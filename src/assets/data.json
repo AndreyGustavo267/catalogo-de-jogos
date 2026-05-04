@@ -1,0 +1,89 @@
+{
+  "usuarios": [
+    {
+      "id": "u1",
+      "nome": "João Silva",
+      "email": "joao@email.com",
+      "senha": "senha_segura_123",
+      "papel": "Comum",
+      "jogosFavoritosIds": ["j1"]
+    }
+  ],
+  "desenvolvedoras": [
+    {
+      "id": "d1",
+      "nome": "Naughty Dog",
+      "anoFundacao": 1984,
+      "paisOrigem": "Estados Unidos",
+      "logotipo": "/assets/images/naughty_dog_logo.png",
+      "descricao": "Estúdio renomado conhecido por jogos focados em narrativa, desenvolvimento de personagens e excelência técnica."
+    }
+  ],
+  "jogos": [
+    {
+      "id": "j1",
+      "titulo": "The Last of Us Part I",
+      "sinopse": "Em uma civilização devastada...",
+      "dataLancamento": "2022-09-02",
+      "capa": "https://placehold.co/50x70/2a475e/66c0f4?text=TLOU",
+      "desenvolvedoraId": "d1",
+      "plataformas": ["PlayStation 5", "PC"],
+      "generos": ["Ação", "Sobrevivência"],
+      "notaMedia": 9.8
+    },
+    {
+      "id": "j2",
+      "titulo": "Red Dead Redemption 2",
+      "sinopse": "Estados Unidos, 1899. O fim da era do velho oeste começou...",
+      "dataLancamento": "2018-10-26",
+      "capa": "https://placehold.co/50x70/2a475e/66c0f4?text=RDR2",
+      "desenvolvedoraId": "d2",
+      "plataformas": ["PlayStation 4", "Xbox One", "PC"],
+      "generos": ["Mundo Aberto", "Ação", "Aventura"],
+      "notaMedia": 9.7
+    },
+    {
+      "id": "j3",
+      "titulo": "The Witcher 3: Wild Hunt",
+      "sinopse": "Você é Geralt de Rívia, um mercenário matador de monstros...",
+      "dataLancamento": "2015-05-18",
+      "capa": "https://placehold.co/50x70/2a475e/66c0f4?text=TW3",
+      "desenvolvedoraId": "d3",
+      "plataformas": ["PlayStation 4", "Xbox One", "PC", "Switch"],
+      "generos": ["RPG", "Mundo Aberto"],
+      "notaMedia": 9.6
+    },
+    {
+      "id": "j4",
+      "titulo": "God of War",
+      "sinopse": "Com sua vingança contra os deuses do Olimpo no passado...",
+      "dataLancamento": "2018-04-20",
+      "capa": "https://placehold.co/50x70/2a475e/66c0f4?text=GOW",
+      "desenvolvedoraId": "d4",
+      "plataformas": ["PlayStation 4", "PC"],
+      "generos": ["Ação", "Aventura", "Hack and Slash"],
+      "notaMedia": 9.5
+    },
+    {
+      "id": "j5",
+      "titulo": "Hollow Knight",
+      "sinopse": "Forje seu próprio caminho em Hollow Knight! Uma aventura épica...",
+      "dataLancamento": "2017-02-24",
+      "capa": "https://placehold.co/50x70/2a475e/66c0f4?text=HK",
+      "desenvolvedoraId": "d5",
+      "plataformas": ["PC", "Switch", "PlayStation 4", "Xbox One"],
+      "generos": ["Metroidvania", "Ação", "Indie"],
+      "notaMedia": 9.4
+    }
+  ],
+  "avaliacoes": [
+    {
+      "id": "a1",
+      "usuarioId": "u1",
+      "jogoId": "j1",
+      "nota": 5,
+      "comentario": "Obra-prima! A história me prendeu do início ao fim e os gráficos estão absurdos.",
+      "data": "2023-10-15T14:30:00Z"
+    }
+  ]
+}
