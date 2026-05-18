@@ -1,50 +1,24 @@
-import { Layout, Menu } from "antd";
-import { Outlet, Link, useLocation } from "react-router-dom";
+import { Layout } from "antd";
+import { Outlet } from "react-router-dom";
+import HeaderMenu from "../components/layout/HeaderMenu";
+import FooterMenu from "../components/layout/FooterMenu";
+import BotaoVoltarInicio from "../components/layout/BotaoVoltarInicio";
 
-const { Header, Content, Footer } = Layout;
+const { Content, Footer } = Layout;
 
 export default function MainLayout() {
-  const location = useLocation();
-
-  const menuItems = [{ key: "/", label: <Link to="/">Top 50</Link> }];
-
   return (
-    <Layout style={{ minHeight: "100vh" }}>
-      <Header
-        style={{ display: "flex", alignItems: "center", background: "#171a21" }}
-      >
-        <div
-          style={{
-            background: "#f5c518",
-            color: "#000",
-            padding: "2px 8px",
-            borderRadius: "4px",
-            fontWeight: "900",
-            fontSize: "20px",
-            marginRight: "32px",
-            letterSpacing: "-0.5px",
-          }}
-        >
-          IGDb
-        </div>
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          selectedKeys={[location.pathname]}
-          items={menuItems}
-          style={{ flex: 1, background: "transparent" }}
-        />
-      </Header>
+    // Adicionamos o background: 'transparent' aqui nesta primeira linha
+    <Layout style={{ minHeight: "100vh", background: "transparent" }}>
+      <HeaderMenu />
 
       <Content style={{ padding: "40px 50px" }}>
         <Outlet />
       </Content>
 
-      <Footer
-        style={{ textAlign: "center", background: "#171a21", color: "#66c0f4" }}
-      >
-        IGDb ©{new Date().getFullYear()} - Catálogo de Jogos (Projeto SPODWE2)
-      </Footer>
+      <FooterMenu />
+
+      <BotaoVoltarInicio />
     </Layout>
   );
 }

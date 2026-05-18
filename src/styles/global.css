@@ -1,6 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap");
+
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #1b2838;
+  background: linear-gradient(180deg, #1f405e 0%, #1b2838 50%, #16202d 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+/* =========================================
+   Customizações do Carrossel
+   ========================================= */
+.steam-carousel .slick-prev::before,
+.steam-carousel .slick-next::before,
+.steam-carousel .slick-prev::after,
+.steam-carousel .slick-next::after {
+  display: none !important;
+  content: none !important;
+}
+
+.steam-carousel .slick-prev,
+.steam-carousel .slick-next {
+  color: transparent !important;
+  background: transparent !important;
+}
+
+/* Posição das barrinhas */
+.steam-carousel .slick-dots {
+  bottom: -40px !important;
+}
+
+/* Formato das barrinhas */
+.steam-carousel .slick-dots li {
+  width: 45px !important;
+  height: 6px !important;
+  margin: 0 4px !important;
+}
+
+/* Remove o risco preto matando os pseudo-elementos internos do botão */
+.steam-carousel .slick-dots li button::before,
+.steam-carousel .slick-dots li button::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Cor da barrinha INATIVA */
+.steam-carousel .slick-dots li button {
+  width: 100% !important;
+  height: 100% !important;
+  background: #ffffff !important;
+  opacity: 0.3 !important;
+  border-radius: 4px !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Cor da barrinha ATIVA (Azul limpo, sem riscos) */
+.steam-carousel .slick-dots li.slick-active button {
+  background: #66c0f4 !important;
+  opacity: 1 !important;
+}
+
+/* Força o container interno do modal a renderizar o gradiente */
+.steam-modal-content .ant-modal-content {
+  background: linear-gradient(
+    180deg,
+    #1f405e 0%,
+    #1b2838 50%,
+    #16202d 100%
+  ) !important;
 }
