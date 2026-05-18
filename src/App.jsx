@@ -2,6 +2,7 @@ import { RouterProvider } from "react-router-dom";
 import { ConfigProvider, theme } from "antd";
 import ptBR from "antd/locale/pt_BR";
 import router from "./routes";
+import { AuthProvider } from "./contexts/AuthContext";
 
 export default function App() {
   return (
@@ -22,7 +23,9 @@ export default function App() {
         },
       }}
     >
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </ConfigProvider>
   );
 }
