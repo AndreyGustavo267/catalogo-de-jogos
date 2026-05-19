@@ -21,6 +21,7 @@ import {
   StarOutlined,
   LogoutOutlined,
   UserOutlined,
+  HeartOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -63,9 +64,14 @@ export default function HeaderMenu() {
 
   const userMenuItems = [
     {
-      key: "info",
-      label: <span style={{ color: "#8f98a0" }}>Logado como {user?.email}</span>,
-      disabled: true,
+      key: "perfil",
+      icon: <UserOutlined />,
+      label: <Link to="/perfil" style={{ color: "#c7d5e0" }}>Meu Perfil</Link>,
+    },
+    {
+      key: "favoritos",
+      icon: <HeartOutlined />,
+      label: <Link to="/perfil" style={{ color: "#c7d5e0" }}>Meus Favoritos</Link>,
     },
     {
       type: "divider",
@@ -127,21 +133,23 @@ export default function HeaderMenu() {
           />
         </div>
 
-        <div style={{ display: "flex", flex: 1, justifyContent: "flex-end", alignItems: "center", gap: "30px" }}>
-          <Link
-            to="/minhas-avaliacoes"
-            style={{
-              color: "#fff",
-              fontWeight: "800",
-              fontSize: "16px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <StarOutlined style={{ fontSize: "20px", color: "#f5c518" }} />
-            Minhas avaliações
-          </Link>
+        <div style={{ display: "flex", flex: 1, justifyContent: "flex-end", alignItems: "center", gap: "30px" }}>  
+            {user && (
+              <Link
+                to="/perfil"
+                style={{
+                  color: "#fff",
+                  fontWeight: "800",
+                  fontSize: "16px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                }}
+              >
+                <StarOutlined style={{ fontSize: "20px", color: "#66c0f4" }} />
+                Minhas Avaliações
+              </Link>
+            )}
 
           {user ? (
             <Dropdown menu={{ items: userMenuItems }} placement="bottomRight" arrow>
