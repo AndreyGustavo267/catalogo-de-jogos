@@ -36,6 +36,13 @@ export function AuthProvider({ children }) {
 
     return { success: true };
   };
+
+  const atualizarPerfil = (novosDados) => {
+    const usuarioAtualizado = { ...user, ...novosDados };
+    setUser(usuarioAtualizado);
+    localStorage.setItem("@IGDb:user", JSON.stringify(usuarioAtualizado));
+    return { success: true };
+  };
   
   const login = (email, senha) => {
     const usuarioEncontrado = db.usuarios.find(
@@ -58,7 +65,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, register, isAuthenticated: !!user }}>
+    <AuthContext.Provider value={{ user, login, logout, register, atualizarPerfil, isAuthenticated: !!user }}>
       {children}
     </AuthContext.Provider>
   );
