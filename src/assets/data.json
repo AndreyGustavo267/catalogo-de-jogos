@@ -19,7 +19,7 @@
       "nome": "Andrey Gustavo",
       "email": "andrey.gustavo@email.com",
       "senha": "senha_segura_123",
-      "jogosFavoritosIds": ["j14", "j24"]
+      "jogosFavoritosIds": ["j1", "j2", "j4", "j5", "j6"]
     },
     {
       "id": "u4",
@@ -137,7 +137,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 9.9
       },
       {
         "id": "j2",
@@ -161,7 +161,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 9.8
       },
       {
         "id": "j3",
@@ -208,7 +208,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 9.8
       },
       {
         "id": "j5",
@@ -233,7 +233,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.4
+        "notaMedia": 9.8
       },
       {
         "id": "j6",
@@ -258,7 +258,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.3
+        "notaMedia": 10.0
       },
       {
         "id": "j7",
@@ -281,7 +281,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 9.9
       },
       {
         "id": "j8",
@@ -352,7 +352,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 9.4
       },
       {
         "id": "j11",
@@ -375,7 +375,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 9.1
       },
       {
         "id": "j12",
@@ -399,7 +399,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 9.0
       },
       {
         "id": "j13",
@@ -422,7 +422,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.9
+        "notaMedia": 9.4
       },
       {
         "id": "j14",
@@ -512,7 +512,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 8.8
+        "notaMedia": 7.0
       },
       {
         "id": "j18",
@@ -536,7 +536,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.0
+        "notaMedia": 7.2
       },
       {
         "id": "j19",
@@ -629,7 +629,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.0
+        "notaMedia": 8.3
       },
       {
         "id": "j23",
@@ -675,7 +675,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 8.6
+        "notaMedia": 6.6
       },
       {
         "id": "j25",
@@ -699,7 +699,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.0
+        "notaMedia": 8.9
       },
       {
         "id": "j26",
@@ -745,7 +745,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 9.4
       },
       {
         "id": "j28",
@@ -766,7 +766,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 8.5
       },
       {
         "id": "j29",
@@ -788,7 +788,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 8.0
       },
       {
         "id": "j30",
@@ -810,7 +810,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.3
+        "notaMedia": 9.0
       },
       {
         "id": "j31",
@@ -831,7 +831,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 7.1
       },
       {
         "id": "j32",
@@ -853,7 +853,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 8.4
       },
       {
         "id": "j33",
@@ -876,7 +876,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 8.8
+        "notaMedia": 7.8
       },
       {
         "id": "j34",
@@ -897,7 +897,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 7.2
       },
       {
         "id": "j35",
@@ -918,7 +918,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 8.2
       },
       {
         "id": "j36",
@@ -939,7 +939,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 8.0
       },
       {
         "id": "j37",
@@ -960,7 +960,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.9
+        "notaMedia": 9.2
       },
       {
         "id": "j38",
@@ -985,7 +985,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 9.0
       },
       {
         "id": "j39",
@@ -1009,7 +1009,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 7.8
       },
       {
         "id": "j40",
@@ -1033,7 +1033,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 8.9
       },
       {
         "id": "j41",
@@ -1057,7 +1057,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 8.0
       },
       {
         "id": "j42",
@@ -1082,7 +1082,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 8.3
+        "notaMedia": 7.3
       },
       {
         "id": "j43",
@@ -1105,7 +1105,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.9
+        "notaMedia": 9.0
       },
       {
         "id": "j44",
@@ -1129,7 +1129,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 8.1
       },
       {
         "id": "j45",
@@ -1153,7 +1153,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 7.9
       },
       {
         "id": "j46",
@@ -1223,7 +1223,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 6.6
       },
       {
         "id": "j49",
@@ -1247,7 +1247,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 6.7
       },
       {
         "id": "j50",
@@ -1270,7 +1270,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.0
+        "notaMedia": 5.3
       },
       {
         "id": "j51",
@@ -1291,7 +1291,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.1
+        "notaMedia": 4.1
       },
       {
         "id": "j52",
@@ -1336,7 +1336,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.3
+        "notaMedia": 2.3
       },
       {
         "id": "j54",
@@ -1383,7 +1383,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 8.5
       },
       {
         "id": "j56",
@@ -1405,7 +1405,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 7.7
       },
       {
         "id": "j57",
@@ -1429,7 +1429,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.4
+        "notaMedia": 8.4
       },
       {
         "id": "j58",
@@ -1453,7 +1453,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.2
+        "notaMedia": 1.2
       },
       {
         "id": "j59",
@@ -1521,7 +1521,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.1
+        "notaMedia": 2.1
       },
       {
         "id": "j62",
@@ -1564,7 +1564,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.2
+        "notaMedia": 6.2
       },
       {
         "id": "j64",
@@ -1586,7 +1586,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.2
+        "notaMedia": 7.0
       },
       {
         "id": "j65",
@@ -1609,7 +1609,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 8.8
       },
       {
         "id": "j66",
@@ -1633,7 +1633,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 8.0
       },
       {
         "id": "j67",
@@ -1655,14 +1655,14 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 5.6
       },
       {
         "id": "j68",
         "titulo": "Demon's Souls",
         "sinopse": "Um conto de trevas, neblina e monstros num remake majestoso de um verdadeiro clássico.",
         "dataLancamento": "2020-11-12",
-        "capa": "https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Freservoircreative.studio%2Fportfolio%2Fdemons-souls%2F&ved=0CBYQjRxqFwoTCNCr_ejRw5QDFQAAAAAdAAAAABAc&opi=89978449",
+        "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.api.playstation.com%2Fvulcan%2Fimg%2Frnd%2F202011%2F1716%2FzN2mjiH0WNTXwfcbRTtxyeLI.jpg&f=1&nofb=1&ipt=cd0de8292fe60494ba382fa549c172b18253d63b7cc466cdf7bf264d518e405c",
         "desenvolvedoraId": "d68",
         "plataformas": [
           "PlayStation 5"
@@ -1676,7 +1676,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.4
+        "notaMedia": 7.4
       },
       {
         "id": "j69",
@@ -1700,7 +1700,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.4
+        "notaMedia": 8.4
       },
       {
         "id": "j70",
@@ -1722,7 +1722,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 9.6
       },
       {
         "id": "j71",
@@ -1746,7 +1746,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.2
+        "notaMedia": 9.0
       },
       {
         "id": "j72",
@@ -1791,7 +1791,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 8.4
       },
       {
         "id": "j74",
@@ -1812,7 +1812,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.9
+        "notaMedia": 9.6
       },
       {
         "id": "j75",
@@ -1834,7 +1834,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 9.0
       },
       {
         "id": "j76",
@@ -1855,7 +1855,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 8.7
       },
       {
         "id": "j77",
@@ -1876,7 +1876,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 8.4
       },
       {
         "id": "j78",
@@ -1899,7 +1899,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 7.6
       },
       {
         "id": "j79",
@@ -1944,7 +1944,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 10.0
+        "notaMedia": 9.5
       },
       {
         "id": "j81",
@@ -1986,7 +1986,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 8.7
       },
       {
         "id": "j83",
@@ -2007,7 +2007,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 7.5
       },
       {
         "id": "j84",
@@ -2029,7 +2029,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 6.0
       },
       {
         "id": "j85",
@@ -2052,7 +2052,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.9
+        "notaMedia": 7.0
       },
       {
         "id": "j86",
@@ -2074,7 +2074,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 7.6
       },
       {
         "id": "j87",
@@ -2095,7 +2095,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 7.1
       },
       {
         "id": "j88",
@@ -2116,7 +2116,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 8.5
       },
       {
         "id": "j89",
@@ -2137,7 +2137,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 6.8
       },
       {
         "id": "j90",
@@ -2158,7 +2158,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 6.5
       },
       {
         "id": "j91",
@@ -2179,7 +2179,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.7
+        "notaMedia": 8.5
       },
       {
         "id": "j92",
@@ -2200,7 +2200,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 8.1
       },
       {
         "id": "j93",
@@ -2223,7 +2223,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.3
+        "notaMedia": 8.3
       },
       {
         "id": "j94",
@@ -2244,7 +2244,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 2.5
       },
       {
         "id": "j95",
@@ -2265,7 +2265,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.9
+        "notaMedia": 9.3
       },
       {
         "id": "j96",
@@ -2286,7 +2286,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.8
+        "notaMedia": 9.5
       },
       {
         "id": "j97",
@@ -2309,7 +2309,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 5.6
       },
       {
         "id": "j98",
@@ -2331,7 +2331,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.5
+        "notaMedia": 9.3
       },
       {
         "id": "j99",
@@ -2354,7 +2354,7 @@
           "link-1",
           "link-2"
         ],
-        "notaMedia": 9.6
+        "notaMedia": 9.5
       },
       {
         "id": "j100",
@@ -2376,7 +2376,271 @@
           "link-1",
           "link-2"
         ],
+        "notaMedia": 9.2
+      },
+      {
+        "id": "j101",
+        "titulo": "The Last of Us Part II",
+        "sinopse": "Cinco anos após sua perigosa jornada, Ellie e Joel se estabeleceram em Wyoming. Quando um evento violento interrompe essa paz, Ellie embarca em uma jornada implacável para fazer justiça e encontrar encerramento.",
+        "dataLancamento": "2020-06-19",
+        "capa": "https://image.api.playstation.com/vulcan/ap/rnd/202312/0117/da083fa5e19458dd750aa8a6ea30ba10bac6f87074693df5.jpg",
+        "desenvolvedoraId": "d101",
+        "plataformas": [
+          "PlayStation 4",
+          "PlayStation 5"
+        ],
+        "generos": [
+          "Ação",
+          "Sobrevivência",
+          "Aventura"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 9.6
+      },
+      {
+        "id": "j102",
+        "titulo": "Clair Obscure: Expedition 33",
+        "sinopse": "Uma vez por ano, a Pintora acorda e pinta um número em seu monólito. Todos daquela idade desaparecem. A Expedição 33 parte em uma missão suicida para destruir a Pintora para sempre.",
+        "dataLancamento": "2025-12-31",
+        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/be3305b02d4db0dffa3458537118423bf2792d7e/header.jpg?t=1773676780",
+        "desenvolvedoraId": "d102",
+        "plataformas": [
+          "PC",
+          "PlayStation 5",
+          "Xbox Series X/S"
+        ],
+        "generos": [
+          "RPG",
+          "Turnos",
+          "Aventura"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 8.9
+      },
+      {
+        "id": "j103",
+        "titulo": "Pro Evolution Soccer 2011",
+        "sinopse": "Trazendo um nível sem precedentes de controle e realismo, o PES 2011 eleva a série com novas animações, liberdade total de passe e a aguardada introdução da Copa Libertadores da América.",
+        "dataLancamento": "2010-09-30",
+        "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffs-prod-cdn.nintendo-europe.com%2Fmedia%2Fimages%2F10_share_images%2Fgames_15%2Fwii_24%2FSI_Wii_ProEvolutionSoccer2011_image1600w.jpg&f=1&nofb=1&ipt=922c199fc36ca73ec3ec9c63a9988ebd31b527c9b2795f04e6892e58de381c63",
+        "desenvolvedoraId": "d103",
+        "plataformas": [
+          "PlayStation 3",
+          "Xbox 360",
+          "PC",
+          "PlayStation 2",
+          "Wii"
+        ],
+        "generos": [
+          "Esportes",
+          "Simulação"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 8.9
+      },
+      {
+        "id": "j104",
+        "titulo": "Hollow Knight: Silksong",
+        "sinopse": "Jogue como Hornet, a princesa protetora de Hallownest, e aventure-se por um reino totalmente novo regido por seda e música para descobrir segredos ancestrais.",
+        "dataLancamento": "2025-12-31",
+        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736",
+        "desenvolvedoraId": "d104",
+        "plataformas": [
+          "PC",
+          "Switch",
+          "PlayStation 5",
+          "Xbox Series X/S"
+        ],
+        "generos": [
+          "Metroidvania",
+          "Ação",
+          "Indie"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
         "notaMedia": 9.7
+      },
+      {
+        "id": "j105",
+        "titulo": "FIFA 15",
+        "sinopse": "Sinta o jogo! Com inteligência emocional e reações autênticas dos jogadores, FIFA 15 oferece o futebol mais dinâmico e realista da sua geração de consoles.",
+        "dataLancamento": "2014-09-23",
+        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_FIFA15_image1600w.jpg",
+        "desenvolvedoraId": "d105",
+        "plataformas": [
+          "PlayStation 3",
+          "PlayStation 4",
+          "Xbox 360",
+          "Xbox One",
+          "PC"
+        ],
+        "generos": [
+          "Esportes",
+          "Simulação"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 9.2
+      },
+      {
+        "id": "j106",
+        "titulo": "Grand Theft Auto: San Andreas",
+        "sinopse": "Início dos anos 90. Após sua mãe ser assassinada, Carl 'CJ' Johnson volta para casa em Los Santos e é forçado a cruzar o estado de San Andreas para salvar sua família.",
+        "dataLancamento": "2004-10-26",
+        "capa": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2F3%2Fc%2Fb%2F1120096-large-grand-theft-auto-san-andreas-wallpapers-1920x1200-meizu.jpg&f=1&nofb=1&ipt=c6695ed234242ad6bace4e493d1d03a9dd07388569f44164135ef36c8e069845",
+        "desenvolvedoraId": "d106",
+        "plataformas": [
+          "PlayStation 2",
+          "PC",
+          "Xbox"
+        ],
+        "generos": [
+          "Mundo Aberto",
+          "Ação",
+          "Aventura"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 9.5
+      },
+      {
+        "id": "j107",
+        "titulo": "Overcooked!",
+        "sinopse": "Um jogo de culinária caótico e cooperativo para até quatro jogadores. Trabalhem juntos para preparar e cozinhar pedidos antes que os clientes saiam furiosos do restaurante.",
+        "dataLancamento": "2016-08-02",
+        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/448510/header.jpg?t=1778527917",
+        "desenvolvedoraId": "d107",
+        "plataformas": [
+          "PC",
+          "PlayStation 4",
+          "Xbox One",
+          "Switch"
+        ],
+        "generos": [
+          "Casual",
+          "Co-op",
+          "Festa"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 8.0
+      },
+      {
+        "id": "j108",
+        "titulo": "Assassin's Creed",
+        "sinopse": "O ano é 1191 d.C. e a Terceira Cruzada está destruindo a Terra Santa. Você é Altaïr, um Mestre Assassino enviado para matar os líderes corruptos que lucram com a guerra.",
+        "dataLancamento": "2007-11-13",
+        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15100/header.jpg?t=1602600542",
+        "desenvolvedoraId": "d108",
+        "plataformas": [
+          "PlayStation 3",
+          "Xbox 360",
+          "PC"
+        ],
+        "generos": [
+          "Ação",
+          "Aventura",
+          "Furtividade"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 8.4
+      },
+      {
+        "id": "j109",
+        "titulo": "Pokémon Red Version",
+        "sinopse": "A jornada para se tornar o maior treinador Pokémon começa agora! Capture, treine, evolua monstros e duele contra líderes de ginásio para vencer a Elite Four.",
+        "dataLancamento": "1996-02-27",
+        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/game_boy_4/H2x1_GB_PokemonRed_enGB.jpg",
+        "desenvolvedoraId": "d109",
+        "plataformas": [
+          "Game Boy"
+        ],
+        "generos": [
+          "RPG"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 9.2
+      },
+      {
+        "id": "j110",
+        "titulo": "Far Cry 3",
+        "sinopse": "Preso em uma ilha tropical sem lei governada pela pirataria e a loucura de Vaas, você deve lutar por sua sobrevivência e resgatar seus amigos.",
+        "dataLancamento": "2012-11-29",
+        "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.unrealengine.com%2FDiesel%2Fproductv2%2Ffar-cry-3%2Fdeluxe-edition%2FFC3-dlx-2560x1440-4fa7f35072ee54993b47cf163c2f4f0fd7b1759a.jpg&f=1&nofb=1&ipt=cee1638bf34848ea3de35702681fdc844ed86efb071db75e5e4a42c1a5a392a1",
+        "desenvolvedoraId": "d110",
+        "plataformas": [
+          "PlayStation 3",
+          "Xbox 360",
+          "PC"
+        ],
+        "generos": [
+          "Ação",
+          "Mundo Aberto",
+          "Tiro"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 8.8
+      },
+      {
+        "id": "j111",
+        "titulo": "Bomberman",
+        "sinopse": "Coloque bombas, destrua paredes e elimine os seus oponentes no labirinto frenético e cheio de itens deste clássico atemporal que definiu o modo multiplayer explosivo.",
+        "dataLancamento": "1983-07-01",
+        "capa": "https://www.konami.com/games/bomberman/r/s/img/thumb_g4_preorder.jpg",
+        "desenvolvedoraId": "d111",
+        "plataformas": [
+          "Arcade",
+          "NES",
+          "PC",
+          "Multiplataforma"
+        ],
+        "generos": [
+          "Ação",
+          "Labirinto",
+          "Arcade"
+        ],
+        "modeloNegocio": "pago",
+        "outrasMidias": [
+          "link-1",
+          "link-2"
+        ],
+        "notaMedia": 8.5
       }
     ],
   "avaliacoes": [
