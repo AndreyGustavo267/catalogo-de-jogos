@@ -9,7 +9,7 @@ import SobrePage from "./pages/SobrePage";
 import AjudaPage from "./pages/AjudaPage";
 import TermosPage from "./pages/TermosPage";
 import PrivacidadePage from "./pages/PrivacidadePage"; 
-//import MinhasAvaliacoesPage from "./pages/MinhasAvaliacoesPage"; 
+import PerfilPage from "./pages/PerfilPage"; 
 
 const router = createBrowserRouter([
   {
@@ -52,8 +52,8 @@ const router = createBrowserRouter([
         element: <PrivateRoute />,
         children: [
           {
-            //path: "minhas-avaliacoes",
-            //element: <MinhasAvaliacoesPage />,
+            path: "perfil",
+            element: <PerfilPage />,
           },
         ],
       },
