@@ -66,12 +66,12 @@ export default function HeaderMenu() {
     {
       key: "perfil",
       icon: <UserOutlined />,
-      label: <Link to="/perfil" style={{ color: "#c7d5e0" }}>Meu Perfil</Link>,
+      label: <Link to="/perfil?tab=1" style={{ color: "#c7d5e0" }}>Meu Perfil</Link>,
     },
     {
       key: "favoritos",
       icon: <HeartOutlined />,
-      label: <Link to="/perfil" style={{ color: "#c7d5e0" }}>Meus Favoritos</Link>,
+      label: <Link to="/perfil?tab=3" style={{ color: "#c7d5e0" }}>Meus Favoritos</Link>,
     },
     {
       type: "divider",
@@ -134,9 +134,9 @@ export default function HeaderMenu() {
         </div>
 
         <div style={{ display: "flex", flex: 1, justifyContent: "flex-end", alignItems: "center", gap: "30px" }}>  
-            {user && (
+          {user && (
               <Link
-                to="/perfil"
+                to="/perfil?tab=2"
                 style={{
                   color: "#fff",
                   fontWeight: "800",
@@ -208,7 +208,9 @@ export default function HeaderMenu() {
       >
         <div style={{ padding: "30px 40px", borderBottom: "1px solid #2a475e" }}>
           <div style={{ ...containerStyle, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <Link to="/" onClick={closeMenu} style={{ display: "flex", alignItems: "center" }}>
             <img src="/src/assets/images/logo.png" alt="IGDb Logo" style={{ height: "60px", borderRadius: "6px" }} />
+          </Link>
             <Button
               shape="circle"
               icon={<CloseOutlined style={{ fontSize: "20px" }} />}
