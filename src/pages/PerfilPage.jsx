@@ -1,7 +1,7 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Typography, Tabs, List, Row, Col, Space, Card, Avatar, Button, Modal, Form, Input, message } from "antd";
 import { StarFilled, UserOutlined, MailOutlined, CrownOutlined, EditOutlined, LockOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 import db from "../assets/data.json";
 
@@ -9,8 +9,23 @@ const { Title, Text, Paragraph } = Typography;
 
 export default function PerfilPage() {
   const { user, atualizarPerfil } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState("1");
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tab = params.get("tab");
+    if (tab && ["1", "2", "3"].includes(tab)) {
+      setActiveTab(tab);
+    }
+  }, [location]);
+  const handleTabChange = (key) => {
+    setActiveTab(key);
+    navigate(`/perfil?tab=${key}`, { replace: true });
+  };
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [form] = Form.useForm();
+  
   const handleUpdate = (values) => {
     const result = atualizarPerfil(values);
     if (result.success) {
@@ -121,7 +136,7 @@ export default function PerfilPage() {
                   <Link to={`/jogo/${jogo.id}`} style={{ textDecoration: "none" }}>
                     <Card
                       hoverable
-                      cover={<img alt={jogo.titulo} src={jogo.capa} style={{ height: "220px", objectFit: "cover" }} />}
+                      cover={<img alt={jogo.titulo} src={jogo.capa} style={{ height: "100px", objectFit: "cover" }} />}
                       style={{ background: "#1a1f26", borderColor: "#2a475e", overflow: "hidden" }}
                       bodyStyle={{ padding: "12px" }}
                     >
@@ -149,7 +164,7 @@ export default function PerfilPage() {
         <Text style={{ color: "#8f98a0", fontSize: "16px" }}>Gerencie sua conta e suas atividades no IGDb.</Text>
       </div>
 
-      <Tabs defaultActiveKey="1" items={items} size="large" />
+      <Tabs activeKey={activeTab} onChange={handleTabChange} items={items} size="large" />
 
       <Modal
         title="Editar Perfil"
