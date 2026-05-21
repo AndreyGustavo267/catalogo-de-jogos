@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { useNavigate, Link } from "react-router-dom"; // <-- Apenas essa linha para o react-router-dom!
+import { useNavigate, Link } from "react-router-dom";
 import { Form, Input, Button, Typography, message } from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
 import { AuthContext } from "../contexts/AuthContext";
@@ -51,7 +51,7 @@ export default function LoginPage() {
         >
           <Input
             prefix={<MailOutlined style={{ color: "#8f98a0" }} />}
-            placeholder="E-mail (ex: seunome@email.com)"
+            placeholder="Seu e-mail"
             style={{ 
               background: "#1b2838", 
               borderColor: "#2a475e", 
@@ -66,7 +66,7 @@ export default function LoginPage() {
         >
           <Input.Password
             prefix={<LockOutlined style={{ color: "#8f98a0" }} />}
-            placeholder="Senha (ex: 123456)"
+            placeholder="Sua senha"
             style={{ 
               background: "#1b2838", 
               borderColor: "#2a475e", 
