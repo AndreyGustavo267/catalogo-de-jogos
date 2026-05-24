@@ -10,6 +10,7 @@ import AjudaPage from "./pages/AjudaPage";
 import TermosPage from "./pages/TermosPage";
 import PrivacidadePage from "./pages/PrivacidadePage"; 
 import PerfilPage from "./pages/PerfilPage"; 
+import GamePage from "./pages/GamePage"; 
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "privacidade",
         element: <PrivacidadePage />,
+      },
+      {
+        path: "jogo/:id",
+        element: <GamePage />,
       },
       {
         element: <PrivateRoute />,
