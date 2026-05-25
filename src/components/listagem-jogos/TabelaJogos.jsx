@@ -1,94 +1,32 @@
-import { useState } from "react"; // <-- Certifique-se de importar o useState
+import { useState } from "react";
 import { Typography, Row, Col, Space, Button, List } from "antd";
 import {
   StarFilled,
   StarOutlined,
   InfoCircleOutlined,
-  WindowsOutlined,
-  AppleOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import ModalDetalheJogo from "./ModalDetalheJogo";
+import Plataformas from "../common/Plataformas";
+import ModalAvaliacoes from "./ModalAvaliacoes";
 
 const { Title, Text } = Typography;
 
-// Reutilizando nossa lógica de ícones da Steam
-const renderPlatformIcon = (plataforma) => {
-  const platLower = plataforma.toLowerCase();
-
-  if (platLower.includes("pc") || platLower.includes("windows")) {
-    return (
-      <WindowsOutlined
-        key={plataforma}
-        style={{ fontSize: "20px", color: "#8f98a0" }}
-        title={plataforma}
-      />
-    );
-  }
-  if (platLower.includes("mac")) {
-    return (
-      <AppleOutlined
-        key={plataforma}
-        style={{ fontSize: "22px", color: "#8f98a0", marginBottom: "2px" }}
-        title={plataforma}
-      />
-    );
-  }
-  if (platLower.includes("playstation") || platLower.includes("ps")) {
-    return (
-      <span
-        key={plataforma}
-        style={{
-          color: "#8f98a0",
-          fontSize: "14px",
-          fontWeight: "900",
-          letterSpacing: "-1px",
-        }}
-        title={plataforma}
-      >
-        PS
-      </span>
-    );
-  }
-  if (platLower.includes("xbox")) {
-    return (
-      <span
-        key={plataforma}
-        style={{
-          color: "#8f98a0",
-          fontSize: "14px",
-          fontWeight: "900",
-          letterSpacing: "-0.5px",
-        }}
-        title={plataforma}
-      >
-        Xbox
-      </span>
-    );
-  }
-
-  return (
-    <span
-      key={plataforma}
-      style={{ color: "#8f98a0", fontSize: "13px", fontWeight: "bold" }}
-      title={plataforma}
-    >
-      {plataforma}
-    </span>
-  );
-};
-
-export default function TabelaJogos({ jogos, titulo, subtitulo }) {
+export default function TabelaJogos({ jogos }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedGame, setSelectedGame] = useState(null);
+
+  const [modalAvaliacaoVisible, setModalAvaliacaoVisible] = useState(false);
+  const [jogoParaAvaliar, setJogoParaAvaliar] = useState(null);
 
   const handleOpenDetails = (jogo) => {
     setSelectedGame(jogo);
     setModalVisible(true);
   };
 
-  const handleOpenRate = (jogoId) => {
-    console.log("Abrir modal de avaliação do jogo:", jogoId);
+  const handleOpenRate = (jogo) => {
+    setJogoParaAvaliar(jogo);
+    setModalAvaliacaoVisible(true);
   };
 
   return (
@@ -115,7 +53,6 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
             }}
           >
             <Row gutter={[24, 16]} align="middle">
-              {/* COLUNA 1: CAPA HORIZONTAL E RANK */}
               <Col xs={24} sm={6} md={5}>
                 <div
                   style={{
@@ -126,15 +63,18 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
                     overflow: "hidden",
                   }}
                 >
-                  <img
-                    src={jogo.capa}
-                    alt={jogo.titulo}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
+                  <Link to={`/jogo/${jogo.id}`}>
+                    <img
+                      src={jogo.capa}
+                      alt={jogo.titulo}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
+                  </Link>
                   <div
                     style={{
                       position: "absolute",
@@ -146,6 +86,7 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
                       fontWeight: "bold",
                       fontSize: "14px",
                       borderBottomRightRadius: "4px",
+                      pointerEvents: "none",
                     }}
                   >
                     #{index + 1}
@@ -153,31 +94,34 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
                 </div>
               </Col>
 
-              {/* COLUNA 2: TÍTULO, ANO E ÍCONES DE PLATAFORMAS */}
               <Col xs={24} sm={12} md={13}>
                 <Space direction="vertical" size={6} style={{ width: "100%" }}>
-                  <Title
-                    level={3}
-                    style={{
-                      color: "#fff",
-                      margin: 0,
-                      fontSize: "22px",
-                      fontWeight: "700",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => handleOpenDetails(jogo.id)}
-                    onMouseOver={(e) => (e.target.style.color = "#66c0f4")}
-                    onMouseOut={(e) => (e.target.style.color = "#fff")}
+                  <Link
+                    to={`/jogo/${jogo.id}`}
+                    style={{ display: "inline-block" }}
                   >
-                    {jogo.titulo}
-                  </Title>
+                    <Title
+                      level={3}
+                      style={{
+                        color: "#fff",
+                        margin: 0,
+                        fontSize: "22px",
+                        fontWeight: "700",
+                        transition: "color 0.2s",
+                      }}
+                      onMouseOver={(e) =>
+                        (e.currentTarget.style.color = "#66c0f4")
+                      }
+                      onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
+                    >
+                      {jogo.titulo}
+                    </Title>
+                  </Link>
 
                   <Space size="large" style={{ alignItems: "center" }}>
                     <Text style={{ color: "#8f98a0", fontSize: "15px" }}>
                       {new Date(jogo.dataLancamento).getFullYear()}
                     </Text>
-
-                    {/* Alinhamento de ícones horizontal igual ao carrossel */}
                     <div
                       style={{
                         display: "flex",
@@ -185,22 +129,19 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
                         gap: "12px",
                       }}
                     >
-                      {jogo.plataformas.map((plat) => renderPlatformIcon(plat))}
+                      <Plataformas plataformas={jogo.plataformas} />
                     </div>
                   </Space>
                 </Space>
               </Col>
-
-              {/* COLUNA 3: NOTA, BOTÃO AVALIAR E BOTÃO DETALHES */}
               <Col xs={24} sm={6} md={6} style={{ textAlign: "right" }}>
                 <Row justify="end" align="middle" gutter={[24, 0]}>
-                  {/* Bloco de Avaliação Média */}
                   <Col style={{ textAlign: "center", minWidth: "60px" }}>
                     <div
                       style={{
                         display: "flex",
                         alignItems: "center",
-                        justifyContext: "flex-end",
+                        justifyContent: "flex-end",
                         gap: "6px",
                       }}
                     >
@@ -212,8 +153,6 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
                       </Text>
                     </div>
                   </Col>
-
-                  {/* Ações interativas em formato de botões de texto discretos (estilo IMDb) */}
                   <Col>
                     <Space size="middle">
                       <Button
@@ -224,7 +163,7 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
                           fontWeight: "600",
                           padding: "0 4px",
                         }}
-                        onClick={() => handleOpenRate(jogo.id)}
+                        onClick={() => handleOpenRate(jogo)}
                       >
                         Avaliar
                       </Button>
@@ -251,6 +190,11 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
         jogo={selectedGame}
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
+      />
+      <ModalAvaliacoes
+        jogo={jogoParaAvaliar}
+        visible={modalAvaliacaoVisible}
+        onClose={() => setModalAvaliacaoVisible(false)}
       />
     </div>
   );

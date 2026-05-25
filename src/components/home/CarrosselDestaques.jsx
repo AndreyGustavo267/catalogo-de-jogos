@@ -1,13 +1,11 @@
-import { Carousel, Typography, Space, Tag } from "antd";
-import {
-  LeftOutlined,
-  RightOutlined,
-  StarFilled,
-  WindowsOutlined,
-  AppleOutlined,
-} from "@ant-design/icons";
+import { Carousel, Typography, Space } from "antd";
+import { LeftOutlined, RightOutlined, StarFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import db from "../../assets/data.json";
+
+// 1. IMPORTAMOS OS COMPONENTES PADRONIZADOS
+import Generos from "../common/Generos";
+import Plataformas from "../common/Plataformas";
 
 const { Title, Text } = Typography;
 
@@ -63,72 +61,7 @@ const CustomRightArrow = (props) => {
   );
 };
 
-// Função auxiliar para renderizar ícones ou textos das plataformas
-const renderPlatformIcon = (plataforma) => {
-  const platLower = plataforma.toLowerCase();
-
-  if (platLower.includes("pc") || platLower.includes("windows")) {
-    return (
-      <WindowsOutlined
-        key={plataforma}
-        style={{ fontSize: "22px", color: "#8f98a0" }}
-        title={plataforma}
-      />
-    );
-  }
-  if (platLower.includes("mac")) {
-    return (
-      <AppleOutlined
-        key={plataforma}
-        style={{ fontSize: "24px", color: "#8f98a0", marginBottom: "2px" }}
-        title={plataforma}
-      />
-    );
-  }
-  if (platLower.includes("playstation")) {
-    return (
-      <span
-        key={plataforma}
-        style={{
-          color: "#8f98a0",
-          fontSize: "16px",
-          fontWeight: "900",
-          letterSpacing: "-1px",
-        }}
-        title={plataforma}
-      >
-        PS
-      </span>
-    );
-  }
-  if (platLower.includes("xbox")) {
-    return (
-      <span
-        key={plataforma}
-        style={{
-          color: "#8f98a0",
-          fontSize: "16px",
-          fontWeight: "900",
-          letterSpacing: "-0.5px",
-        }}
-        title={plataforma}
-      >
-        Xbox
-      </span>
-    );
-  }
-
-  // Fallback padrão
-  return (
-    <span
-      key={plataforma}
-      style={{ color: "#8f98a0", fontSize: "14px", fontWeight: "bold" }}
-      title={plataforma}
-    >
-      {plataforma}
-    </span>
-  );
-};
+// A FUNÇÃO renderPlatformIcon FOI TOTALMENTE DELETADA DAQUI!
 
 export default function CarrosselDestaques() {
   // Ordenar os jogos pela data de lançamento (mais recentes primeiro) e pegar os 5 primeiros
@@ -162,25 +95,25 @@ export default function CarrosselDestaques() {
       >
         {top5Games.map((jogo) => (
           <div key={jogo.id}>
-            <Link
-              to={`/jogo/${jogo.id}`}
+            <div
               style={{
                 display: "flex",
                 height: "450px",
                 width: "100%",
                 backgroundColor: "#0a141d",
-                /* O EFEITO DE CONTORNO */
                 borderRadius: "25px",
-                border: "5px rgba(255, 255, 255, 0.05)",
+                border: "5px solid rgba(255, 255, 255, 0.05)",
                 overflow: "hidden",
                 textDecoration: "none",
               }}
             >
-              {/* LADO ESQUERDO: Imagem do Jogo */}
-              <div
+              {/* LADO ESQUERDO: Imagem do Jogo que funciona como Link para os detalhes */}
+              <Link
+                to={`/jogo/${jogo.id}`}
                 style={{
                   flex: "0 0 65%",
                   background: `url(${jogo.capa}) center/cover no-repeat`,
+                  display: "block",
                 }}
               />
 
@@ -196,19 +129,26 @@ export default function CarrosselDestaques() {
                   justifyContent: "center",
                 }}
               >
-                {/* Título */}
-                <Title
-                  level={2}
-                  style={{
-                    color: "#fff",
-                    marginTop: 0,
-                    marginBottom: "28px",
-                    fontSize: "34px",
-                    lineHeight: "1.1",
-                  }}
-                >
-                  {jogo.titulo}
-                </Title>
+                {/* Título Clicável */}
+                <Link to={`/jogo/${jogo.id}`}>
+                  <Title
+                    level={2}
+                    style={{
+                      color: "#fff",
+                      marginTop: 0,
+                      marginBottom: "28px",
+                      fontSize: "34px",
+                      lineHeight: "1.1",
+                      transition: "color 0.2s",
+                    }}
+                    onMouseOver={(e) =>
+                      (e.currentTarget.style.color = "#66c0f4")
+                    }
+                    onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
+                  >
+                    {jogo.titulo}
+                  </Title>
+                </Link>
 
                 <Space
                   direction="vertical"
@@ -230,35 +170,17 @@ export default function CarrosselDestaques() {
                     <StarFilled
                       style={{ color: "#f5c518", fontSize: "26px" }}
                     />{" "}
-                    {/* Estrela bem maior */}
                     <Text strong style={{ color: "#fff", fontSize: "26px" }}>
                       {jogo.notaMedia.toFixed(1)}
                     </Text>
                   </div>
 
-                  {/* Tags */}
-                  <div
-                    style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
-                  >
-                    {jogo.generos.map((genero) => (
-                      <Tag
-                        key={genero}
-                        color="processing"
-                        style={{
-                          background: "rgba(102, 192, 244, 0.15)",
-                          border: "none",
-                          color: "#66c0f4",
-                          padding: "6px 12px",
-                          fontSize: "14px",
-                          margin: 0,
-                        }}
-                      >
-                        {genero}
-                      </Tag>
-                    ))}
+                  {/* 2. SUBSTITUÍMOS O MAP DE TAGS ANTIGO PELO NOSSO COMPONENTE */}
+                  <div>
+                    <Generos generos={jogo.generos} />
                   </div>
 
-                  {/* Plataformas com Ícones estilo Steam */}
+                  {/* 3. SUBSTITUÍMOS OS ÍCONES MANUAIS PELO NOSSO COMPONENTE */}
                   <div style={{ marginTop: "24px" }}>
                     <Text
                       style={{
@@ -271,20 +193,13 @@ export default function CarrosselDestaques() {
                     >
                       Já disponível para:
                     </Text>
-                    {/* Aumentamos o gap e os elementos internos vão herdar tamanhos maiores da função */}
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "20px",
-                      }}
-                    >
-                      {jogo.plataformas.map((plat) => renderPlatformIcon(plat))}
+                    <div>
+                      <Plataformas plataformas={jogo.plataformas} />
                     </div>
                   </div>
                 </Space>
               </div>
-            </Link>
+            </div>
           </div>
         ))}
       </Carousel>

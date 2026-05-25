@@ -1,77 +1,20 @@
-import { Modal, Typography } from "antd";
-import {
-  CloseOutlined,
-  RightOutlined,
-  StarFilled,
-  WindowsOutlined,
-  AppleOutlined,
-} from "@ant-design/icons";
+import { Modal, Typography, Divider } from "antd";
+import { CloseOutlined, RightOutlined, StarFilled } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import db from "../../assets/data.json";
+import Generos from "../common/Generos";
+import Plataformas from "../common/Plataformas";
+import React from "react";
 
 const { Title, Text, Paragraph } = Typography;
-
-const renderPlatformIconInModal = (plataforma) => {
-  const platLower = plataforma.toLowerCase();
-  if (platLower.includes("pc") || platLower.includes("windows")) {
-    return (
-      <WindowsOutlined
-        key={plataforma}
-        style={{ fontSize: "20px", color: "#66c0f4" }}
-      />
-    );
-  }
-  if (platLower.includes("mac")) {
-    return (
-      <AppleOutlined
-        key={plataforma}
-        style={{ fontSize: "22px", color: "#66c0f4" }}
-      />
-    );
-  }
-  if (platLower.includes("playstation") || platLower.includes("ps")) {
-    return (
-      <span
-        key={plataforma}
-        style={{
-          color: "#66c0f4",
-          fontSize: "15px",
-          fontWeight: "900",
-          letterSpacing: "-1px",
-        }}
-      >
-        PS
-      </span>
-    );
-  }
-  if (platLower.includes("xbox")) {
-    return (
-      <span
-        key={plataforma}
-        style={{
-          color: "#66c0f4",
-          fontSize: "15px",
-          fontWeight: "900",
-          letterSpacing: "-0.5px",
-        }}
-      >
-        Xbox
-      </span>
-    );
-  }
-  return (
-    <span
-      key={plataforma}
-      style={{ color: "#8f98a0", fontSize: "14px", fontWeight: "bold" }}
-    >
-      {plataforma}
-    </span>
-  );
-};
 
 export default function ModalDetalheJogo({ jogo, visible, onClose }) {
   const navigate = useNavigate();
 
   if (!jogo) return null;
+
+  const dev = db.desenvolvedoras.find((d) => d.id === jogo.desenvolvedoraId);
+  const nomeDev = dev ? dev.nome : "Desconhecida";
 
   return (
     <Modal
@@ -82,36 +25,47 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
         <CloseOutlined style={{ color: "#8f98a0", fontSize: "18px" }} />
       }
       centered
-      width={700}
-      className="steam-modal-content"
+      width={750}
+      cclassName="igdb-dark-modal"
+      wrapClassName="igdb-dark-modal"
       styles={{
-        mask: { background: "rgba(0, 0, 0, 0.4)", backdropFilter: "blur(1px)" },
-        content: {
-          color: "#fff",
-          borderRadius: "8px",
-          padding: "30px",
-          border: "1px solid rgba(255, 255, 255, 0.1)",
-          boxShadow: "0 20px 40px rgba(0, 0, 0, 0.8)",
-        },
+        mask: { background: "rgba(0, 0, 0, 0.7)", backdropFilter: "blur(2px)" },
       }}
+      modalRender={(node) =>
+        React.cloneElement(node, {
+          style: {
+            ...node.props.style,
+            background: "linear-gradient(180deg, #1e2c3a 0%, #0d131a 100%)",
+            boxShadow:
+              "0 0 80px rgba(87, 153, 239, 0.15), 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+            padding: "50px 40px 40px 40px",
+            overflow: "visible",
+          },
+        })
+      }
     >
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-        {/* PARTE SUPERIOR: CAPA VERTICAL À ESQUERDA + INFOS À DIREITA */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "24px",
+          marginTop: "10px",
+        }}
+      >
+        {/* PARTE SUPERIOR: CAPA HORIZONTAL + INFOS */}
         <div style={{ display: "flex", gap: "24px", alignItems: "flex-start" }}>
-          {/* Capa estilo Pôster vertical do IMDb */}
           <img
             src={jogo.capa}
             alt={jogo.titulo}
             style={{
-              width: "110px",
-              aspectRatio: "2/3",
+              width: "220px",
+              aspectRatio: "16/9",
               objectFit: "cover",
               borderRadius: "6px",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.5)",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.5)",
             }}
           />
 
-          {/* Detalhes do Bloco Superior Direito */}
           <div
             style={{
               flex: 1,
@@ -120,7 +74,7 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
               gap: "8px",
             }}
           >
-            {/* Título e Seta */}
+            {/* Título e Seta clicável */}
             <div
               onClick={() => {
                 onClose();
@@ -131,49 +85,39 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
                 display: "flex",
                 alignItems: "center",
                 gap: "12px",
-                flexWrap: "wrap",
                 width: "fit-content",
               }}
               onMouseOver={(e) => {
-                e.currentTarget.querySelector(".modal-title").style.color =
-                  "#66c0f4";
-                e.currentTarget.querySelector(".arrow-svg").style.color =
-                  "#66c0f4";
+                e.currentTarget.style.color = "#66c0f4";
               }}
               onMouseOut={(e) => {
-                e.currentTarget.querySelector(".modal-title").style.color =
-                  "#fff";
-                e.currentTarget.querySelector(".arrow-svg").style.color =
-                  "#fff";
+                e.currentTarget.style.color = "#fff";
               }}
             >
               <Title
                 level={3}
-                className="modal-title"
                 style={{
-                  color: "#fff",
+                  color: "inherit",
                   margin: 0,
                   fontSize: "26px",
-                  fontWeight: "700",
-                  lineHeight: "1.2",
+                  fontWeight: "800",
                   transition: "color 0.2s",
                 }}
               >
                 {jogo.titulo}
               </Title>
               <RightOutlined
-                className="arrow-svg"
                 style={{
-                  fontSize: "26px", // Aumentado de 20px para 26px
-                  color: "#fff",
-                  transition: "color 0.2s",
-                  strokeWidth: "40", // Deixa o traço do ícone mais espesso
+                  fontSize: "22px",
+                  color: "inherit",
+                  strokeWidth: "30",
                   stroke: "currentColor",
+                  transition: "color 0.2s",
                 }}
               />
             </div>
 
-            {/* Metadados: Ano e Avaliações */}
+            {/* Ano e Nota */}
             <div
               style={{
                 display: "flex",
@@ -190,84 +134,92 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
                 style={{ display: "flex", alignItems: "center", gap: "6px" }}
               >
                 <StarFilled style={{ color: "#f5c518", fontSize: "16px" }} />
-                <Text strong style={{ color: "#fff" }}>
+                <Text strong style={{ color: "#fff", fontSize: "15px" }}>
                   {jogo.notaMedia.toFixed(1)}/10
                 </Text>
               </div>
             </div>
 
-            {/* Linha da Desenvolvedora */}
-            <div style={{ fontSize: "15px" }}>
-              <Text style={{ color: "#8f98a0", marginRight: "6px" }}>
+            {/* Desenvolvedora */}
+            <div style={{ marginTop: "4px" }}>
+              <Text
+                style={{
+                  color: "#8f98a0",
+                  fontSize: "15px",
+                  marginRight: "6px",
+                }}
+              >
                 Direção / Dev:
               </Text>
-              <Text style={{ color: "#66c0f4", fontWeight: "600" }}>
-                {jogo.desenvolvedoraId === "d1"
-                  ? "Naughty Dog"
-                  : jogo.desenvolvedoraId === "d2"
-                    ? "Rockstar Games"
-                    : "CD Projekt Red"}
+              <Text
+                style={{
+                  color: "#66c0f4",
+                  fontSize: "15px",
+                  fontWeight: "600",
+                }}
+              >
+                {nomeDev}
               </Text>
             </div>
           </div>
         </div>
 
-        {/* PARTE DO MEIO: DESCRIÇÃO DO FILME/JOGO */}
-        <div>
-          <Paragraph
+        {/* SINOPSE */}
+        <Paragraph
+          style={{
+            color: "#c7d5e0",
+            fontSize: "15px",
+            lineHeight: "1.6",
+            margin: 0,
+          }}
+        >
+          {jogo.sinopse}
+        </Paragraph>
+
+        {/* CATEGORIAS E PLATAFORMAS COM DIVIDERS */}
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <Divider
             style={{
-              color: "#fff",
-              fontSize: "15px",
-              lineHeight: "1.5",
-              margin: 0,
+              borderColor: "rgba(255, 255, 255, 0.08)",
+              margin: "16px 0",
+            }}
+          />
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "16px",
             }}
           >
-            {jogo.sinopse}
-          </Paragraph>
-        </div>
-
-        {/* PARTE INFERIOR: SEÇÕES TEXTUAIS PURAS (SEM CAIXAS OU TITLES) */}
-
-        {/* Categorias em Linha Reta */}
-        <div
-          style={{
-            borderTop: "1px solid rgba(255, 255, 255, 0.08)",
-            paddingTop: "14px",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            flexWrap: "wrap",
-          }}
-        >
-          <Text style={{ color: "#fff", fontWeight: "700", fontSize: "15px" }}>
-            Categorias:
-          </Text>
-          {jogo.generos.map((gen, index) => (
             <Text
-              key={gen}
-              style={{ color: "#66c0f4", fontSize: "15px", fontWeight: "500" }}
+              style={{
+                color: "#fff",
+                fontWeight: "700",
+                fontSize: "15px",
+                marginRight: "8px",
+              }}
             >
-              {gen}
-              {index < jogo.generos.length - 1 ? "  •" : ""}
+              Categorias:
             </Text>
-          ))}
-        </div>
+            <Generos generos={jogo.generos} onClick={onClose} />
+          </div>
 
-        {/* Plataformas Espaçadas Simples */}
-        <div
-          style={{
-            borderTop: "1px solid rgba(255, 255, 255, 0.08)",
-            paddingTop: "14px",
-            display: "flex",
-            alignItems: "center",
-            gap: "16px",
-          }}
-        >
-          <Text style={{ color: "#fff", fontWeight: "700", fontSize: "15px" }}>
-            Plataformas disponíveis:
-          </Text>
+          <Divider
+            style={{
+              borderColor: "rgba(255, 255, 255, 0.08)",
+              margin: "16px 0",
+            }}
+          />
+
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            {jogo.plataformas.map((plat) => renderPlatformIconInModal(plat))}
+            <Text
+              style={{ color: "#fff", fontWeight: "700", fontSize: "15px" }}
+            >
+              Plataformas disponíveis:
+            </Text>
+            <Plataformas plataformas={jogo.plataformas} onClick={onClose} />
           </div>
         </div>
       </div>

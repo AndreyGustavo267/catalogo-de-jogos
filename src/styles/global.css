@@ -71,12 +71,56 @@ body {
   opacity: 1 !important;
 }
 
-/* Força o container interno do modal a renderizar o gradiente */
-.steam-modal-content .ant-modal-content {
-  background: linear-gradient(
-    180deg,
-    #1f405e 0%,
-    #1b2838 50%,
-    #16202d 100%
-  ) !important;
+/* =========================================
+   MODAIS (Garantia de fundo escuro para AntD v4 e v5)
+========================================= */
+
+/* Limpa fundos brancos apenas das partes INFERIORES do Ant Design */
+div.igdb-dark-modal .ant-modal-header,
+div.igdb-dark-modal .ant-modal-body,
+div.igdb-dark-modal .ant-modal-footer,
+div.modal-avaliacao-igdb .ant-modal-header,
+div.modal-avaliacao-igdb .ant-modal-body,
+div.modal-avaliacao-igdb .ant-modal-footer {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* -----------------------------------------
+   Específicos do Modal Jogo Detalhes
+----------------------------------------- */
+/* A tag 'div' aqui na frente é o segredo para forçar a prioridade máxima! */
+div.ant-modal.igdb-dark-modal .ant-modal-content,
+div.igdb-dark-modal .ant-modal-content {
+  background-color: #171a21 !important;
+  border: 1px solid #2a475e !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8) !important;
+  padding: 30px !important;
+}
+
+.igdb-dark-modal .ant-modal-close {
+  top: 24px !important;
+  right: 24px !important;
+}
+
+/* -----------------------------------------
+   Específicos do Modal Avaliações (IGDb)
+----------------------------------------- */
+div.ant-modal.modal-avaliacao-igdb .ant-modal-content,
+div.modal-avaliacao-igdb .ant-modal-content {
+  background: linear-gradient(180deg, #1e2c3a 0%, #0d131a 100%) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  padding: 50px 40px 40px 40px !important;
+  overflow: visible !important; /* Isso é o que vai impedir a estrela de ser cortada! */
+}
+
+/* Deixa a estrela cinza vazia mais visível */
+div.modal-avaliacao-igdb .ant-rate-star-zero svg {
+  color: rgba(255, 255, 255, 0.1) !important;
 }
