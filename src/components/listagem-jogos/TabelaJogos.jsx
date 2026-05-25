@@ -93,23 +93,13 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
 
   return (
     <div>
-      <div style={{ marginBottom: "32px" }}>
-        <Title
-          level={2}
-          style={{ color: "#fff", fontSize: "36px", marginBottom: "8px" }}
-        >
-          {titulo}
-        </Title>
-        <Text style={{ color: "#8f98a0", fontSize: "16px" }}>{subtitulo}</Text>
-      </div>
-
       <List
         itemLayout="horizontal"
         dataSource={jogos}
         locale={{
           emptyText: (
             <Text style={{ color: "#8f98a0", fontSize: "16px" }}>
-              Nenhum jogo encontrado.
+              Nenhum jogo encontrado com estes filtros.
             </Text>
           ),
         }}
@@ -254,13 +244,13 @@ export default function TabelaJogos({ jogos, titulo, subtitulo }) {
                 </Row>
               </Col>
             </Row>
-            <ModalDetalheJogo
-              jogo={selectedGame}
-              visible={modalVisible}
-              onClose={() => setModalVisible(false)}
-            />
           </div>
         )}
+      />
+      <ModalDetalheJogo
+        jogo={selectedGame}
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
       />
     </div>
   );

@@ -1,9 +1,6 @@
 import { useContext } from "react";
 import { Row, Col, Typography, Button } from "antd";
-import {
-  GithubOutlined,
-  LinkedinOutlined,
-} from "@ant-design/icons";
+import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
 import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 
@@ -12,7 +9,8 @@ const { Text } = Typography;
 export default function FooterMenu() {
   const location = useLocation();
   const { user } = useContext(AuthContext);
-  const hideLoginButton = location.pathname === "/login" || location.pathname === "/registro" || user;
+  const hideLoginButton =
+    location.pathname === "/login" || location.pathname === "/registro" || user;
 
   const linkStyle = {
     color: "#c7d5e0",
@@ -63,7 +61,6 @@ export default function FooterMenu() {
       )}
 
       <Row gutter={[40, 40]} justify="space-between">
-        
         <Col xs={24} md={6}>
           <img
             src="/src/assets/images/logo.png"
@@ -88,14 +85,47 @@ export default function FooterMenu() {
 
         <Col xs={24} md={6}>
           <div style={titleStyle}>Desenvolvedores</div>
-          <a href="#" target="_blank" rel="noopener noreferrer" style={linkStyle} onMouseOver={(e) => (e.target.style.color = "#66c0f4")} onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}>
-            <LinkedinOutlined style={{ marginRight: "8px", fontSize: "18px" }} /> Andrey Gustavo
+
+          <a
+            href="https://www.linkedin.com/in/andrey-gustavo-s-dos-santos-6691a333a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={linkStyle}
+            onMouseOver={(e) => (e.target.style.color = "#66c0f4")}
+            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+          >
+            <LinkedinOutlined
+              style={{ marginRight: "8px", fontSize: "18px" }}
+            />{" "}
+            Andrey Gustavo
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" style={linkStyle} onMouseOver={(e) => (e.target.style.color = "#66c0f4")} onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}>
-            <LinkedinOutlined style={{ marginRight: "8px", fontSize: "18px" }} /> Elton Araujo
+
+          <a
+            href="https://www.linkedin.com/in/elton-lima-araujo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={linkStyle}
+            onMouseOver={(e) => (e.target.style.color = "#66c0f4")}
+            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+          >
+            <LinkedinOutlined
+              style={{ marginRight: "8px", fontSize: "18px" }}
+            />{" "}
+            Elton Araujo
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" style={linkStyle} onMouseOver={(e) => (e.target.style.color = "#66c0f4")} onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}>
-            <LinkedinOutlined style={{ marginRight: "8px", fontSize: "18px" }} /> João Gustavo
+
+          <a
+            href="https://www.linkedin.com/in/joao-gustavo-dos-santos/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={linkStyle}
+            onMouseOver={(e) => (e.target.style.color = "#66c0f4")}
+            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+          >
+            <LinkedinOutlined
+              style={{ marginRight: "8px", fontSize: "18px" }}
+            />{" "}
+            João Gustavo
           </a>
         </Col>
 
@@ -109,18 +139,46 @@ export default function FooterMenu() {
             onMouseOver={(e) => (e.target.style.color = "#66c0f4")}
             onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
           >
-            <GithubOutlined style={{ marginRight: "8px", fontSize: "18px" }} /> Repositório no GitHub
+            <GithubOutlined style={{ marginRight: "8px", fontSize: "18px" }} />{" "}
+            Repositório no GitHub
           </a>
         </Col>
 
         <Col xs={24} md={6}>
           <div style={titleStyle}>Institucional</div>
-          <Link to="/sobre" style={linkStyle} onMouseOver={(e) => (e.target.style.color = "#fff")} onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}>Sobre o IGDb</Link>
-          <Link to="/ajuda" style={linkStyle} onMouseOver={(e) => (e.target.style.color = "#fff")} onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}>Central de Ajuda</Link>
-          <Link to="/termos" style={linkStyle} onMouseOver={(e) => (e.target.style.color = "#fff")} onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}>Termos de Uso</Link>
-          <Link to="/privacidade" style={linkStyle} onMouseOver={(e) => (e.target.style.color = "#fff")} onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}>Privacidade</Link>
+          <Link
+            to="/sobre"
+            style={linkStyle}
+            onMouseOver={(e) => (e.target.style.color = "#fff")}
+            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+          >
+            Sobre o IGDb
+          </Link>
+          <Link
+            to="/ajuda"
+            style={linkStyle}
+            onMouseOver={(e) => (e.target.style.color = "#fff")}
+            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+          >
+            Central de Ajuda
+          </Link>
+          <Link
+            to="/termos"
+            style={linkStyle}
+            onMouseOver={(e) => (e.target.style.color = "#fff")}
+            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+          >
+            Termos de Uso
+          </Link>
+          <Link
+            to="/privacidade"
+            style={linkStyle}
+            onMouseOver={(e) => (e.target.style.color = "#fff")}
+            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+          >
+            Privacidade
+          </Link>
         </Col>
-
       </Row>
     </footer>
   );

@@ -117,2532 +117,1462 @@
     }
   ],
   "jogos": [
-      {
-        "id": "j1",
-        "titulo": "The Last of Us Part I",
-        "sinopse": "Em uma civilização devastada...",
-        "dataLancamento": "2022-09-02",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/capsule_616x353.jpg",
-        "desenvolvedoraId": "d1",
-        "plataformas": [
-          "PlayStation 5",
-          "PC"
-        ],
-        "generos": [
-          "Ação",
-          "Sobrevivência"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.9
-      },
-      {
-        "id": "j2",
-        "titulo": "Red Dead Redemption 2",
-        "sinopse": "Estados Unidos, 1899. O fim da era do velho oeste começou...",
-        "dataLancamento": "2018-10-26",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_616x353.jpg",
-        "desenvolvedoraId": "d2",
-        "plataformas": [
-          "PlayStation 4",
-          "Xbox One",
-          "PC"
-        ],
-        "generos": [
-          "Mundo Aberto",
-          "Ação",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.8
-      },
-      {
-        "id": "j3",
-        "titulo": "The Witcher 3: Wild Hunt",
-        "sinopse": "Você é Geralt de Rívia, um mercenário matador de monstros...",
-        "dataLancamento": "2015-05-18",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/capsule_616x353.jpg",
-        "desenvolvedoraId": "d3",
-        "plataformas": [
-          "PlayStation 4",
-          "Xbox One",
-          "PC",
-          "Switch"
-        ],
-        "generos": [
-          "RPG",
-          "Mundo Aberto"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.6
-      },
-      {
-        "id": "j4",
-        "titulo": "God of War",
-        "sinopse": "Com sua vingança contra os deuses do Olimpo no passado...",
-        "dataLancamento": "2018-04-20",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/capsule_616x353.jpg",
-        "desenvolvedoraId": "d4",
-        "plataformas": [
-          "PlayStation 4",
-          "PC"
-        ],
-        "generos": [
-          "Ação",
-          "Aventura",
-          "Hack and Slash"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.8
-      },
-      {
-        "id": "j5",
-        "titulo": "Hollow Knight",
-        "sinopse": "Forje seu próprio caminho em Hollow Knight! Uma aventura épica...",
-        "dataLancamento": "2017-02-24",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/capsule_616x353.jpg",
-        "desenvolvedoraId": "d5",
-        "plataformas": [
-          "PC",
-          "Switch",
-          "PlayStation 4",
-          "Xbox One"
-        ],
-        "generos": [
-          "Metroidvania",
-          "Ação",
-          "Indie"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.8
-      },
-      {
-        "id": "j6",
-        "titulo": "Minecraft",
-        "sinopse": "Explore mundos gerados aleatoriamente e construa coisas incríveis.",
-        "dataLancamento": "2011-11-18",
-        "capa": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Minecraft_JavaBedrock_Net_1170x500.jpg",
-        "desenvolvedoraId": "d6",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch",
-          "Mobile"
-        ],
-        "generos": [
-          "Sandbox",
-          "Sobrevivência"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 10.0
-      },
-      {
-        "id": "j7",
-        "titulo": "Grand Theft Auto V",
-        "sinopse": "Um jovem traficante, um assaltante de bancos e um psicopata...",
-        "dataLancamento": "2013-09-17",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/header.jpg?t=1765479644",
-        "desenvolvedoraId": "d7",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "Ação",
-          "Mundo Aberto"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.9
-      },
-      {
-        "id": "j8",
-        "titulo": "Fortnite",
-        "sinopse": "Construa, lute e sobreviva no Battle Royale mais famoso do mundo.",
-        "dataLancamento": "2017-07-25",
-        "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frggames.com.br%2Fwp-content%2Fuploads%2F2023%2F02%2Ffortinite.jpg&f=1&nofb=1&ipt=5e97e34f8a69db3ccd7a3f46245b10d0469e587bca716e607e836ee69a32f7c9",
-        "desenvolvedoraId": "d8",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch",
-          "Mobile"
-        ],
-        "generos": [
-          "Battle Royale",
-          "Tiro"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.8
-      },
-      {
-        "id": "j9",
-        "titulo": "Terraria",
-        "sinopse": "Cave, lute, explore, construa! Nada é impossível neste jogo de aventura.",
-        "dataLancamento": "2011-05-16",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1769844435",
-        "desenvolvedoraId": "d9",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch",
-          "Mobile"
-        ],
-        "generos": [
-          "Sandbox",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.0
-      },
-      {
-        "id": "j10",
-        "titulo": "The Legend of Zelda: Breath of the Wild",
-        "sinopse": "Esqueça tudo o que sabe sobre os jogos The Legend of Zelda.",
-        "dataLancamento": "2017-03-03",
-        "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.nintendo.com%2Fimage%2Fupload%2Ff_auto%2Fq_auto%2Fdpr_1.5%2FMarketing%2F68272fb37fa56918996af8bfceddbc4223c2746af7c325b2067f0c62c65ef8c0%2Fpmp_cy802h%2F2-trailer%2Fvideo-thumbnail-2x&f=1&nofb=1&ipt=5e1d14db7d1bb6d05e99b3629b57e7d3a508cc3e060fd59bd861ca6c39a0e773",
-        "desenvolvedoraId": "d10",
-        "plataformas": [
-          "Switch"
-        ],
-        "generos": [
-          "Aventura",
-          "RPG"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.4
-      },
-      {
-        "id": "j11",
-        "titulo": "Elden Ring",
-        "sinopse": "Levante-se, Maculado, e seja guiado pela graça para portar o poder do Elden Ring.",
-        "dataLancamento": "2022-02-25",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1767883716",
-        "desenvolvedoraId": "d11",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "RPG",
-          "Soulslike"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.1
-      },
-      {
-        "id": "j12",
-        "titulo": "The Elder Scrolls V: Skyrim",
-        "sinopse": "Vencedor de mais de 200 prêmios de Jogo do Ano, Skyrim reimagina o épico de fantasia.",
-        "dataLancamento": "2011-11-11",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg?t=1753715778",
-        "desenvolvedoraId": "d12",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "RPG",
-          "Mundo Aberto"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.0
-      },
-      {
-        "id": "j13",
-        "titulo": "Baldur's Gate 3",
-        "sinopse": "Reúna seu grupo e retorne a Forgotten Realms em uma história de amizade e traição.",
-        "dataLancamento": "2023-08-03",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040",
-        "desenvolvedoraId": "d13",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "RPG",
-          "Tático"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.4
-      },
-      {
-        "id": "j14",
-        "titulo": "Dark Souls",
-        "sinopse": "Prepare-se para morrer neste RPG de ação que definiu uma geração.",
-        "dataLancamento": "2011-09-22",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/374320/header.jpg?t=1748630784",
-        "desenvolvedoraId": "d14",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "RPG",
-          "Soulslike"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.4
-      },
-      {
-        "id": "j15",
-        "titulo": "Cyberpunk 2077",
-        "sinopse": "Um RPG de ação e aventura em mundo aberto que se passa em Night City.",
-        "dataLancamento": "2020-12-10",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1769690377",
-        "desenvolvedoraId": "d15",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "RPG",
-          "Ficção Científica"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.5
-      },
-      {
-        "id": "j16",
-        "titulo": "Counter-Strike 2",
-        "sinopse": "Por mais de duas décadas, o Counter-Strike ofereceu uma experiência competitiva de elite.",
-        "dataLancamento": "2023-09-27",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/header.jpg?t=1749053861",
-        "desenvolvedoraId": "d16",
-        "plataformas": [
-          "PC"
-        ],
-        "generos": [
-          "Tiro",
-          "FPS",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.1
-      },
-      {
-        "id": "j17",
-        "titulo": "League of Legends",
-        "sinopse": "Forme sua equipe e destrua a base inimiga neste MOBA lendário.",
-        "dataLancamento": "2009-10-27",
-        "capa": "https://i0.wp.com/drawyourweapon.com/wp-content/uploads/2020/11/1_nb1P8J-TXW8D-7yqznrDXw.jpeg?resize=1300%2C731&ssl=1",
-        "desenvolvedoraId": "d17",
-        "plataformas": [
-          "PC"
-        ],
-        "generos": [
-          "MOBA",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.0
-      },
-      {
-        "id": "j18",
-        "titulo": "Valorant",
-        "sinopse": "Misture seu estilo e experiência em um cenário global e competitivo.",
-        "dataLancamento": "2020-06-02",
-        "capa": "https://www.riotgames.com/darkroom/1200/1dbd7211e78ce5faa7a8af9d10afad47:2b5979e3922758399ba389561e797919/ps-f2p-val-console-launch-16x9.jpg",
-        "desenvolvedoraId": "d18",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "Tiro",
-          "FPS",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.2
-      },
-      {
-        "id": "j19",
-        "titulo": "Call of Duty: Warzone",
-        "sinopse": "Bem-vindo ao Warzone, a enorme arena de combate gratuita.",
-        "dataLancamento": "2020-03-10",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1962663/f25cc927ec7d42578ffbf2162d3367a968da1594/header_alt_assets_17.jpg?t=1778886707",
-        "desenvolvedoraId": "d19",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "Battle Royale",
-          "FPS"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.4
-      },
-      {
-        "id": "j20",
-        "titulo": "Overwatch 2",
-        "sinopse": "Junte-se à luta por um futuro de esperança.",
-        "dataLancamento": "2022-10-04",
-        "capa": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2024/08/overwatch-2-season-12-banner.jpg",
-        "desenvolvedoraId": "d20",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "Tiro",
-          "Herói",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.9
-      },
-      {
-        "id": "j21",
-        "titulo": "Apex Legends",
-        "sinopse": "Domine um elenco crescente de lendas poderosas.",
-        "dataLancamento": "2019-02-04",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172470/0bd74245b869287a2dc7f682e6013f7ed08d98e3/header.jpg?t=1778502442",
-        "desenvolvedoraId": "d21",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "Battle Royale",
-          "Tiro"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.9
-      },
-      {
-        "id": "j22",
-        "titulo": "Dota 2",
-        "sinopse": "Milhões de jogadores ao redor do mundo entram na batalha como um dos mais de cem heróis.",
-        "dataLancamento": "2013-07-09",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/570/header.jpg?t=1769535998",
-        "desenvolvedoraId": "d22",
-        "plataformas": [
-          "PC"
-        ],
-        "generos": [
-          "MOBA",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.3
-      },
-      {
-        "id": "j23",
-        "titulo": "Rainbow Six Siege",
-        "sinopse": "Domine a arte da destruição e o uso de dispositivos.",
-        "dataLancamento": "2015-12-01",
-        "capa": "https://images.steamusercontent.com/ugc/789730529899117879/12EEBFEF9FC806D87577B75645916EAB4D0497DE/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
-        "desenvolvedoraId": "d23",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "Tiro Tático",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.7
-      },
-      {
-        "id": "j24",
-        "titulo": "Destiny 2",
-        "sinopse": "Mergulhe no mundo de Destiny 2 para explorar os mistérios do sistema solar.",
-        "dataLancamento": "2017-09-06",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/header_brazilian.jpg?t=1765904462",
-        "desenvolvedoraId": "d24",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "Looter Shooter",
-          "MMO"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 6.6
-      },
-      {
-        "id": "j25",
-        "titulo": "Rocket League",
-        "sinopse": "Futebol encontra condução numa sequela baseada em física.",
-        "dataLancamento": "2015-07-07",
-        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_RocketLeague_S16_image1600w.jpg",
-        "desenvolvedoraId": "d25",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "Esportes",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.9
-      },
-      {
-        "id": "j26",
-        "titulo": "PUBG: Battlegrounds",
-        "sinopse": "Pouse em locais estratégicos, saqueie armas e suprimentos.",
-        "dataLancamento": "2017-12-20",
-        "capa": "https://cdn1.epicgames.com/spt-assets/53ec4985296b4facbe3a8d8d019afba9/pubg-battlegrounds-19vwb.jpg?resize=1&w=480&h=270&quality=medium",
-        "desenvolvedoraId": "d26",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "Battle Royale",
-          "Tiro"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.2
-      },
-      {
-        "id": "j27",
-        "titulo": "Left 4 Dead 2",
-        "sinopse": "Este jogo cooperativo de terror e ação leva você e seus amigos por cidades e pântanos.",
-        "dataLancamento": "2009-11-17",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/550/header.jpg?t=1772742214",
-        "desenvolvedoraId": "d27",
-        "plataformas": [
-          "PC",
-          "Xbox"
-        ],
-        "generos": [
-          "Zumbis",
-          "Tiro",
-          "Co-op"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.4
-      },
-      {
-        "id": "j28",
-        "titulo": "Spider-Man 2",
-        "sinopse": "Os Homens-Aranha Peter Parker e Miles Morales enfrentam o teste definitivo.",
-        "dataLancamento": "2023-10-20",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/header.jpg?t=1763569811",
-        "desenvolvedoraId": "d28",
-        "plataformas": [
-          "PlayStation 5"
-        ],
-        "generos": [
-          "Ação",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.5
-      },
-      {
-        "id": "j29",
-        "titulo": "Ghost of Tsushima",
-        "sinopse": "Forje um novo caminho e trave uma guerra não convencional pela liberdade de Tsushima.",
-        "dataLancamento": "2020-07-17",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg?t=1763409398",
-        "desenvolvedoraId": "d29",
-        "plataformas": [
-          "PC",
-          "PlayStation"
-        ],
-        "generos": [
-          "Ação",
-          "Mundo Aberto"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.0
-      },
-      {
-        "id": "j30",
-        "titulo": "Horizon Zero Dawn",
-        "sinopse": "Aloy embarca em uma jornada para desvendar os mistérios da Terra governada por máquinas.",
-        "dataLancamento": "2017-02-28",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2561580/header.jpg?t=1750952943",
-        "desenvolvedoraId": "d30",
-        "plataformas": [
-          "PC",
-          "PlayStation"
-        ],
-        "generos": [
-          "RPG",
-          "Ação"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.0
-      },
-      {
-        "id": "j31",
-        "titulo": "Bloodborne",
-        "sinopse": "Enfrente seus pesadelos e procure respostas na antiga cidade de Yharnam.",
-        "dataLancamento": "2015-03-24",
-        "capa": "https://t2.tudocdn.net/593327?w=1920",
-        "desenvolvedoraId": "d31",
-        "plataformas": [
-          "PlayStation 4"
-        ],
-        "generos": [
-          "RPG",
-          "Soulslike"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.1
-      },
-      {
-        "id": "j32",
-        "titulo": "Forza Horizon 5",
-        "sinopse": "A sua derradeira aventura Horizon o aguarda no México vibrante.",
-        "dataLancamento": "2021-11-09",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg?t=1746471508",
-        "desenvolvedoraId": "d32",
-        "plataformas": [
-          "PC",
-          "Xbox"
-        ],
-        "generos": [
-          "Corrida",
-          "Mundo Aberto"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.4
-      },
-      {
-        "id": "j33",
-        "titulo": "Sea of Thieves",
-        "sinopse": "Oferece a experiência essencial de pirata, desde navegar e lutar até explorar e saquear.",
-        "dataLancamento": "2018-03-20",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/header.jpg?t=1765448772",
-        "desenvolvedoraId": "d33",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "Aventura",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.8
-      },
-      {
-        "id": "j34",
-        "titulo": "Super Mario Odyssey",
-        "sinopse": "Embarque numa aventura cativante pelo mundo fora com Mario e o seu novo amigo, Cappy.",
-        "dataLancamento": "2017-10-27",
-        "capa": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000001130/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5",
-        "desenvolvedoraId": "d34",
-        "plataformas": [
-          "Switch"
-        ],
-        "generos": [
-          "Plataforma",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.2
-      },
-      {
-        "id": "j35",
-        "titulo": "Mario Kart 8 Deluxe",
-        "sinopse": "Aqueça os motores no Mario Kart mais definitivo de todos.",
-        "dataLancamento": "2017-04-28",
-        "capa": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000000153/de697f487a36d802dd9a5ff0341f717c8486221f2f1219b675af37aca63bc453",
-        "desenvolvedoraId": "d35",
-        "plataformas": [
-          "Switch"
-        ],
-        "generos": [
-          "Corrida",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.2
-      },
-      {
-        "id": "j36",
-        "titulo": "Super Smash Bros. Ultimate",
-        "sinopse": "Personagens icônicos se enfrentam na maior batalha de todas.",
-        "dataLancamento": "2018-12-07",
-        "capa": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000012332/ac4d1fc9824876ce756406f0525d50c57ded4b2a666f6dfe40a6ac5c3563fad9",
-        "desenvolvedoraId": "d36",
-        "plataformas": [
-          "Switch"
-        ],
-        "generos": [
-          "Luta",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.0
-      },
-      {
-        "id": "j37",
-        "titulo": "Zelda: Tears of the Kingdom",
-        "sinopse": "Uma aventura épica pelos céus e vastas terras de Hyrule.",
-        "dataLancamento": "2023-05-12",
-        "capa": "https://assets.nintendo.com/image/upload/c_limit,f_auto,h_300,q_auto,w_500/v1/store/software/switch/70010000063714/Video/posters/a6143e436f85d80109a43f47f95be32a4fc5fb698df6816799563e9530fb012c",
-        "desenvolvedoraId": "d37",
-        "plataformas": [
-          "Switch"
-        ],
-        "generos": [
-          "Aventura",
-          "RPG"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.2
-      },
-      {
-        "id": "j38",
-        "titulo": "Stardew Valley",
-        "sinopse": "Você herdou a antiga fazenda de seu avô. Com ferramentas de segunda mão e algumas moedas...",
-        "dataLancamento": "2016-02-26",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1754692865",
-        "desenvolvedoraId": "d38",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch",
-          "Mobile"
-        ],
-        "generos": [
-          "Simulação",
-          "RPG"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.0
-      },
-      {
-        "id": "j39",
-        "titulo": "Hades",
-        "sinopse": "Desafie o deus dos mortos enquanto você luta para sair do Submundo nesta masmorra roguelike.",
-        "dataLancamento": "2020-09-17",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1758127023",
-        "desenvolvedoraId": "d39",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "Roguelike",
-          "Ação"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.8
-      },
-      {
-        "id": "j40",
-        "titulo": "Undertale",
-        "sinopse": "O RPG onde você não precisa matar ninguém.",
-        "dataLancamento": "2015-09-15",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg?t=1757349115",
-        "desenvolvedoraId": "d40",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "RPG",
-          "Indie"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.9
-      },
-      {
-        "id": "j41",
-        "titulo": "Celeste",
-        "sinopse": "Ajude Madeline a sobreviver aos seus demônios internos em sua jornada.",
-        "dataLancamento": "2018-01-25",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg?t=1714089525",
-        "desenvolvedoraId": "d41",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "Plataforma",
-          "Indie"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.0
-      },
-      {
-        "id": "j42",
-        "titulo": "Among Us",
-        "sinopse": "Um jogo de festa sobre trabalho em equipe e traição.",
-        "dataLancamento": "2018-06-15",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg?t=1757444903",
-        "desenvolvedoraId": "d42",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch",
-          "Mobile"
-        ],
-        "generos": [
-          "Dedução Social",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.3
-      },
-      {
-        "id": "j43",
-        "titulo": "Portal 2",
-        "sinopse": "O Portal 2 baseia-se na fórmula premiada de jogabilidade inovadora.",
-        "dataLancamento": "2011-04-18",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/620/header.jpg?t=1745363004",
-        "desenvolvedoraId": "d43",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Puzzle",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.0
-      },
-      {
-        "id": "j44",
-        "titulo": "Resident Evil 4 Remake",
-        "sinopse": "A sobrevivência é apenas o começo.",
-        "dataLancamento": "2023-03-24",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg?t=1772502922",
-        "desenvolvedoraId": "d44",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "Terror",
-          "Ação",
-          "Sobrevivência"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.1
-      },
-      {
-        "id": "j45",
-        "titulo": "It Takes Two",
-        "sinopse": "Embarque na jornada mais maluca de sua vida em It Takes Two.",
-        "dataLancamento": "2021-03-26",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/capsule_616x353.jpg?t=1777395376",
-        "desenvolvedoraId": "d45",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "Aventura",
-          "Co-op"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.9
-      },
-      {
-        "id": "j46",
-        "titulo": "Halo Infinite",
-        "sinopse": "Quando toda esperança se perde, Master Chief está pronto para enfrentar o inimigo.",
-        "dataLancamento": "2021-12-08",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1708091/capsule_616x353.jpg?t=1763578010",
-        "desenvolvedoraId": "d46",
-        "plataformas": [
-          "PC",
-          "Xbox"
-        ],
-        "generos": [
-          "Tiro",
-          "FPS",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.5
-      },
-      {
-        "id": "j47",
-        "titulo": "Fallout 4",
-        "sinopse": "Como o único sobrevivente do Refúgio 111, você entra num mundo destruído pela guerra nuclear.",
-        "dataLancamento": "2015-11-10",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1764687456",
-        "desenvolvedoraId": "d47",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "RPG",
-          "Ação",
-          "Mundo Aberto"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.6
-      },
-      {
-        "id": "j48",
-        "titulo": "Mass Effect Legendary Edition",
-        "sinopse": "Reviva a lenda de Commander Shepard.",
-        "dataLancamento": "2021-05-14",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1328670/header.jpg?t=1777395134",
-        "desenvolvedoraId": "d48",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "RPG",
-          "Ficção Científica"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 6.6
-      },
-      {
-        "id": "j49",
-        "titulo": "Persona 5 Royal",
-        "sinopse": "Prepare-se para uma experiência de RPG premiada nesta edição definitiva.",
-        "dataLancamento": "2019-10-31",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1687950/header.jpg?t=1763530018",
-        "desenvolvedoraId": "d49",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation",
-          "Switch"
-        ],
-        "generos": [
-          "JRPG",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 6.7
-      },
-      {
-        "id": "j50",
-        "titulo": "Monster Hunter: World",
-        "sinopse": "Enfrente monstros imensos em locais épicos.",
-        "dataLancamento": "2018-01-26",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg?t=1773328926",
-        "desenvolvedoraId": "d50",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "PlayStation"
-        ],
-        "generos": [
-          "RPG de Ação",
-          "Co-op"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 5.3
-      },
-      {
-        "id": "j51",
-        "titulo": "Animal Crossing: New Horizons",
-        "sinopse": "Fuja para uma ilha deserta e crie o seu próprio paraíso enquanto explora e constrói.",
-        "dataLancamento": "2020-03-20",
-        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_AnimalCrossingNewHorizons_image1600w.jpg",
-        "desenvolvedoraId": "d51",
-        "plataformas": [
-          "Switch"
-        ],
-        "generos": [
-          "Simulação Social",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 4.1
-      },
-      {
-        "id": "j52",
-        "titulo": "Garry's Mod",
-        "sinopse": "Um sandbox de física onde podes manipular e criar cenários malucos à tua vontade.",
-        "dataLancamento": "2006-11-29",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1776868682",
-        "desenvolvedoraId": "d52",
-        "plataformas": [
-          "PC"
-        ],
-        "generos": [
-          "Sandbox",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.9
-      },
-      {
-        "id": "j53",
-        "titulo": "Slay the Spire",
-        "sinopse": "Um jogo de cartas roguelike onde constróis um baralho único para subir o pináculo.",
-        "dataLancamento": "2019-01-23",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/646570/header.jpg?t=1774015376",
-        "desenvolvedoraId": "d53",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Roguelike",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 2.3
-      },
-      {
-        "id": "j54",
-        "titulo": "The Sims 4",
-        "sinopse": "Jogue com a vida e controle os personagens do zero, criando e personalizando as suas vidas.",
-        "dataLancamento": "2014-09-02",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg?t=1778778231",
-        "desenvolvedoraId": "d54",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox"
-        ],
-        "generos": [
-          "Simulação",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.5
-      },
-      {
-        "id": "j55",
-        "titulo": "Subnautica",
-        "sinopse": "Mergulhe nas profundezas de um oceano alienígena misterioso e encontre formas de sobreviver.",
-        "dataLancamento": "2018-01-23",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg?t=1777456112",
-        "desenvolvedoraId": "d55",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Sobrevivência",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.5
-      },
-      {
-        "id": "j56",
-        "titulo": "Half-Life 2",
-        "sinopse": "Gordon Freeman desperta para combater os Combine num mundo outrora livre.",
-        "dataLancamento": "2004-11-16",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/320/header.jpg?t=1749481506",
-        "desenvolvedoraId": "d56",
-        "plataformas": [
-          "PC",
-          "Xbox"
-        ],
-        "generos": [
-          "Tiro",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.7
-      },
-      {
-        "id": "j57",
-        "titulo": "Dead Cells",
-        "sinopse": "Domine o combate 2D souls-lite com permadeath e sem checkpoints.",
-        "dataLancamento": "2018-08-07",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg?t=1779086887",
-        "desenvolvedoraId": "d57",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Roguelike",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.4
-      },
-      {
-        "id": "j58",
-        "titulo": "Civilization VI",
-        "sinopse": "Construa o seu império, governe os seus cidadãos e teste a passagem do tempo.",
-        "dataLancamento": "2016-10-21",
-        "capa": "https://cdn1.epicgames.com/cd14dcaa4f3443f19f7169a980559c62/offer/EGS_SidMeiersCivilizationVI_FiraxisGames_S1-2560x1440-2fcd1c150ac6d8cdc672ae042d2dd179.jpg",
-        "desenvolvedoraId": "d58",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Estratégia",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 1.2
-      },
-      {
-        "id": "j59",
-        "titulo": "Roblox",
-        "sinopse": "Plataforma multijogador focada em permitir a criação dos teus próprios mundos.",
-        "dataLancamento": "2006-09-01",
-        "capa": "https://wallpapercave.com/wp/wp11347874.jpg",
-        "desenvolvedoraId": "d59",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "Mobile"
-        ],
-        "generos": [
-          "Sandbox",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.0
-      },
-      {
-        "id": "j60",
-        "titulo": "Starfield",
-        "sinopse": "O primeiro novo universo em mais de 25 anos dos criadores do Skyrim.",
-        "dataLancamento": "2023-09-06",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg?t=1778168061",
-        "desenvolvedoraId": "d60",
-        "plataformas": [
-          "PC",
-          "Xbox"
-        ],
-        "generos": [
-          "RPG",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.2
-      },
-      {
-        "id": "j61",
-        "titulo": "Vampire Survivors",
-        "sinopse": "Destrua milhares de criaturas da noite e sobreviva até ao amanhecer num frenético roguelike.",
-        "dataLancamento": "2022-10-20",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1794680/header.jpg?t=1778864981",
-        "desenvolvedoraId": "d61",
-        "plataformas": [
-          "PC",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Ação",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 2.1
-      },
-      {
-        "id": "j62",
-        "titulo": "Gears 5",
-        "sinopse": "De um dos mais aclamados franchises de jogos, chega uma jornada cheia de combates viscerais.",
-        "dataLancamento": "2019-09-10",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1097840/header.jpg?t=1684425784",
-        "desenvolvedoraId": "d62",
-        "plataformas": [
-          "PC",
-          "Xbox"
-        ],
-        "generos": [
-          "Ação",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.7
-      },
-      {
-        "id": "j63",
-        "titulo": "Team Fortress 2",
-        "sinopse": "Nove classes diferentes para escolher e o jogo que redefiniu os heróis.",
-        "dataLancamento": "2007-10-10",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/header.jpg?t=1757348372",
-        "desenvolvedoraId": "d63",
-        "plataformas": [
-          "PC"
-        ],
-        "generos": [
-          "Tiro",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 6.2
-      },
-      {
-        "id": "j64",
-        "titulo": "Final Fantasy VII Remake",
-        "sinopse": "O clássico épico de RPG de ação reimaginado com combates rápidos e espetaculares.",
-        "dataLancamento": "2020-04-10",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1462040/header.jpg?t=1773895755",
-        "desenvolvedoraId": "d64",
-        "plataformas": [
-          "PC",
-          "PlayStation"
-        ],
-        "generos": [
-          "RPG",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.0
-      },
-      {
-        "id": "j65",
-        "titulo": "Sekiro: Shadows Die Twice",
-        "sinopse": "Torne-se o Lobo de Um Braço Só neste jogo de samurai furtivo de precisão.",
-        "dataLancamento": "2019-03-22",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/814380/header.jpg?t=1762888662",
-        "desenvolvedoraId": "d65",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox"
-        ],
-        "generos": [
-          "Ação",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.8
-      },
-      {
-        "id": "j66",
-        "titulo": "Outer Wilds",
-        "sinopse": "Explora os mistérios de um sistema solar apanhado num estranho loop temporal de 22 minutos.",
-        "dataLancamento": "2019-05-28",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/753640/header.jpg?t=1778608284",
-        "desenvolvedoraId": "d66",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Aventura",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.0
-      },
-      {
-        "id": "j67",
-        "titulo": "Age of Empires II: Definitive Edition",
-        "sinopse": "Celebre um dos maiores clássicos de RTS com os seus amigos e exércitos imensos.",
-        "dataLancamento": "2019-11-14",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/813780/header.jpg?t=1777577197",
-        "desenvolvedoraId": "d67",
-        "plataformas": [
-          "PC",
-          "Xbox"
-        ],
-        "generos": [
-          "Estratégia",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 5.6
-      },
-      {
-        "id": "j68",
-        "titulo": "Demon's Souls",
-        "sinopse": "Um conto de trevas, neblina e monstros num remake majestoso de um verdadeiro clássico.",
-        "dataLancamento": "2020-11-12",
-        "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.api.playstation.com%2Fvulcan%2Fimg%2Frnd%2F202011%2F1716%2FzN2mjiH0WNTXwfcbRTtxyeLI.jpg&f=1&nofb=1&ipt=cd0de8292fe60494ba382fa549c172b18253d63b7cc466cdf7bf264d518e405c",
-        "desenvolvedoraId": "d68",
-        "plataformas": [
-          "PlayStation 5"
-        ],
-        "generos": [
-          "RPG",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.4
-      },
-      {
-        "id": "j69",
-        "titulo": "Inscryption",
-        "sinopse": "Um estranho jogo de cartas mistura mistério, escape room e terror puro.",
-        "dataLancamento": "2021-10-19",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1092790/header.jpg?t=1777572925",
-        "desenvolvedoraId": "d69",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Cartas",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.4
-      },
-      {
-        "id": "j70",
-        "titulo": "Uncharted 4: A Thief's End",
-        "sinopse": "Nathan Drake regressa do retiro para a sua maior caça ao tesouro até à data.",
-        "dataLancamento": "2016-05-10",
-        "capa": "https://image.api.playstation.com/vulcan/img/rnd/202010/2620/eIO6Ka26JChNo8KaFi7wON4L.jpg",
-        "desenvolvedoraId": "d70",
-        "plataformas": [
-          "PlayStation 4",
-          "PC"
-        ],
-        "generos": [
-          "Ação",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.6
-      },
-      {
-        "id": "j71",
-        "titulo": "Cuphead",
-        "sinopse": "Corre e atira num jogo clássico de ação e plataforma fortemente inspirado por desenhos de 1930.",
-        "dataLancamento": "2017-09-29",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg?t=1709068852",
-        "desenvolvedoraId": "d71",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Ação",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.0
-      },
-      {
-        "id": "j72",
-        "titulo": "Death Stranding",
-        "sinopse": "Carrega o fardo para voltar a ligar um mundo destruído através de ligações com os outros.",
-        "dataLancamento": "2019-11-08",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1850570/header.jpg?t=1773400635",
-        "desenvolvedoraId": "d72",
-        "plataformas": [
-          "PC",
-          "PlayStation"
-        ],
-        "generos": [
-          "Ação",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.9
-      },
-      {
-        "id": "j73",
-        "titulo": "Resident Evil 2 Remake",
-        "sinopse": "Sobrevive e tenta escapar a Raccoon City num conto assustador cheio de perigo real.",
-        "dataLancamento": "2019-01-25",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/883710/header.jpg?t=1768954831",
-        "desenvolvedoraId": "d73",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox"
-        ],
-        "generos": [
-          "Terror",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.4
-      },
-      {
-        "id": "j74",
-        "titulo": "Super Mario World",
-        "sinopse": "Viaja para a Dinosaur Land neste épico clássico e icónico título de platforms da SNES.",
-        "dataLancamento": "1990-11-21",
-        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/super_nintendo_5/H2x1_SNES_SuperMarioWorld.jpg",
-        "desenvolvedoraId": "d74",
-        "plataformas": [
-          "SNES"
-        ],
-        "generos": [
-          "Plataforma",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.6
-      },
-      {
-        "id": "j75",
-        "titulo": "Street Fighter II",
-        "sinopse": "O jogo que começou uma revolução no mundo dos videojogos na vertente do combate.",
-        "dataLancamento": "1991-02-06",
-        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_UltraStreetFighter2TheFinalChallengers_image600w.jpg",
-        "desenvolvedoraId": "d75",
-        "plataformas": [
-          "Arcade",
-          "SNES"
-        ],
-        "generos": [
-          "Luta",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.0
-      },
-      {
-        "id": "j76",
-        "titulo": "Tetris",
-        "sinopse": "O puzzle definitivo que definiu uma série de quebra-cabeças icónicos e rápidos de apanhar.",
-        "dataLancamento": "1984-06-06",
-        "capa": "https://www.designyourway.net/blog/wp-content/uploads/2024/11/Tetris-Logo-featured.jpg",
-        "desenvolvedoraId": "d76",
-        "plataformas": [
-          "Tudo"
-        ],
-        "generos": [
-          "Puzzle",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.7
-      },
-      {
-        "id": "j77",
-        "titulo": "Doom (1993)",
-        "sinopse": "Destrói os piores demónios de Marte no avô de todos os jogos de tiro.",
-        "dataLancamento": "1993-12-10",
-        "capa": "https://assets.nuuvem.com/image/upload/t_product_sharing_banner/v1/products/557dbb0069702d0a9ccb6600/sharing_images/kfupx48auoz29ejhzidc.jpg",
-        "desenvolvedoraId": "d77",
-        "plataformas": [
-          "Tudo"
-        ],
-        "generos": [
-          "Tiro",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.4
-      },
-      {
-        "id": "j78",
-        "titulo": "BioShock",
-        "sinopse": "Desce nas profundezas sob as ondas num conto inesquecível do utópico e destruído Rapture.",
-        "dataLancamento": "2007-08-21",
-        "capa": "https://cdn2.unrealengine.com/egs-bioshockthecollection-massmediagames-s3-2560x1440-ac3cc1945d89.jpg",
-        "desenvolvedoraId": "d78",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox"
-        ],
-        "generos": [
-          "Tiro",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.6
-      },
-      {
-        "id": "j79",
-        "titulo": "Mortal Kombat 11",
-        "sinopse": "Desfrute do combate violento, combos brutais e Fatalities cheios de sangue como nunca antes.",
-        "dataLancamento": "2019-04-23",
-        "capa": "https://cdn.awsli.com.br/800x800/1041/1041512/produto/144238140/mortal-kombat-11---standard-edition---pc-c-digo-digital-rstmfucfbg.jpg",
-        "desenvolvedoraId": "d79",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox",
-          "Switch"
-        ],
-        "generos": [
-          "Luta",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.8
-      },
-      {
-        "id": "j80",
-        "titulo": "The Legend of Zelda: Ocarina of Time",
-        "sinopse": "Um épico imortal sobre heróis, o tempo, e a bravura nas vastas terras de Hyrule.",
-        "dataLancamento": "1998-11-21",
-        "capa": "https://m.media-amazon.com/images/I/61+6b-FXwgL.jpg",
-        "desenvolvedoraId": "d80",
-        "plataformas": [
-          "Nintendo 64"
-        ],
-        "generos": [
-          "Aventura",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.5
-      },
-      {
-        "id": "j81",
-        "titulo": "Pac-Man",
-        "sinopse": "Foge e devora pontos brancos sem descanso pelo labirinto e apanha bónus.",
-        "dataLancamento": "1980-05-22",
-        "capa": "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_auto/www.fizzcreations.com/wp-content/uploads/2020/01/PAC-MAN-Banner.jpg",
-        "desenvolvedoraId": "d81",
-        "plataformas": [
-          "Arcade"
-        ],
-        "generos": [
-          "Arcade",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.4
-      },
-      {
-        "id": "j82",
-        "titulo": "Metal Gear Solid",
-        "sinopse": "A tua missão é a infiltração completa num perigoso terreno terrorista sem seres apanhado.",
-        "dataLancamento": "1998-09-03",
-        "capa": "https://i.ebayimg.com/images/g/Jh4AAOSw5m5kRznp/s-l400.jpg",
-        "desenvolvedoraId": "d82",
-        "plataformas": [
-          "PlayStation"
-        ],
-        "generos": [
-          "Infiltração",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.7
-      },
-      {
-        "id": "j83",
-        "titulo": "Diablo II",
-        "sinopse": "Um grande hack and slash que definiu as pedras de todo um género sombrio e violento.",
-        "dataLancamento": "2000-06-29",
-        "capa": "https://ovicio.com.br/wp-content/uploads/diablo-2_zfu2.jpg",
-        "desenvolvedoraId": "d83",
-        "plataformas": [
-          "PC"
-        ],
-        "generos": [
-          "RPG",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.5
-      },
-      {
-        "id": "j84",
-        "titulo": "Halo: Combat Evolved",
-        "sinopse": "Começa a lendária história de Master Chief onde exploras um anel mortal e misterioso no espaço.",
-        "dataLancamento": "2001-11-15",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2806050/30d8542d35d7919b34e5f5dbe955d04c3f99e6da/header.jpg?t=1761337703",
-        "desenvolvedoraId": "d84",
-        "plataformas": [
-          "Xbox",
-          "PC"
-        ],
-        "generos": [
-          "Tiro",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 6.0
-      },
-      {
-        "id": "j85",
-        "titulo": "Star Wars Jedi: Survivor",
-        "sinopse": "A história de Cal Kestis continua neste épico jogo de ação e aventura em terceira pessoa focado na narrativa.",
-        "dataLancamento": "2023-04-28",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1774580/capsule_616x353.jpg",
-        "desenvolvedoraId": "d110",
-        "plataformas": [
-          "PlayStation 5",
-          "Xbox Series X/S",
-          "PC"
-        ],
-        "generos": [
-          "Ação",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.0
-      },
-      {
-        "id": "j86",
-        "titulo": "Silent Hill 2",
-        "sinopse": "Explora o nevoeiro sombrio enquanto resolves perigosos traumas num conto de fadas terrível.",
-        "dataLancamento": "2001-09-24",
-        "capa": "https://tm.ibxk.com.br/2023/01/05/05153148736340.jpg?ims=1200x675",
-        "desenvolvedoraId": "d86",
-        "plataformas": [
-          "PlayStation 2",
-          "PC"
-        ],
-        "generos": [
-          "Terror",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.6
-      },
-      {
-        "id": "j87",
-        "titulo": "World of Warcraft",
-        "sinopse": "Dá os primeiros passos em Azeroth e molda as alianças mais memoráveis de sempre num MMO.",
-        "dataLancamento": "2004-11-23",
-        "capa": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2024/10/world-of-warcraft-logo-over-20th-anniversary-key-art.jpg?w=1600&h=900&fit=crop",
-        "desenvolvedoraId": "d87",
-        "plataformas": [
-          "PC"
-        ],
-        "generos": [
-          "MMO",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 7.1
-      },
-      {
-        "id": "j88",
-        "titulo": "Shadow of the Colossus",
-        "sinopse": "Caça montanhas vivas e mergulha numa misteriosa arte visual sombria sobre redenção.",
-        "dataLancamento": "2005-10-18",
-        "capa": "https://i0.wp.com/nerdinterior.com.br/wp-content/uploads/2018/03/Shadow2.png?fit=1600%2C900&ssl=1",
-        "desenvolvedoraId": "d88",
-        "plataformas": [
-          "PlayStation 2"
-        ],
-        "generos": [
-          "Ação",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.5
-      },
-      {
-        "id": "j89",
-        "titulo": "Super Metroid",
-        "sinopse": "Sente o terror isolado do espaço em profundas mecânicas metroidvania no Zebes.",
-        "dataLancamento": "1994-03-19",
-        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/super_nintendo_5/H2x1_SNES_SuperMetroid_image1280w.jpg",
-        "desenvolvedoraId": "d89",
-        "plataformas": [
-          "SNES"
-        ],
-        "generos": [
-          "Metroidvania",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 6.8
-      },
-      {
-        "id": "j90",
-        "titulo": "Chrono Trigger",
-        "sinopse": "A viagem no tempo ganha vida como nunca ao combater o monstruoso apocalipse futuro do Lavos.",
-        "dataLancamento": "1995-03-11",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/613830/capsule_616x353.jpg?t=1775725860",
-        "desenvolvedoraId": "d90",
-        "plataformas": [
-          "SNES"
-        ],
-        "generos": [
-          "RPG",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 6.5
-      },
-      {
-        "id": "j91",
-        "titulo": "Castlevania: Symphony of the Night",
-        "sinopse": "Aventuras nos domínios góticos explorando cada secção sombria e destruindo os morcegos.",
-        "dataLancamento": "1997-03-20",
-        "capa": "https://media.idownloadblog.com/wp-content/uploads/2020/03/Castlevania-Symphony-of-the-Night-teaser-001.jpg",
-        "desenvolvedoraId": "d91",
-        "plataformas": [
-          "PlayStation"
-        ],
-        "generos": [
-          "Metroidvania",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.5
-      },
-      {
-        "id": "j92",
-        "titulo": "StarCraft",
-        "sinopse": "O maior teste mental cósmico, reunindo Zergs e mais facções clássicas à velocidade da luz.",
-        "dataLancamento": "1998-03-31",
-        "capa": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/ci/CIGT53U8ZP6M1509744317189.jpg",
-        "desenvolvedoraId": "d92",
-        "plataformas": [
-          "PC"
-        ],
-        "generos": [
-          "Estratégia",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.1
-      },
-      {
-        "id": "j93",
-        "titulo": "Fallout: New Vegas",
-        "sinopse": "Uma aventura radioativa pelo impiedoso deserto com facções para todo o lado.",
-        "dataLancamento": "2010-10-19",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/22380/header.jpg?t=1765992876",
-        "desenvolvedoraId": "d93",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox"
-        ],
-        "generos": [
-          "RPG",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.3
-      },
-      {
-        "id": "j94",
-        "titulo": "GoldenEye 007",
-        "sinopse": "Junta amigos de ecrã dividido num caótico jogo com a licença do maior dos espiões do mundo.",
-        "dataLancamento": "1997-08-25",
-        "capa": "https://ktla.com/wp-content/uploads/sites/4/2022/09/Rare53cd6427-2f6d-4ccc-a37c-3e6120f8b718.jpg?strip=1",
-        "desenvolvedoraId": "d94",
-        "plataformas": [
-          "Nintendo 64"
-        ],
-        "generos": [
-          "Tiro",
-          "Multiplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 2.5
-      },
-      {
-        "id": "j95",
-        "titulo": "The Legend of Zelda: A Link to the Past",
-        "sinopse": "Uma exploração em formato 2D para proteger Hyrule das maiores amálgamas do Ganon.",
-        "dataLancamento": "1991-11-21",
-        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/super_nintendo_5/H2x1_SNES_TheLegendOfZeldaALinkToThePast.jpg",
-        "desenvolvedoraId": "d95",
-        "plataformas": [
-          "SNES"
-        ],
-        "generos": [
-          "Aventura",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.3
-      },
-      {
-        "id": "j96",
-        "titulo": "Super Mario 64",
-        "sinopse": "O avô e a introdução oficial e tridimensional das caóticas plataformas onde todos se maravilharam com os saltos.",
-        "dataLancamento": "1996-06-23",
-        "capa": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3abd9d7a-a56a-403c-aca5-22b4e5cf203f/diamq71-53691cb9-14f6-41a1-96ba-209ff13feef9.jpg/v1/fill/w_1280,h_720,q_75,strp/super_mario_64_banner__by_zackfire456_diamq71-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mLzNhYmQ5ZDdhLWE1NmEtNDAzYy1hY2E1LTIyYjRlNWNmMjAzZi9kaWFtcTcxLTUzNjkxY2I5LTE0ZjYtNDFhMS05NmJhLTIwOWZmMTNmZWVmOS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.rLtprmn08WlR5uKsunG3AGT4PGSGzq5NH3So8RthkW8",
-        "desenvolvedoraId": "d96",
-        "plataformas": [
-          "Nintendo 64"
-        ],
-        "generos": [
-          "Plataforma",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.5
-      },
-      {
-        "id": "j97",
-        "titulo": "Mass Effect 2",
-        "sinopse": "Tudo para criar os laços perfeitos da tua enorme tripulação estelar rumo a missões mortíferas e galácticas.",
-        "dataLancamento": "2010-01-26",
-        "capa": "https://cdn1.epicgames.com/spt-assets/d63910571c9e4ea0aae84da15511bf89/mass-effect-2-digital-deluxe-edition-yviy5.jpg",
-        "desenvolvedoraId": "d97",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox"
-        ],
-        "generos": [
-          "RPG",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "gratuito",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 5.6
-      },
-      {
-        "id": "j98",
-        "titulo": "Red Dead Redemption",
-        "sinopse": "Tira do mapa criminosos no perigoso pôr do sol fronteiriço e no último alento cruel do faroeste.",
-        "dataLancamento": "2010-05-18",
-        "capa": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch2/70010000112715/23a5df3a860a49ea3d47c037362bed20447ea5ac5ff09c8135f6484db8902a4e",
-        "desenvolvedoraId": "d98",
-        "plataformas": [
-          "PlayStation 3",
-          "Xbox 360"
-        ],
-        "generos": [
-          "Ação",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.3
-      },
-      {
-        "id": "j99",
-        "titulo": "Batman: Arkham City",
-        "sinopse": "Sente e paira pelos ares para sentires finalmente no pulso o brutal mundo na pele do morcego da DC.",
-        "dataLancamento": "2011-10-18",
-        "capa": "https://wallpapers.com/images/hd/batman-arkham-city-poster-4k-llu2flr1ija3m09q.jpg",
-        "desenvolvedoraId": "d99",
-        "plataformas": [
-          "PC",
-          "PlayStation",
-          "Xbox"
-        ],
-        "generos": [
-          "Ação",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.5
-      },
-      {
-        "id": "j100",
-        "titulo": "Portal",
-        "sinopse": "A promessa é e sempre será apenas sobre a existência ilusória de um bolo.",
-        "dataLancamento": "2007-10-10",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/400/header.jpg?t=1745368554",
-        "desenvolvedoraId": "d100",
-        "plataformas": [
-          "PC",
-          "Xbox"
-        ],
-        "generos": [
-          "Puzzle",
-          "Singleplayer"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.2
-      },
-      {
-        "id": "j101",
-        "titulo": "The Last of Us Part II",
-        "sinopse": "Cinco anos após sua perigosa jornada, Ellie e Joel se estabeleceram em Wyoming. Quando um evento violento interrompe essa paz, Ellie embarca em uma jornada implacável para fazer justiça e encontrar encerramento.",
-        "dataLancamento": "2020-06-19",
-        "capa": "https://image.api.playstation.com/vulcan/ap/rnd/202312/0117/da083fa5e19458dd750aa8a6ea30ba10bac6f87074693df5.jpg",
-        "desenvolvedoraId": "d101",
-        "plataformas": [
-          "PlayStation 4",
-          "PlayStation 5"
-        ],
-        "generos": [
-          "Ação",
-          "Sobrevivência",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.6
-      },
-      {
-        "id": "j102",
-        "titulo": "Clair Obscure: Expedition 33",
-        "sinopse": "Uma vez por ano, a Pintora acorda e pinta um número em seu monólito. Todos daquela idade desaparecem. A Expedição 33 parte em uma missão suicida para destruir a Pintora para sempre.",
-        "dataLancamento": "2025-12-31",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/be3305b02d4db0dffa3458537118423bf2792d7e/header.jpg?t=1773676780",
-        "desenvolvedoraId": "d102",
-        "plataformas": [
-          "PC",
-          "PlayStation 5",
-          "Xbox Series X/S"
-        ],
-        "generos": [
-          "RPG",
-          "Turnos",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.9
-      },
-      {
-        "id": "j103",
-        "titulo": "Pro Evolution Soccer 2011",
-        "sinopse": "Trazendo um nível sem precedentes de controle e realismo, o PES 2011 eleva a série com novas animações, liberdade total de passe e a aguardada introdução da Copa Libertadores da América.",
-        "dataLancamento": "2010-09-30",
-        "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffs-prod-cdn.nintendo-europe.com%2Fmedia%2Fimages%2F10_share_images%2Fgames_15%2Fwii_24%2FSI_Wii_ProEvolutionSoccer2011_image1600w.jpg&f=1&nofb=1&ipt=922c199fc36ca73ec3ec9c63a9988ebd31b527c9b2795f04e6892e58de381c63",
-        "desenvolvedoraId": "d103",
-        "plataformas": [
-          "PlayStation 3",
-          "Xbox 360",
-          "PC",
-          "PlayStation 2",
-          "Wii"
-        ],
-        "generos": [
-          "Esportes",
-          "Simulação"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.9
-      },
-      {
-        "id": "j104",
-        "titulo": "Hollow Knight: Silksong",
-        "sinopse": "Jogue como Hornet, a princesa protetora de Hallownest, e aventure-se por um reino totalmente novo regido por seda e música para descobrir segredos ancestrais.",
-        "dataLancamento": "2025-12-31",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736",
-        "desenvolvedoraId": "d104",
-        "plataformas": [
-          "PC",
-          "Switch",
-          "PlayStation 5",
-          "Xbox Series X/S"
-        ],
-        "generos": [
-          "Metroidvania",
-          "Ação",
-          "Indie"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.7
-      },
-      {
-        "id": "j105",
-        "titulo": "FIFA 15",
-        "sinopse": "Sinta o jogo! Com inteligência emocional e reações autênticas dos jogadores, FIFA 15 oferece o futebol mais dinâmico e realista da sua geração de consoles.",
-        "dataLancamento": "2014-09-23",
-        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_FIFA15_image1600w.jpg",
-        "desenvolvedoraId": "d105",
-        "plataformas": [
-          "PlayStation 3",
-          "PlayStation 4",
-          "Xbox 360",
-          "Xbox One",
-          "PC"
-        ],
-        "generos": [
-          "Esportes",
-          "Simulação"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.2
-      },
-      {
-        "id": "j106",
-        "titulo": "Grand Theft Auto: San Andreas",
-        "sinopse": "Início dos anos 90. Após sua mãe ser assassinada, Carl 'CJ' Johnson volta para casa em Los Santos e é forçado a cruzar o estado de San Andreas para salvar sua família.",
-        "dataLancamento": "2004-10-26",
-        "capa": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2F3%2Fc%2Fb%2F1120096-large-grand-theft-auto-san-andreas-wallpapers-1920x1200-meizu.jpg&f=1&nofb=1&ipt=c6695ed234242ad6bace4e493d1d03a9dd07388569f44164135ef36c8e069845",
-        "desenvolvedoraId": "d106",
-        "plataformas": [
-          "PlayStation 2",
-          "PC",
-          "Xbox"
-        ],
-        "generos": [
-          "Mundo Aberto",
-          "Ação",
-          "Aventura"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.5
-      },
-      {
-        "id": "j107",
-        "titulo": "Overcooked!",
-        "sinopse": "Um jogo de culinária caótico e cooperativo para até quatro jogadores. Trabalhem juntos para preparar e cozinhar pedidos antes que os clientes saiam furiosos do restaurante.",
-        "dataLancamento": "2016-08-02",
-        "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/448510/header.jpg?t=1778527917",
-        "desenvolvedoraId": "d107",
-        "plataformas": [
-          "PC",
-          "PlayStation 4",
-          "Xbox One",
-          "Switch"
-        ],
-        "generos": [
-          "Casual",
-          "Co-op",
-          "Festa"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.0
-      },
-      {
-        "id": "j108",
-        "titulo": "Assassin's Creed",
-        "sinopse": "O ano é 1191 d.C. e a Terceira Cruzada está destruindo a Terra Santa. Você é Altaïr, um Mestre Assassino enviado para matar os líderes corruptos que lucram com a guerra.",
-        "dataLancamento": "2007-11-13",
-        "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15100/header.jpg?t=1602600542",
-        "desenvolvedoraId": "d108",
-        "plataformas": [
-          "PlayStation 3",
-          "Xbox 360",
-          "PC"
-        ],
-        "generos": [
-          "Ação",
-          "Aventura",
-          "Furtividade"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.4
-      },
-      {
-        "id": "j109",
-        "titulo": "Pokémon Red Version",
-        "sinopse": "A jornada para se tornar o maior treinador Pokémon começa agora! Capture, treine, evolua monstros e duele contra líderes de ginásio para vencer a Elite Four.",
-        "dataLancamento": "1996-02-27",
-        "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/game_boy_4/H2x1_GB_PokemonRed_enGB.jpg",
-        "desenvolvedoraId": "d109",
-        "plataformas": [
-          "Game Boy"
-        ],
-        "generos": [
-          "RPG"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 9.2
-      },
-      {
-        "id": "j110",
-        "titulo": "Far Cry 3",
-        "sinopse": "Preso em uma ilha tropical sem lei governada pela pirataria e a loucura de Vaas, você deve lutar por sua sobrevivência e resgatar seus amigos.",
-        "dataLancamento": "2012-11-29",
-        "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.unrealengine.com%2FDiesel%2Fproductv2%2Ffar-cry-3%2Fdeluxe-edition%2FFC3-dlx-2560x1440-4fa7f35072ee54993b47cf163c2f4f0fd7b1759a.jpg&f=1&nofb=1&ipt=cee1638bf34848ea3de35702681fdc844ed86efb071db75e5e4a42c1a5a392a1",
-        "desenvolvedoraId": "d110",
-        "plataformas": [
-          "PlayStation 3",
-          "Xbox 360",
-          "PC"
-        ],
-        "generos": [
-          "Ação",
-          "Mundo Aberto",
-          "Tiro"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.8
-      },
-      {
-        "id": "j111",
-        "titulo": "Bomberman",
-        "sinopse": "Coloque bombas, destrua paredes e elimine os seus oponentes no labirinto frenético e cheio de itens deste clássico atemporal que definiu o modo multiplayer explosivo.",
-        "dataLancamento": "1983-07-01",
-        "capa": "https://www.konami.com/games/bomberman/r/s/img/thumb_g4_preorder.jpg",
-        "desenvolvedoraId": "d111",
-        "plataformas": [
-          "Arcade",
-          "NES",
-          "PC",
-          "Multiplataforma"
-        ],
-        "generos": [
-          "Ação",
-          "Labirinto",
-          "Arcade"
-        ],
-        "modeloNegocio": "pago",
-        "outrasMidias": [
-          "link-1",
-          "link-2"
-        ],
-        "notaMedia": 8.5
-      }
-    ],
+    {
+      "id": "j1",
+      "titulo": "The Last of Us Part I",
+      "sinopse": "Em uma civilização devastada...",
+      "dataLancamento": "2022-09-02",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/capsule_616x353.jpg",
+      "desenvolvedoraId": "d1",
+      "plataformas": ["PlayStation 5", "PC"],
+      "generos": ["Ação", "Sobrevivência"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.9
+    },
+    {
+      "id": "j2",
+      "titulo": "Red Dead Redemption 2",
+      "sinopse": "Estados Unidos, 1899. O fim da era do velho oeste começou...",
+      "dataLancamento": "2018-10-26",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_616x353.jpg",
+      "desenvolvedoraId": "d2",
+      "plataformas": ["PlayStation 4", "Xbox One", "PC"],
+      "generos": ["Mundo Aberto", "Ação", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.8
+    },
+    {
+      "id": "j3",
+      "titulo": "The Witcher 3: Wild Hunt",
+      "sinopse": "Você é Geralt de Rívia, um mercenário matador de monstros...",
+      "dataLancamento": "2015-05-18",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/capsule_616x353.jpg",
+      "desenvolvedoraId": "d3",
+      "plataformas": ["PlayStation 4", "Xbox One", "PC", "Switch"],
+      "generos": ["RPG", "Mundo Aberto"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.6
+    },
+    {
+      "id": "j4",
+      "titulo": "God of War",
+      "sinopse": "Com sua vingança contra os deuses do Olimpo no passado...",
+      "dataLancamento": "2018-04-20",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/capsule_616x353.jpg",
+      "desenvolvedoraId": "d4",
+      "plataformas": ["PlayStation 4", "PC"],
+      "generos": ["Ação", "Aventura", "Hack and Slash"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.8
+    },
+    {
+      "id": "j5",
+      "titulo": "Hollow Knight",
+      "sinopse": "Forje seu próprio caminho em Hollow Knight! Uma aventura épica...",
+      "dataLancamento": "2017-02-24",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/capsule_616x353.jpg",
+      "desenvolvedoraId": "d5",
+      "plataformas": ["PC", "Switch", "PlayStation 4", "Xbox One"],
+      "generos": ["Metroidvania", "Ação", "Indie"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.8
+    },
+    {
+      "id": "j6",
+      "titulo": "Minecraft",
+      "sinopse": "Explore mundos gerados aleatoriamente e construa coisas incríveis.",
+      "dataLancamento": "2011-11-18",
+      "capa": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Minecraft_JavaBedrock_Net_1170x500.jpg",
+      "desenvolvedoraId": "d6",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch", "Mobile"],
+      "generos": ["Sandbox", "Sobrevivência"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 10.0
+    },
+    {
+      "id": "j7",
+      "titulo": "Grand Theft Auto V",
+      "sinopse": "Um jovem traficante, um assaltante de bancos e um psicopata...",
+      "dataLancamento": "2013-09-17",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/header.jpg?t=1765479644",
+      "desenvolvedoraId": "d7",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["Ação", "Mundo Aberto"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.9
+    },
+    {
+      "id": "j8",
+      "titulo": "Fortnite",
+      "sinopse": "Construa, lute e sobreviva no Battle Royale mais famoso do mundo.",
+      "dataLancamento": "2017-07-25",
+      "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frggames.com.br%2Fwp-content%2Fuploads%2F2023%2F02%2Ffortinite.jpg&f=1&nofb=1&ipt=5e97e34f8a69db3ccd7a3f46245b10d0469e587bca716e607e836ee69a32f7c9",
+      "desenvolvedoraId": "d8",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch", "Mobile"],
+      "generos": ["Battle Royale", "Tiro"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.8
+    },
+    {
+      "id": "j9",
+      "titulo": "Terraria",
+      "sinopse": "Cave, lute, explore, construa! Nada é impossível neste jogo de aventura.",
+      "dataLancamento": "2011-05-16",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1769844435",
+      "desenvolvedoraId": "d9",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch", "Mobile"],
+      "generos": ["Sandbox", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.0
+    },
+    {
+      "id": "j10",
+      "titulo": "The Legend of Zelda: Breath of the Wild",
+      "sinopse": "Esqueça tudo o que sabe sobre os jogos The Legend of Zelda.",
+      "dataLancamento": "2017-03-03",
+      "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.nintendo.com%2Fimage%2Fupload%2Ff_auto%2Fq_auto%2Fdpr_1.5%2FMarketing%2F68272fb37fa56918996af8bfceddbc4223c2746af7c325b2067f0c62c65ef8c0%2Fpmp_cy802h%2F2-trailer%2Fvideo-thumbnail-2x&f=1&nofb=1&ipt=5e1d14db7d1bb6d05e99b3629b57e7d3a508cc3e060fd59bd861ca6c39a0e773",
+      "desenvolvedoraId": "d10",
+      "plataformas": ["Switch"],
+      "generos": ["Aventura", "RPG"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.4
+    },
+    {
+      "id": "j11",
+      "titulo": "Elden Ring",
+      "sinopse": "Levante-se, Maculado, e seja guiado pela graça para portar o poder do Elden Ring.",
+      "dataLancamento": "2022-02-25",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1767883716",
+      "desenvolvedoraId": "d11",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["RPG", "Soulslike"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.1
+    },
+    {
+      "id": "j12",
+      "titulo": "The Elder Scrolls V: Skyrim",
+      "sinopse": "Vencedor de mais de 200 prêmios de Jogo do Ano, Skyrim reimagina o épico de fantasia.",
+      "dataLancamento": "2011-11-11",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg?t=1753715778",
+      "desenvolvedoraId": "d12",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["RPG", "Mundo Aberto"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.0
+    },
+    {
+      "id": "j13",
+      "titulo": "Baldur's Gate 3",
+      "sinopse": "Reúna seu grupo e retorne a Forgotten Realms em uma história de amizade e traição.",
+      "dataLancamento": "2023-08-03",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040",
+      "desenvolvedoraId": "d13",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["RPG", "Tático"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.4
+    },
+    {
+      "id": "j14",
+      "titulo": "Dark Souls",
+      "sinopse": "Prepare-se para morrer neste RPG de ação que definiu uma geração.",
+      "dataLancamento": "2011-09-22",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/374320/header.jpg?t=1748630784",
+      "desenvolvedoraId": "d14",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["RPG", "Soulslike"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.4
+    },
+    {
+      "id": "j15",
+      "titulo": "Cyberpunk 2077",
+      "sinopse": "Um RPG de ação e aventura em mundo aberto que se passa em Night City.",
+      "dataLancamento": "2020-12-10",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1769690377",
+      "desenvolvedoraId": "d15",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["RPG", "Ficção Científica"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.5
+    },
+    {
+      "id": "j16",
+      "titulo": "Counter-Strike 2",
+      "sinopse": "Por mais de duas décadas, o Counter-Strike ofereceu uma experiência competitiva de elite.",
+      "dataLancamento": "2023-09-27",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/header.jpg?t=1749053861",
+      "desenvolvedoraId": "d16",
+      "plataformas": ["PC"],
+      "generos": ["Tiro", "FPS", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.1
+    },
+    {
+      "id": "j17",
+      "titulo": "League of Legends",
+      "sinopse": "Forme sua equipe e destrua a base inimiga neste MOBA lendário.",
+      "dataLancamento": "2009-10-27",
+      "capa": "https://i0.wp.com/drawyourweapon.com/wp-content/uploads/2020/11/1_nb1P8J-TXW8D-7yqznrDXw.jpeg?resize=1300%2C731&ssl=1",
+      "desenvolvedoraId": "d17",
+      "plataformas": ["PC"],
+      "generos": ["MOBA", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.0
+    },
+    {
+      "id": "j18",
+      "titulo": "Valorant",
+      "sinopse": "Misture seu estilo e experiência em um cenário global e competitivo.",
+      "dataLancamento": "2020-06-02",
+      "capa": "https://www.riotgames.com/darkroom/1200/1dbd7211e78ce5faa7a8af9d10afad47:2b5979e3922758399ba389561e797919/ps-f2p-val-console-launch-16x9.jpg",
+      "desenvolvedoraId": "d18",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["Tiro", "FPS", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.2
+    },
+    {
+      "id": "j19",
+      "titulo": "Call of Duty: Warzone",
+      "sinopse": "Bem-vindo ao Warzone, a enorme arena de combate gratuita.",
+      "dataLancamento": "2020-03-10",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1962663/f25cc927ec7d42578ffbf2162d3367a968da1594/header_alt_assets_17.jpg?t=1778886707",
+      "desenvolvedoraId": "d19",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["Battle Royale", "FPS"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.4
+    },
+    {
+      "id": "j20",
+      "titulo": "Overwatch 2",
+      "sinopse": "Junte-se à luta por um futuro de esperança.",
+      "dataLancamento": "2022-10-04",
+      "capa": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2024/08/overwatch-2-season-12-banner.jpg",
+      "desenvolvedoraId": "d20",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["Tiro", "Herói", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.9
+    },
+    {
+      "id": "j21",
+      "titulo": "Apex Legends",
+      "sinopse": "Domine um elenco crescente de lendas poderosas.",
+      "dataLancamento": "2019-02-04",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172470/0bd74245b869287a2dc7f682e6013f7ed08d98e3/header.jpg?t=1778502442",
+      "desenvolvedoraId": "d21",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["Battle Royale", "Tiro"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.9
+    },
+    {
+      "id": "j22",
+      "titulo": "Dota 2",
+      "sinopse": "Milhões de jogadores ao redor do mundo entram na batalha como um dos mais de cem heróis.",
+      "dataLancamento": "2013-07-09",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/570/header.jpg?t=1769535998",
+      "desenvolvedoraId": "d22",
+      "plataformas": ["PC"],
+      "generos": ["MOBA", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.3
+    },
+    {
+      "id": "j23",
+      "titulo": "Rainbow Six Siege",
+      "sinopse": "Domine a arte da destruição e o uso de dispositivos.",
+      "dataLancamento": "2015-12-01",
+      "capa": "https://images.steamusercontent.com/ugc/789730529899117879/12EEBFEF9FC806D87577B75645916EAB4D0497DE/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+      "desenvolvedoraId": "d23",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["Tiro Tático", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.7
+    },
+    {
+      "id": "j24",
+      "titulo": "Destiny 2",
+      "sinopse": "Mergulhe no mundo de Destiny 2 para explorar os mistérios do sistema solar.",
+      "dataLancamento": "2017-09-06",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1085660/header_brazilian.jpg?t=1765904462",
+      "desenvolvedoraId": "d24",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["Looter Shooter", "MMO"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 6.6
+    },
+    {
+      "id": "j25",
+      "titulo": "Rocket League",
+      "sinopse": "Futebol encontra condução numa sequela baseada em física.",
+      "dataLancamento": "2015-07-07",
+      "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_RocketLeague_S16_image1600w.jpg",
+      "desenvolvedoraId": "d25",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["Esportes", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.9
+    },
+    {
+      "id": "j26",
+      "titulo": "PUBG: Battlegrounds",
+      "sinopse": "Pouse em locais estratégicos, saqueie armas e suprimentos.",
+      "dataLancamento": "2017-12-20",
+      "capa": "https://cdn1.epicgames.com/spt-assets/53ec4985296b4facbe3a8d8d019afba9/pubg-battlegrounds-19vwb.jpg?resize=1&w=480&h=270&quality=medium",
+      "desenvolvedoraId": "d26",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["Battle Royale", "Tiro"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.2
+    },
+    {
+      "id": "j27",
+      "titulo": "Left 4 Dead 2",
+      "sinopse": "Este jogo cooperativo de terror e ação leva você e seus amigos por cidades e pântanos.",
+      "dataLancamento": "2009-11-17",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/550/header.jpg?t=1772742214",
+      "desenvolvedoraId": "d27",
+      "plataformas": ["PC", "Xbox"],
+      "generos": ["Zumbis", "Tiro", "Co-op"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.4
+    },
+    {
+      "id": "j28",
+      "titulo": "Spider-Man 2",
+      "sinopse": "Os Homens-Aranha Peter Parker e Miles Morales enfrentam o teste definitivo.",
+      "dataLancamento": "2023-10-20",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/header.jpg?t=1763569811",
+      "desenvolvedoraId": "d28",
+      "plataformas": ["PlayStation 5"],
+      "generos": ["Ação", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.5
+    },
+    {
+      "id": "j29",
+      "titulo": "Ghost of Tsushima",
+      "sinopse": "Forje um novo caminho e trave uma guerra não convencional pela liberdade de Tsushima.",
+      "dataLancamento": "2020-07-17",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg?t=1763409398",
+      "desenvolvedoraId": "d29",
+      "plataformas": ["PC", "PlayStation"],
+      "generos": ["Ação", "Mundo Aberto"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.0
+    },
+    {
+      "id": "j30",
+      "titulo": "Horizon Zero Dawn",
+      "sinopse": "Aloy embarca em uma jornada para desvendar os mistérios da Terra governada por máquinas.",
+      "dataLancamento": "2017-02-28",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2561580/header.jpg?t=1750952943",
+      "desenvolvedoraId": "d30",
+      "plataformas": ["PC", "PlayStation"],
+      "generos": ["RPG", "Ação"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.0
+    },
+    {
+      "id": "j31",
+      "titulo": "Bloodborne",
+      "sinopse": "Enfrente seus pesadelos e procure respostas na antiga cidade de Yharnam.",
+      "dataLancamento": "2015-03-24",
+      "capa": "https://t2.tudocdn.net/593327?w=1920",
+      "desenvolvedoraId": "d31",
+      "plataformas": ["PlayStation 4"],
+      "generos": ["RPG", "Soulslike"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.1
+    },
+    {
+      "id": "j32",
+      "titulo": "Forza Horizon 5",
+      "sinopse": "A sua derradeira aventura Horizon o aguarda no México vibrante.",
+      "dataLancamento": "2021-11-09",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg?t=1746471508",
+      "desenvolvedoraId": "d32",
+      "plataformas": ["PC", "Xbox"],
+      "generos": ["Corrida", "Mundo Aberto"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.4
+    },
+    {
+      "id": "j33",
+      "titulo": "Sea of Thieves",
+      "sinopse": "Oferece a experiência essencial de pirata, desde navegar e lutar até explorar e saquear.",
+      "dataLancamento": "2018-03-20",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172620/header.jpg?t=1765448772",
+      "desenvolvedoraId": "d33",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["Aventura", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.8
+    },
+    {
+      "id": "j34",
+      "titulo": "Super Mario Odyssey",
+      "sinopse": "Embarque numa aventura cativante pelo mundo fora com Mario e o seu novo amigo, Cappy.",
+      "dataLancamento": "2017-10-27",
+      "capa": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000001130/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5",
+      "desenvolvedoraId": "d34",
+      "plataformas": ["Switch"],
+      "generos": ["Plataforma", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.2
+    },
+    {
+      "id": "j35",
+      "titulo": "Mario Kart 8 Deluxe",
+      "sinopse": "Aqueça os motores no Mario Kart mais definitivo de todos.",
+      "dataLancamento": "2017-04-28",
+      "capa": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000000153/de697f487a36d802dd9a5ff0341f717c8486221f2f1219b675af37aca63bc453",
+      "desenvolvedoraId": "d35",
+      "plataformas": ["Switch"],
+      "generos": ["Corrida", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.2
+    },
+    {
+      "id": "j36",
+      "titulo": "Super Smash Bros. Ultimate",
+      "sinopse": "Personagens icônicos se enfrentam na maior batalha de todas.",
+      "dataLancamento": "2018-12-07",
+      "capa": "https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000012332/ac4d1fc9824876ce756406f0525d50c57ded4b2a666f6dfe40a6ac5c3563fad9",
+      "desenvolvedoraId": "d36",
+      "plataformas": ["Switch"],
+      "generos": ["Luta", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.0
+    },
+    {
+      "id": "j37",
+      "titulo": "Zelda: Tears of the Kingdom",
+      "sinopse": "Uma aventura épica pelos céus e vastas terras de Hyrule.",
+      "dataLancamento": "2023-05-12",
+      "capa": "https://assets.nintendo.com/image/upload/c_limit,f_auto,h_300,q_auto,w_500/v1/store/software/switch/70010000063714/Video/posters/a6143e436f85d80109a43f47f95be32a4fc5fb698df6816799563e9530fb012c",
+      "desenvolvedoraId": "d37",
+      "plataformas": ["Switch"],
+      "generos": ["Aventura", "RPG"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.2
+    },
+    {
+      "id": "j38",
+      "titulo": "Stardew Valley",
+      "sinopse": "Você herdou a antiga fazenda de seu avô. Com ferramentas de segunda mão e algumas moedas...",
+      "dataLancamento": "2016-02-26",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1754692865",
+      "desenvolvedoraId": "d38",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch", "Mobile"],
+      "generos": ["Simulação", "RPG"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.0
+    },
+    {
+      "id": "j39",
+      "titulo": "Hades",
+      "sinopse": "Desafie o deus dos mortos enquanto você luta para sair do Submundo nesta masmorra roguelike.",
+      "dataLancamento": "2020-09-17",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1758127023",
+      "desenvolvedoraId": "d39",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["Roguelike", "Ação"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.8
+    },
+    {
+      "id": "j40",
+      "titulo": "Undertale",
+      "sinopse": "O RPG onde você não precisa matar ninguém.",
+      "dataLancamento": "2015-09-15",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg?t=1757349115",
+      "desenvolvedoraId": "d40",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["RPG", "Indie"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.9
+    },
+    {
+      "id": "j41",
+      "titulo": "Celeste",
+      "sinopse": "Ajude Madeline a sobreviver aos seus demônios internos em sua jornada.",
+      "dataLancamento": "2018-01-25",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg?t=1714089525",
+      "desenvolvedoraId": "d41",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["Plataforma", "Indie"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.0
+    },
+    {
+      "id": "j42",
+      "titulo": "Among Us",
+      "sinopse": "Um jogo de festa sobre trabalho em equipe e traição.",
+      "dataLancamento": "2018-06-15",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg?t=1757444903",
+      "desenvolvedoraId": "d42",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch", "Mobile"],
+      "generos": ["Dedução Social", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.3
+    },
+    {
+      "id": "j43",
+      "titulo": "Portal 2",
+      "sinopse": "O Portal 2 baseia-se na fórmula premiada de jogabilidade inovadora.",
+      "dataLancamento": "2011-04-18",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/620/header.jpg?t=1745363004",
+      "desenvolvedoraId": "d43",
+      "plataformas": ["PC", "Xbox", "Switch"],
+      "generos": ["Puzzle", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.0
+    },
+    {
+      "id": "j44",
+      "titulo": "Resident Evil 4 Remake",
+      "sinopse": "A sobrevivência é apenas o começo.",
+      "dataLancamento": "2023-03-24",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg?t=1772502922",
+      "desenvolvedoraId": "d44",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["Terror", "Ação", "Sobrevivência"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.1
+    },
+    {
+      "id": "j45",
+      "titulo": "It Takes Two",
+      "sinopse": "Embarque na jornada mais maluca de sua vida em It Takes Two.",
+      "dataLancamento": "2021-03-26",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/capsule_616x353.jpg?t=1777395376",
+      "desenvolvedoraId": "d45",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["Aventura", "Co-op"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.9
+    },
+    {
+      "id": "j46",
+      "titulo": "Halo Infinite",
+      "sinopse": "Quando toda esperança se perde, Master Chief está pronto para enfrentar o inimigo.",
+      "dataLancamento": "2021-12-08",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1708091/capsule_616x353.jpg?t=1763578010",
+      "desenvolvedoraId": "d46",
+      "plataformas": ["PC", "Xbox"],
+      "generos": ["Tiro", "FPS", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.5
+    },
+    {
+      "id": "j47",
+      "titulo": "Fallout 4",
+      "sinopse": "Como o único sobrevivente do Refúgio 111, você entra num mundo destruído pela guerra nuclear.",
+      "dataLancamento": "2015-11-10",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1764687456",
+      "desenvolvedoraId": "d47",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["RPG", "Ação", "Mundo Aberto"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.6
+    },
+    {
+      "id": "j48",
+      "titulo": "Mass Effect Legendary Edition",
+      "sinopse": "Reviva a lenda de Commander Shepard.",
+      "dataLancamento": "2021-05-14",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1328670/header.jpg?t=1777395134",
+      "desenvolvedoraId": "d48",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["RPG", "Ficção Científica"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 6.6
+    },
+    {
+      "id": "j49",
+      "titulo": "Persona 5 Royal",
+      "sinopse": "Prepare-se para uma experiência de RPG premiada nesta edição definitiva.",
+      "dataLancamento": "2019-10-31",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1687950/header.jpg?t=1763530018",
+      "desenvolvedoraId": "d49",
+      "plataformas": ["PC", "Xbox", "PlayStation", "Switch"],
+      "generos": ["JRPG", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 6.7
+    },
+    {
+      "id": "j50",
+      "titulo": "Monster Hunter: World",
+      "sinopse": "Enfrente monstros imensos em locais épicos.",
+      "dataLancamento": "2018-01-26",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg?t=1773328926",
+      "desenvolvedoraId": "d50",
+      "plataformas": ["PC", "Xbox", "PlayStation"],
+      "generos": ["RPG de Ação", "Co-op"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 5.3
+    },
+    {
+      "id": "j51",
+      "titulo": "Animal Crossing: New Horizons",
+      "sinopse": "Fuja para uma ilha deserta e crie o seu próprio paraíso enquanto explora e constrói.",
+      "dataLancamento": "2020-03-20",
+      "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_AnimalCrossingNewHorizons_image1600w.jpg",
+      "desenvolvedoraId": "d51",
+      "plataformas": ["Switch"],
+      "generos": ["Simulação Social", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 4.1
+    },
+    {
+      "id": "j52",
+      "titulo": "Garry's Mod",
+      "sinopse": "Um sandbox de física onde podes manipular e criar cenários malucos à tua vontade.",
+      "dataLancamento": "2006-11-29",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1776868682",
+      "desenvolvedoraId": "d52",
+      "plataformas": ["PC"],
+      "generos": ["Sandbox", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.9
+    },
+    {
+      "id": "j53",
+      "titulo": "Slay the Spire",
+      "sinopse": "Um jogo de cartas roguelike onde constróis um baralho único para subir o pináculo.",
+      "dataLancamento": "2019-01-23",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/646570/header.jpg?t=1774015376",
+      "desenvolvedoraId": "d53",
+      "plataformas": ["PC", "PlayStation", "Xbox", "Switch"],
+      "generos": ["Roguelike", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 2.3
+    },
+    {
+      "id": "j54",
+      "titulo": "The Sims 4",
+      "sinopse": "Jogue com a vida e controle os personagens do zero, criando e personalizando as suas vidas.",
+      "dataLancamento": "2014-09-02",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg?t=1778778231",
+      "desenvolvedoraId": "d54",
+      "plataformas": ["PC", "PlayStation", "Xbox"],
+      "generos": ["Simulação", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.5
+    },
+    {
+      "id": "j55",
+      "titulo": "Subnautica",
+      "sinopse": "Mergulhe nas profundezas de um oceano alienígena misterioso e encontre formas de sobreviver.",
+      "dataLancamento": "2018-01-23",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg?t=1777456112",
+      "desenvolvedoraId": "d55",
+      "plataformas": ["PC", "PlayStation", "Xbox", "Switch"],
+      "generos": ["Sobrevivência", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.5
+    },
+    {
+      "id": "j56",
+      "titulo": "Half-Life 2",
+      "sinopse": "Gordon Freeman desperta para combater os Combine num mundo outrora livre.",
+      "dataLancamento": "2004-11-16",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/320/header.jpg?t=1749481506",
+      "desenvolvedoraId": "d56",
+      "plataformas": ["PC", "Xbox"],
+      "generos": ["Tiro", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.7
+    },
+    {
+      "id": "j57",
+      "titulo": "Dead Cells",
+      "sinopse": "Domine o combate 2D souls-lite com permadeath e sem checkpoints.",
+      "dataLancamento": "2018-08-07",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg?t=1779086887",
+      "desenvolvedoraId": "d57",
+      "plataformas": ["PC", "PlayStation", "Xbox", "Switch"],
+      "generos": ["Roguelike", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.4
+    },
+    {
+      "id": "j58",
+      "titulo": "Civilization VI",
+      "sinopse": "Construa o seu império, governe os seus cidadãos e teste a passagem do tempo.",
+      "dataLancamento": "2016-10-21",
+      "capa": "https://cdn1.epicgames.com/cd14dcaa4f3443f19f7169a980559c62/offer/EGS_SidMeiersCivilizationVI_FiraxisGames_S1-2560x1440-2fcd1c150ac6d8cdc672ae042d2dd179.jpg",
+      "desenvolvedoraId": "d58",
+      "plataformas": ["PC", "PlayStation", "Xbox", "Switch"],
+      "generos": ["Estratégia", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 1.2
+    },
+    {
+      "id": "j59",
+      "titulo": "Roblox",
+      "sinopse": "Plataforma multijogador focada em permitir a criação dos teus próprios mundos.",
+      "dataLancamento": "2006-09-01",
+      "capa": "https://wallpapercave.com/wp/wp11347874.jpg",
+      "desenvolvedoraId": "d59",
+      "plataformas": ["PC", "Xbox", "Mobile"],
+      "generos": ["Sandbox", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.0
+    },
+    {
+      "id": "j60",
+      "titulo": "Starfield",
+      "sinopse": "O primeiro novo universo em mais de 25 anos dos criadores do Skyrim.",
+      "dataLancamento": "2023-09-06",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg?t=1778168061",
+      "desenvolvedoraId": "d60",
+      "plataformas": ["PC", "Xbox"],
+      "generos": ["RPG", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.2
+    },
+    {
+      "id": "j61",
+      "titulo": "Vampire Survivors",
+      "sinopse": "Destrua milhares de criaturas da noite e sobreviva até ao amanhecer num frenético roguelike.",
+      "dataLancamento": "2022-10-20",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1794680/header.jpg?t=1778864981",
+      "desenvolvedoraId": "d61",
+      "plataformas": ["PC", "Xbox", "Switch"],
+      "generos": ["Ação", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 2.1
+    },
+    {
+      "id": "j62",
+      "titulo": "Gears 5",
+      "sinopse": "De um dos mais aclamados franchises de jogos, chega uma jornada cheia de combates viscerais.",
+      "dataLancamento": "2019-09-10",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1097840/header.jpg?t=1684425784",
+      "desenvolvedoraId": "d62",
+      "plataformas": ["PC", "Xbox"],
+      "generos": ["Ação", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.7
+    },
+    {
+      "id": "j63",
+      "titulo": "Team Fortress 2",
+      "sinopse": "Nove classes diferentes para escolher e o jogo que redefiniu os heróis.",
+      "dataLancamento": "2007-10-10",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/440/header.jpg?t=1757348372",
+      "desenvolvedoraId": "d63",
+      "plataformas": ["PC"],
+      "generos": ["Tiro", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 6.2
+    },
+    {
+      "id": "j64",
+      "titulo": "Final Fantasy VII Remake",
+      "sinopse": "O clássico épico de RPG de ação reimaginado com combates rápidos e espetaculares.",
+      "dataLancamento": "2020-04-10",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1462040/header.jpg?t=1773895755",
+      "desenvolvedoraId": "d64",
+      "plataformas": ["PC", "PlayStation"],
+      "generos": ["RPG", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.0
+    },
+    {
+      "id": "j65",
+      "titulo": "Sekiro: Shadows Die Twice",
+      "sinopse": "Torne-se o Lobo de Um Braço Só neste jogo de samurai furtivo de precisão.",
+      "dataLancamento": "2019-03-22",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/814380/header.jpg?t=1762888662",
+      "desenvolvedoraId": "d65",
+      "plataformas": ["PC", "PlayStation", "Xbox"],
+      "generos": ["Ação", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.8
+    },
+    {
+      "id": "j66",
+      "titulo": "Outer Wilds",
+      "sinopse": "Explora os mistérios de um sistema solar apanhado num estranho loop temporal de 22 minutos.",
+      "dataLancamento": "2019-05-28",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/753640/header.jpg?t=1778608284",
+      "desenvolvedoraId": "d66",
+      "plataformas": ["PC", "PlayStation", "Xbox", "Switch"],
+      "generos": ["Aventura", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.0
+    },
+    {
+      "id": "j67",
+      "titulo": "Age of Empires II: Definitive Edition",
+      "sinopse": "Celebre um dos maiores clássicos de RTS com os seus amigos e exércitos imensos.",
+      "dataLancamento": "2019-11-14",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/813780/header.jpg?t=1777577197",
+      "desenvolvedoraId": "d67",
+      "plataformas": ["PC", "Xbox"],
+      "generos": ["Estratégia", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 5.6
+    },
+    {
+      "id": "j68",
+      "titulo": "Demon's Souls",
+      "sinopse": "Um conto de trevas, neblina e monstros num remake majestoso de um verdadeiro clássico.",
+      "dataLancamento": "2020-11-12",
+      "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.api.playstation.com%2Fvulcan%2Fimg%2Frnd%2F202011%2F1716%2FzN2mjiH0WNTXwfcbRTtxyeLI.jpg&f=1&nofb=1&ipt=cd0de8292fe60494ba382fa549c172b18253d63b7cc466cdf7bf264d518e405c",
+      "desenvolvedoraId": "d68",
+      "plataformas": ["PlayStation 5"],
+      "generos": ["RPG", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.4
+    },
+    {
+      "id": "j69",
+      "titulo": "Inscryption",
+      "sinopse": "Um estranho jogo de cartas mistura mistério, escape room e terror puro.",
+      "dataLancamento": "2021-10-19",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1092790/header.jpg?t=1777572925",
+      "desenvolvedoraId": "d69",
+      "plataformas": ["PC", "PlayStation", "Xbox", "Switch"],
+      "generos": ["Cartas", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.4
+    },
+    {
+      "id": "j70",
+      "titulo": "Uncharted 4: A Thief's End",
+      "sinopse": "Nathan Drake regressa do retiro para a sua maior caça ao tesouro até à data.",
+      "dataLancamento": "2016-05-10",
+      "capa": "https://image.api.playstation.com/vulcan/img/rnd/202010/2620/eIO6Ka26JChNo8KaFi7wON4L.jpg",
+      "desenvolvedoraId": "d70",
+      "plataformas": ["PlayStation 4", "PC"],
+      "generos": ["Ação", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.6
+    },
+    {
+      "id": "j71",
+      "titulo": "Cuphead",
+      "sinopse": "Corre e atira num jogo clássico de ação e plataforma fortemente inspirado por desenhos de 1930.",
+      "dataLancamento": "2017-09-29",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg?t=1709068852",
+      "desenvolvedoraId": "d71",
+      "plataformas": ["PC", "PlayStation", "Xbox", "Switch"],
+      "generos": ["Ação", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.0
+    },
+    {
+      "id": "j72",
+      "titulo": "Death Stranding",
+      "sinopse": "Carrega o fardo para voltar a ligar um mundo destruído através de ligações com os outros.",
+      "dataLancamento": "2019-11-08",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1850570/header.jpg?t=1773400635",
+      "desenvolvedoraId": "d72",
+      "plataformas": ["PC", "PlayStation"],
+      "generos": ["Ação", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.9
+    },
+    {
+      "id": "j73",
+      "titulo": "Resident Evil 2 Remake",
+      "sinopse": "Sobrevive e tenta escapar a Raccoon City num conto assustador cheio de perigo real.",
+      "dataLancamento": "2019-01-25",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/883710/header.jpg?t=1768954831",
+      "desenvolvedoraId": "d73",
+      "plataformas": ["PC", "PlayStation", "Xbox"],
+      "generos": ["Terror", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.4
+    },
+    {
+      "id": "j74",
+      "titulo": "Super Mario World",
+      "sinopse": "Viaja para a Dinosaur Land neste épico clássico e icónico título de platforms da SNES.",
+      "dataLancamento": "1990-11-21",
+      "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/super_nintendo_5/H2x1_SNES_SuperMarioWorld.jpg",
+      "desenvolvedoraId": "d74",
+      "plataformas": ["SNES"],
+      "generos": ["Plataforma", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.6
+    },
+    {
+      "id": "j75",
+      "titulo": "Street Fighter II",
+      "sinopse": "O jogo que começou uma revolução no mundo dos videojogos na vertente do combate.",
+      "dataLancamento": "1991-02-06",
+      "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_UltraStreetFighter2TheFinalChallengers_image600w.jpg",
+      "desenvolvedoraId": "d75",
+      "plataformas": ["Arcade", "SNES"],
+      "generos": ["Luta", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.0
+    },
+    {
+      "id": "j76",
+      "titulo": "Tetris",
+      "sinopse": "O puzzle definitivo que definiu uma série de quebra-cabeças icónicos e rápidos de apanhar.",
+      "dataLancamento": "1984-06-06",
+      "capa": "https://www.designyourway.net/blog/wp-content/uploads/2024/11/Tetris-Logo-featured.jpg",
+      "desenvolvedoraId": "d76",
+      "plataformas": ["Tudo"],
+      "generos": ["Puzzle", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.7
+    },
+    {
+      "id": "j77",
+      "titulo": "Doom (1993)",
+      "sinopse": "Destrói os piores demónios de Marte no avô de todos os jogos de tiro.",
+      "dataLancamento": "1993-12-10",
+      "capa": "https://assets.nuuvem.com/image/upload/t_product_sharing_banner/v1/products/557dbb0069702d0a9ccb6600/sharing_images/kfupx48auoz29ejhzidc.jpg",
+      "desenvolvedoraId": "d77",
+      "plataformas": ["Tudo"],
+      "generos": ["Tiro", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.4
+    },
+    {
+      "id": "j78",
+      "titulo": "BioShock",
+      "sinopse": "Desce nas profundezas sob as ondas num conto inesquecível do utópico e destruído Rapture.",
+      "dataLancamento": "2007-08-21",
+      "capa": "https://cdn2.unrealengine.com/egs-bioshockthecollection-massmediagames-s3-2560x1440-ac3cc1945d89.jpg",
+      "desenvolvedoraId": "d78",
+      "plataformas": ["PC", "PlayStation", "Xbox"],
+      "generos": ["Tiro", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.6
+    },
+    {
+      "id": "j79",
+      "titulo": "Mortal Kombat 11",
+      "sinopse": "Desfrute do combate violento, combos brutais e Fatalities cheios de sangue como nunca antes.",
+      "dataLancamento": "2019-04-23",
+      "capa": "https://cdn.awsli.com.br/800x800/1041/1041512/produto/144238140/mortal-kombat-11---standard-edition---pc-c-digo-digital-rstmfucfbg.jpg",
+      "desenvolvedoraId": "d79",
+      "plataformas": ["PC", "PlayStation", "Xbox", "Switch"],
+      "generos": ["Luta", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.8
+    },
+    {
+      "id": "j80",
+      "titulo": "The Legend of Zelda: Ocarina of Time",
+      "sinopse": "Um épico imortal sobre heróis, o tempo, e a bravura nas vastas terras de Hyrule.",
+      "dataLancamento": "1998-11-21",
+      "capa": "https://m.media-amazon.com/images/I/61+6b-FXwgL.jpg",
+      "desenvolvedoraId": "d80",
+      "plataformas": ["Nintendo 64"],
+      "generos": ["Aventura", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.5
+    },
+    {
+      "id": "j81",
+      "titulo": "Pac-Man",
+      "sinopse": "Foge e devora pontos brancos sem descanso pelo labirinto e apanha bónus.",
+      "dataLancamento": "1980-05-22",
+      "capa": "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_auto/www.fizzcreations.com/wp-content/uploads/2020/01/PAC-MAN-Banner.jpg",
+      "desenvolvedoraId": "d81",
+      "plataformas": ["Arcade"],
+      "generos": ["Arcade", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.4
+    },
+    {
+      "id": "j82",
+      "titulo": "Metal Gear Solid",
+      "sinopse": "A tua missão é a infiltração completa num perigoso terreno terrorista sem seres apanhado.",
+      "dataLancamento": "1998-09-03",
+      "capa": "https://i.ebayimg.com/images/g/Jh4AAOSw5m5kRznp/s-l400.jpg",
+      "desenvolvedoraId": "d82",
+      "plataformas": ["PlayStation"],
+      "generos": ["Infiltração", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.7
+    },
+    {
+      "id": "j83",
+      "titulo": "Diablo II",
+      "sinopse": "Um grande hack and slash que definiu as pedras de todo um género sombrio e violento.",
+      "dataLancamento": "2000-06-29",
+      "capa": "https://ovicio.com.br/wp-content/uploads/diablo-2_zfu2.jpg",
+      "desenvolvedoraId": "d83",
+      "plataformas": ["PC"],
+      "generos": ["RPG", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.5
+    },
+    {
+      "id": "j84",
+      "titulo": "Halo: Combat Evolved",
+      "sinopse": "Começa a lendária história de Master Chief onde exploras um anel mortal e misterioso no espaço.",
+      "dataLancamento": "2001-11-15",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2806050/30d8542d35d7919b34e5f5dbe955d04c3f99e6da/header.jpg?t=1761337703",
+      "desenvolvedoraId": "d84",
+      "plataformas": ["Xbox", "PC"],
+      "generos": ["Tiro", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 6.0
+    },
+    {
+      "id": "j85",
+      "titulo": "Star Wars Jedi: Survivor",
+      "sinopse": "A história de Cal Kestis continua neste épico jogo de ação e aventura em terceira pessoa focado na narrativa.",
+      "dataLancamento": "2023-04-28",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1774580/capsule_616x353.jpg",
+      "desenvolvedoraId": "d110",
+      "plataformas": ["PlayStation 5", "Xbox Series X/S", "PC"],
+      "generos": ["Ação", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.0
+    },
+    {
+      "id": "j86",
+      "titulo": "Silent Hill 2",
+      "sinopse": "Explora o nevoeiro sombrio enquanto resolves perigosos traumas num conto de fadas terrível.",
+      "dataLancamento": "2001-09-24",
+      "capa": "https://tm.ibxk.com.br/2023/01/05/05153148736340.jpg?ims=1200x675",
+      "desenvolvedoraId": "d86",
+      "plataformas": ["PlayStation 2", "PC"],
+      "generos": ["Terror", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.6
+    },
+    {
+      "id": "j87",
+      "titulo": "World of Warcraft",
+      "sinopse": "Dá os primeiros passos em Azeroth e molda as alianças mais memoráveis de sempre num MMO.",
+      "dataLancamento": "2004-11-23",
+      "capa": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2024/10/world-of-warcraft-logo-over-20th-anniversary-key-art.jpg?w=1600&h=900&fit=crop",
+      "desenvolvedoraId": "d87",
+      "plataformas": ["PC"],
+      "generos": ["MMO", "Multiplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 7.1
+    },
+    {
+      "id": "j88",
+      "titulo": "Shadow of the Colossus",
+      "sinopse": "Caça montanhas vivas e mergulha numa misteriosa arte visual sombria sobre redenção.",
+      "dataLancamento": "2005-10-18",
+      "capa": "https://i0.wp.com/nerdinterior.com.br/wp-content/uploads/2018/03/Shadow2.png?fit=1600%2C900&ssl=1",
+      "desenvolvedoraId": "d88",
+      "plataformas": ["PlayStation 2"],
+      "generos": ["Ação", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.5
+    },
+    {
+      "id": "j89",
+      "titulo": "Super Metroid",
+      "sinopse": "Sente o terror isolado do espaço em profundas mecânicas metroidvania no Zebes.",
+      "dataLancamento": "1994-03-19",
+      "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/super_nintendo_5/H2x1_SNES_SuperMetroid_image1280w.jpg",
+      "desenvolvedoraId": "d89",
+      "plataformas": ["SNES"],
+      "generos": ["Metroidvania", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 6.8
+    },
+    {
+      "id": "j90",
+      "titulo": "Chrono Trigger",
+      "sinopse": "A viagem no tempo ganha vida como nunca ao combater o monstruoso apocalipse futuro do Lavos.",
+      "dataLancamento": "1995-03-11",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/613830/capsule_616x353.jpg?t=1775725860",
+      "desenvolvedoraId": "d90",
+      "plataformas": ["SNES"],
+      "generos": ["RPG", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 6.5
+    },
+    {
+      "id": "j91",
+      "titulo": "Castlevania: Symphony of the Night",
+      "sinopse": "Aventuras nos domínios góticos explorando cada secção sombria e destruindo os morcegos.",
+      "dataLancamento": "1997-03-20",
+      "capa": "https://media.idownloadblog.com/wp-content/uploads/2020/03/Castlevania-Symphony-of-the-Night-teaser-001.jpg",
+      "desenvolvedoraId": "d91",
+      "plataformas": ["PlayStation"],
+      "generos": ["Metroidvania", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.5
+    },
+    {
+      "id": "j92",
+      "titulo": "StarCraft",
+      "sinopse": "O maior teste mental cósmico, reunindo Zergs e mais facções clássicas à velocidade da luz.",
+      "dataLancamento": "1998-03-31",
+      "capa": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/ci/CIGT53U8ZP6M1509744317189.jpg",
+      "desenvolvedoraId": "d92",
+      "plataformas": ["PC"],
+      "generos": ["Estratégia", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.1
+    },
+    {
+      "id": "j93",
+      "titulo": "Fallout: New Vegas",
+      "sinopse": "Uma aventura radioativa pelo impiedoso deserto com facções para todo o lado.",
+      "dataLancamento": "2010-10-19",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/22380/header.jpg?t=1765992876",
+      "desenvolvedoraId": "d93",
+      "plataformas": ["PC", "PlayStation", "Xbox"],
+      "generos": ["RPG", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.3
+    },
+    {
+      "id": "j94",
+      "titulo": "GoldenEye 007",
+      "sinopse": "Junta amigos de ecrã dividido num caótico jogo com a licença do maior dos espiões do mundo.",
+      "dataLancamento": "1997-08-25",
+      "capa": "https://ktla.com/wp-content/uploads/sites/4/2022/09/Rare53cd6427-2f6d-4ccc-a37c-3e6120f8b718.jpg?strip=1",
+      "desenvolvedoraId": "d94",
+      "plataformas": ["Nintendo 64"],
+      "generos": ["Tiro", "Multiplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 2.5
+    },
+    {
+      "id": "j95",
+      "titulo": "The Legend of Zelda: A Link to the Past",
+      "sinopse": "Uma exploração em formato 2D para proteger Hyrule das maiores amálgamas do Ganon.",
+      "dataLancamento": "1991-11-21",
+      "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/super_nintendo_5/H2x1_SNES_TheLegendOfZeldaALinkToThePast.jpg",
+      "desenvolvedoraId": "d95",
+      "plataformas": ["SNES"],
+      "generos": ["Aventura", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.3
+    },
+    {
+      "id": "j96",
+      "titulo": "Super Mario 64",
+      "sinopse": "O avô e a introdução oficial e tridimensional das caóticas plataformas onde todos se maravilharam com os saltos.",
+      "dataLancamento": "1996-06-23",
+      "capa": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3abd9d7a-a56a-403c-aca5-22b4e5cf203f/diamq71-53691cb9-14f6-41a1-96ba-209ff13feef9.jpg/v1/fill/w_1280,h_720,q_75,strp/super_mario_64_banner__by_zackfire456_diamq71-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mLzNhYmQ5ZDdhLWE1NmEtNDAzYy1hY2E1LTIyYjRlNWNmMjAzZi9kaWFtcTcxLTUzNjkxY2I5LTE0ZjYtNDFhMS05NmJhLTIwOWZmMTNmZWVmOS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.rLtprmn08WlR5uKsunG3AGT4PGSGzq5NH3So8RthkW8",
+      "desenvolvedoraId": "d96",
+      "plataformas": ["Nintendo 64"],
+      "generos": ["Plataforma", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.5
+    },
+    {
+      "id": "j97",
+      "titulo": "Mass Effect 2",
+      "sinopse": "Tudo para criar os laços perfeitos da tua enorme tripulação estelar rumo a missões mortíferas e galácticas.",
+      "dataLancamento": "2010-01-26",
+      "capa": "https://cdn1.epicgames.com/spt-assets/d63910571c9e4ea0aae84da15511bf89/mass-effect-2-digital-deluxe-edition-yviy5.jpg",
+      "desenvolvedoraId": "d97",
+      "plataformas": ["PC", "PlayStation", "Xbox"],
+      "generos": ["RPG", "Singleplayer"],
+      "modeloNegocio": "gratuito",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 5.6
+    },
+    {
+      "id": "j98",
+      "titulo": "Red Dead Redemption",
+      "sinopse": "Tira do mapa criminosos no perigoso pôr do sol fronteiriço e no último alento cruel do faroeste.",
+      "dataLancamento": "2010-05-18",
+      "capa": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch2/70010000112715/23a5df3a860a49ea3d47c037362bed20447ea5ac5ff09c8135f6484db8902a4e",
+      "desenvolvedoraId": "d98",
+      "plataformas": ["PlayStation 3", "Xbox 360"],
+      "generos": ["Ação", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.3
+    },
+    {
+      "id": "j99",
+      "titulo": "Batman: Arkham City",
+      "sinopse": "Sente e paira pelos ares para sentires finalmente no pulso o brutal mundo na pele do morcego da DC.",
+      "dataLancamento": "2011-10-18",
+      "capa": "https://wallpapers.com/images/hd/batman-arkham-city-poster-4k-llu2flr1ija3m09q.jpg",
+      "desenvolvedoraId": "d99",
+      "plataformas": ["PC", "PlayStation", "Xbox"],
+      "generos": ["Ação", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.5
+    },
+    {
+      "id": "j100",
+      "titulo": "Portal",
+      "sinopse": "A promessa é e sempre será apenas sobre a existência ilusória de um bolo.",
+      "dataLancamento": "2007-10-10",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/400/header.jpg?t=1745368554",
+      "desenvolvedoraId": "d100",
+      "plataformas": ["PC", "Xbox"],
+      "generos": ["Puzzle", "Singleplayer"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.2
+    },
+    {
+      "id": "j101",
+      "titulo": "The Last of Us Part II",
+      "sinopse": "Cinco anos após sua perigosa jornada, Ellie e Joel se estabeleceram em Wyoming. Quando um evento violento interrompe essa paz, Ellie embarca em uma jornada implacável para fazer justiça e encontrar encerramento.",
+      "dataLancamento": "2020-06-19",
+      "capa": "https://image.api.playstation.com/vulcan/ap/rnd/202312/0117/da083fa5e19458dd750aa8a6ea30ba10bac6f87074693df5.jpg",
+      "desenvolvedoraId": "d101",
+      "plataformas": ["PlayStation 4", "PlayStation 5"],
+      "generos": ["Ação", "Sobrevivência", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.7
+    },
+    {
+      "id": "j102",
+      "titulo": "Clair Obscure: Expedition 33",
+      "sinopse": "Uma vez por ano, a Pintora acorda e pinta um número em seu monólito. Todos daquela idade desaparecem. A Expedição 33 parte em uma missão suicida para destruir a Pintora para sempre.",
+      "dataLancamento": "2025-12-31",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/be3305b02d4db0dffa3458537118423bf2792d7e/header.jpg?t=1773676780",
+      "desenvolvedoraId": "d102",
+      "plataformas": ["PC", "PlayStation 5", "Xbox Series X/S"],
+      "generos": ["RPG", "Turnos", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.9
+    },
+    {
+      "id": "j103",
+      "titulo": "Pro Evolution Soccer 2011",
+      "sinopse": "Trazendo um nível sem precedentes de controle e realismo, o PES 2011 eleva a série com novas animações, liberdade total de passe e a aguardada introdução da Copa Libertadores da América.",
+      "dataLancamento": "2010-09-30",
+      "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffs-prod-cdn.nintendo-europe.com%2Fmedia%2Fimages%2F10_share_images%2Fgames_15%2Fwii_24%2FSI_Wii_ProEvolutionSoccer2011_image1600w.jpg&f=1&nofb=1&ipt=922c199fc36ca73ec3ec9c63a9988ebd31b527c9b2795f04e6892e58de381c63",
+      "desenvolvedoraId": "d103",
+      "plataformas": [
+        "PlayStation 3",
+        "Xbox 360",
+        "PC",
+        "PlayStation 2",
+        "Wii"
+      ],
+      "generos": ["Esportes", "Simulação"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.9
+    },
+    {
+      "id": "j104",
+      "titulo": "Hollow Knight: Silksong",
+      "sinopse": "Jogue como Hornet, a princesa protetora de Hallownest, e aventure-se por um reino totalmente novo regido por seda e música para descobrir segredos ancestrais.",
+      "dataLancamento": "2025-12-31",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg?t=1776125736",
+      "desenvolvedoraId": "d104",
+      "plataformas": ["PC", "Switch", "PlayStation 5", "Xbox Series X/S"],
+      "generos": ["Metroidvania", "Ação", "Indie"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.7
+    },
+    {
+      "id": "j105",
+      "titulo": "FIFA 15",
+      "sinopse": "Sinta o jogo! Com inteligência emocional e reações autênticas dos jogadores, FIFA 15 oferece o futebol mais dinâmico e realista da sua geração de consoles.",
+      "dataLancamento": "2014-09-23",
+      "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_FIFA15_image1600w.jpg",
+      "desenvolvedoraId": "d105",
+      "plataformas": [
+        "PlayStation 3",
+        "PlayStation 4",
+        "Xbox 360",
+        "Xbox One",
+        "PC"
+      ],
+      "generos": ["Esportes", "Simulação"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.2
+    },
+    {
+      "id": "j106",
+      "titulo": "Grand Theft Auto: San Andreas",
+      "sinopse": "Início dos anos 90. Após sua mãe ser assassinada, Carl 'CJ' Johnson volta para casa em Los Santos e é forçado a cruzar o estado de San Andreas para salvar sua família.",
+      "dataLancamento": "2004-10-26",
+      "capa": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2F3%2Fc%2Fb%2F1120096-large-grand-theft-auto-san-andreas-wallpapers-1920x1200-meizu.jpg&f=1&nofb=1&ipt=c6695ed234242ad6bace4e493d1d03a9dd07388569f44164135ef36c8e069845",
+      "desenvolvedoraId": "d106",
+      "plataformas": ["PlayStation 2", "PC", "Xbox"],
+      "generos": ["Mundo Aberto", "Ação", "Aventura"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.5
+    },
+    {
+      "id": "j107",
+      "titulo": "Overcooked!",
+      "sinopse": "Um jogo de culinária caótico e cooperativo para até quatro jogadores. Trabalhem juntos para preparar e cozinhar pedidos antes que os clientes saiam furiosos do restaurante.",
+      "dataLancamento": "2016-08-02",
+      "capa": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/448510/header.jpg?t=1778527917",
+      "desenvolvedoraId": "d107",
+      "plataformas": ["PC", "PlayStation 4", "Xbox One", "Switch"],
+      "generos": ["Casual", "Co-op", "Festa"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.0
+    },
+    {
+      "id": "j108",
+      "titulo": "Assassin's Creed",
+      "sinopse": "O ano é 1191 d.C. e a Terceira Cruzada está destruindo a Terra Santa. Você é Altaïr, um Mestre Assassino enviado para matar os líderes corruptos que lucram com a guerra.",
+      "dataLancamento": "2007-11-13",
+      "capa": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15100/header.jpg?t=1602600542",
+      "desenvolvedoraId": "d108",
+      "plataformas": ["PlayStation 3", "Xbox 360", "PC"],
+      "generos": ["Ação", "Aventura", "Furtividade"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.4
+    },
+    {
+      "id": "j109",
+      "titulo": "Pokémon Red Version",
+      "sinopse": "A jornada para se tornar o maior treinador Pokémon começa agora! Capture, treine, evolua monstros e duele contra líderes de ginásio para vencer a Elite Four.",
+      "dataLancamento": "1996-02-27",
+      "capa": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/game_boy_4/H2x1_GB_PokemonRed_enGB.jpg",
+      "desenvolvedoraId": "d109",
+      "plataformas": ["Game Boy"],
+      "generos": ["RPG"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 9.2
+    },
+    {
+      "id": "j110",
+      "titulo": "Far Cry 3",
+      "sinopse": "Preso em uma ilha tropical sem lei governada pela pirataria e a loucura de Vaas, você deve lutar por sua sobrevivência e resgatar seus amigos.",
+      "dataLancamento": "2012-11-29",
+      "capa": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.unrealengine.com%2FDiesel%2Fproductv2%2Ffar-cry-3%2Fdeluxe-edition%2FFC3-dlx-2560x1440-4fa7f35072ee54993b47cf163c2f4f0fd7b1759a.jpg&f=1&nofb=1&ipt=cee1638bf34848ea3de35702681fdc844ed86efb071db75e5e4a42c1a5a392a1",
+      "desenvolvedoraId": "d110",
+      "plataformas": ["PlayStation 3", "Xbox 360", "PC"],
+      "generos": ["Ação", "Mundo Aberto", "Tiro"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.8
+    },
+    {
+      "id": "j111",
+      "titulo": "Bomberman",
+      "sinopse": "Coloque bombas, destrua paredes e elimine os seus oponentes no labirinto frenético e cheio de itens deste clássico atemporal que definiu o modo multiplayer explosivo.",
+      "dataLancamento": "1983-07-01",
+      "capa": "https://www.konami.com/games/bomberman/r/s/img/thumb_g4_preorder.jpg",
+      "desenvolvedoraId": "d111",
+      "plataformas": ["Arcade", "NES", "PC", "Multiplataforma"],
+      "generos": ["Ação", "Labirinto", "Arcade"],
+      "modeloNegocio": "pago",
+      "outrasMidias": ["link-1", "link-2"],
+      "notaMedia": 8.5
+    }
+  ],
   "avaliacoes": [
     {
       "id": "a1",
