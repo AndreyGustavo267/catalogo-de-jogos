@@ -1,42 +1,55 @@
 import { useContext } from "react";
-import { Row, Col, Typography, Button } from "antd";
+import { Row, Col, Typography, Button, Grid } from "antd";
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
 import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 
 const { Text } = Typography;
+const { useBreakpoint } = Grid;
 
 export default function FooterMenu() {
   const location = useLocation();
   const { user } = useContext(AuthContext);
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
+
   const hideLoginButton =
     location.pathname === "/login" || location.pathname === "/registro" || user;
-
-  const linkStyle = {
-    color: "#c7d5e0",
-    fontSize: "15px",
-    fontWeight: "500",
-    textDecoration: "none",
-    transition: "color 0.3s",
-    display: "block",
-    marginBottom: "12px",
-  };
 
   const titleStyle = {
     color: "#fff",
     fontSize: "18px",
     fontWeight: "bold",
     marginBottom: "24px",
+    marginTop: 0,
   };
 
   return (
     <footer
       style={{
         background: "#171a21",
-        padding: "80px 10vw 60px 10vw",
+        padding: isMobile ? "60px 20px 40px 20px" : "80px 10vw 60px 10vw",
         borderTop: "2px solid #2a475e",
       }}
     >
+      <style>{`
+        .footer-link {
+          color: #c7d5e0;
+          font-size: 15px;
+          font-weight: 500;
+          text-decoration: none;
+          transition: color 0.3s;
+          display: block;
+          margin-bottom: 12px;
+        }
+        .footer-link:hover {
+          color: #66c0f4; /* Azul Steam para links externos */
+        }
+        .footer-link-internal:hover {
+          color: #fff; /* Branco para links internos institucionais */
+        }
+      `}</style>
+
       {!hideLoginButton && (
         <div style={{ textAlign: "center", marginBottom: "80px" }}>
           <Link to="/login">
@@ -46,12 +59,14 @@ export default function FooterMenu() {
                 background: "#f5c518",
                 color: "#0a141d",
                 border: "none",
-                height: "60px",
+                height: "auto",
+                minHeight: "60px",
                 borderRadius: "30px",
-                fontSize: "20px",
+                fontSize: isMobile ? "16px" : "20px",
                 fontWeight: "900",
-                padding: "0 50px",
+                padding: isMobile ? "16px 24px" : "0 50px",
                 boxShadow: "0 4px 15px rgba(245, 197, 24, 0.3)",
+                whiteSpace: "normal", 
               }}
             >
               Faça login para obter mais acesso
@@ -61,10 +76,10 @@ export default function FooterMenu() {
       )}
 
       <Row gutter={[40, 40]} justify="space-between">
-        <Col xs={24} md={6}>
+        <Col xs={24} md={6} style={{ textAlign: isMobile ? "center" : "left" }}>
           <img
             src="/src/assets/images/logo.png"
-            alt="IGDb Logo"
+            alt="Logotipo do IGDb" 
             style={{
               height: "70px",
               borderRadius: "8px",
@@ -83,20 +98,16 @@ export default function FooterMenu() {
           </div>
         </Col>
 
-        <Col xs={24} md={6}>
-          <div style={titleStyle}>Desenvolvedores</div>
+        <Col xs={24} md={6} style={{ textAlign: isMobile ? "center" : "left" }}>
+          <h3 style={titleStyle}>Desenvolvedores</h3>
 
           <a
             href="https://www.linkedin.com/in/andrey-gustavo-s-dos-santos-6691a333a/"
             target="_blank"
             rel="noopener noreferrer"
-            style={linkStyle}
-            onMouseOver={(e) => (e.target.style.color = "#66c0f4")}
-            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+            className="footer-link"
           >
-            <LinkedinOutlined
-              style={{ marginRight: "8px", fontSize: "18px" }}
-            />{" "}
+            <LinkedinOutlined aria-hidden="true" style={{ marginRight: "8px", fontSize: "18px" }} />
             Andrey Gustavo
           </a>
 
@@ -104,13 +115,9 @@ export default function FooterMenu() {
             href="https://www.linkedin.com/in/elton-lima-araujo/"
             target="_blank"
             rel="noopener noreferrer"
-            style={linkStyle}
-            onMouseOver={(e) => (e.target.style.color = "#66c0f4")}
-            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+            className="footer-link"
           >
-            <LinkedinOutlined
-              style={{ marginRight: "8px", fontSize: "18px" }}
-            />{" "}
+            <LinkedinOutlined aria-hidden="true" style={{ marginRight: "8px", fontSize: "18px" }} />
             Elton Araujo
           </a>
 
@@ -118,64 +125,38 @@ export default function FooterMenu() {
             href="https://www.linkedin.com/in/joao-gustavo-dos-santos/"
             target="_blank"
             rel="noopener noreferrer"
-            style={linkStyle}
-            onMouseOver={(e) => (e.target.style.color = "#66c0f4")}
-            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+            className="footer-link"
           >
-            <LinkedinOutlined
-              style={{ marginRight: "8px", fontSize: "18px" }}
-            />{" "}
+            <LinkedinOutlined aria-hidden="true" style={{ marginRight: "8px", fontSize: "18px" }} />
             João Gustavo
           </a>
         </Col>
 
-        <Col xs={24} md={6}>
-          <div style={titleStyle}>Projeto</div>
+        <Col xs={24} md={6} style={{ textAlign: isMobile ? "center" : "left" }}>
+          <h3 style={titleStyle}>Projeto</h3>
           <a
             href="https://github.com/AndreyGustavo267/catalogo-de-jogos"
             target="_blank"
             rel="noopener noreferrer"
-            style={linkStyle}
-            onMouseOver={(e) => (e.target.style.color = "#66c0f4")}
-            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
+            className="footer-link"
           >
-            <GithubOutlined style={{ marginRight: "8px", fontSize: "18px" }} />{" "}
+            <GithubOutlined aria-hidden="true" style={{ marginRight: "8px", fontSize: "18px" }} />
             Repositório no GitHub
           </a>
         </Col>
 
-        <Col xs={24} md={6}>
-          <div style={titleStyle}>Institucional</div>
-          <Link
-            to="/sobre"
-            style={linkStyle}
-            onMouseOver={(e) => (e.target.style.color = "#fff")}
-            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-          >
+        <Col xs={24} md={6} style={{ textAlign: isMobile ? "center" : "left" }}>
+          <h3 style={titleStyle}>Institucional</h3>
+          <Link to="/sobre" className="footer-link footer-link-internal">
             Sobre o IGDb
           </Link>
-          <Link
-            to="/ajuda"
-            style={linkStyle}
-            onMouseOver={(e) => (e.target.style.color = "#fff")}
-            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-          >
+          <Link to="/ajuda" className="footer-link footer-link-internal">
             Central de Ajuda
           </Link>
-          <Link
-            to="/termos"
-            style={linkStyle}
-            onMouseOver={(e) => (e.target.style.color = "#fff")}
-            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-          >
+          <Link to="/termos" className="footer-link footer-link-internal">
             Termos de Uso
           </Link>
-          <Link
-            to="/privacidade"
-            style={linkStyle}
-            onMouseOver={(e) => (e.target.style.color = "#fff")}
-            onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-          >
+          <Link to="/privacidade" className="footer-link footer-link-internal">
             Privacidade
           </Link>
         </Col>

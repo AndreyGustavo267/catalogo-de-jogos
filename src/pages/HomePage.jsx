@@ -7,12 +7,16 @@ const { Title } = Typography;
 
 export default function HomePage() {
   return (
-    <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-      <CarrosselDestaques />
+    <main style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 20px" }}>
+      
+      <section aria-label="Destaques Recentes">
+        <CarrosselDestaques />
+      </section>
 
-      <div style={{ marginTop: "20px" }}>
+      <section aria-labelledby="titulo-categorias" style={{ marginTop: "40px" }}>
         <Title
-          level={4}
+          id="titulo-categorias"
+          level={2}
           style={{
             color: "#fff",
             borderLeft: "4px solid #f5c518",
@@ -25,12 +29,12 @@ export default function HomePage() {
           Categorias
         </Title>
         <CarrosselCategorias />
-      </div>
+      </section>
 
-      {/* Seção Top 10 */}
-      <div style={{ marginTop: "60px" }}>
+      <section aria-labelledby="titulo-top10" style={{ marginTop: "60px", paddingBottom: "60px" }}>
         <Title
-          level={4}
+          id="titulo-top10"
+          level={2}
           style={{
             color: "#fff",
             borderLeft: "4px solid #f5c518",
@@ -43,7 +47,8 @@ export default function HomePage() {
           Top 10 no IGDb esta semana
         </Title>
         <Top10Jogos />
-      </div>
-    </div>
+      </section>
+      
+    </main>
   );
 }

@@ -8,17 +8,14 @@ const { Title, Text } = Typography;
 
 export default function ListagemJogos() {
   const [searchParams, setSearchParams] = useSearchParams();
-
   const buscaFiltro = searchParams.get("busca");
   const categoriasParam = searchParams.get("categorias");
   const plataformasParam = searchParams.get("plataformas");
   const ordemParam = searchParams.get("ordem") || "nota";
   const modeloParam = searchParams.get("modelo") || "todos";
   const limiteParam = searchParams.get("limite") || "todos";
-
   const categoriasAtivas = categoriasParam ? categoriasParam.split(",") : [];
   const plataformasAtivas = plataformasParam ? plataformasParam.split(",") : [];
-
   const handleAtualizarFiltro = (chave, valor) => {
     const novosParametros = new URLSearchParams(searchParams);
     if (valor && valor !== "todos" && valor.length > 0) {
@@ -27,42 +24,37 @@ export default function ListagemJogos() {
         Array.isArray(valor) ? valor.join(",") : valor,
       );
     } else {
-      novosParametros.delete(chave); // Limpa o parâmetro se for vazio ou "todos"
+      novosParametros.delete(chave);
     }
     setSearchParams(novosParametros);
   };
 
   let jogosFiltrados = [...db.jogos];
 
-  // 1. Filtro de Busca
   if (buscaFiltro) {
     jogosFiltrados = jogosFiltrados.filter((j) =>
       j.titulo.toLowerCase().includes(buscaFiltro.toLowerCase()),
     );
   }
 
-  // 2. Filtro de Categoria
   if (categoriasAtivas.length > 0) {
     jogosFiltrados = jogosFiltrados.filter((j) =>
       j.generos.some((g) => categoriasAtivas.includes(g)),
     );
   }
 
-  // 3. Filtro de Plataforma
   if (plataformasAtivas.length > 0) {
     jogosFiltrados = jogosFiltrados.filter((j) =>
       j.plataformas.some((p) => plataformasAtivas.includes(p)),
     );
   }
 
-  // 4. Filtro de Preço (Modelo de Negócio)
   if (modeloParam !== "todos") {
     jogosFiltrados = jogosFiltrados.filter(
       (j) => j.modeloNegocio === modeloParam,
     );
   }
 
-  // 5. Ordenação
   if (ordemParam === "nota") {
     jogosFiltrados.sort((a, b) => b.notaMedia - a.notaMedia);
   } else if (ordemParam === "recentes") {
@@ -73,7 +65,6 @@ export default function ListagemJogos() {
     jogosFiltrados.sort((a, b) => a.titulo.localeCompare(b.titulo));
   }
 
-  // 6. Aplicação do Limite
   if (limiteParam !== "todos") {
     const limiteNum = parseInt(limiteParam, 10);
     // Só corta a lista se for um número válido
@@ -82,25 +73,25 @@ export default function ListagemJogos() {
     }
   }
 
-  // Textos Dinâmicos
   let tituloPagina = buscaFiltro
     ? `Resultados para "${buscaFiltro}"`
     : "Explorar Jogos";
   let subtituloPagina = `Exibindo ${jogosFiltrados.length} resultados.`;
 
   return (
-    <div
+    <main
+      aria-labelledby="titulo-listagem-jogos"
       style={{
         maxWidth: "1400px",
         margin: "0 auto",
         padding: "40px 20px 80px 20px",
       }}
     >
-      {/* Título movido para cá para garantir o alinhamento perfeito do Grid abaixo */}
       <div style={{ marginBottom: "32px" }}>
         <Title
-          level={2}
-          style={{ color: "#fff", fontSize: "36px", marginBottom: "8px" }}
+          id="titulo-listagem-jogos"
+          level={1}
+          style={{ color: "#fff", fontSize: "36px", margin: "0 0 8px 0" }}
         >
           {tituloPagina}
         </Title>
@@ -109,22 +100,28 @@ export default function ListagemJogos() {
         </Text>
       </div>
 
-      <Row gutter={[40, 0]}>
-        <Col xs={24} lg={18}>
-          <TabelaJogos jogos={jogosFiltrados} />
+      <Row gutter={[40, 24]}>
+
+        <Col xs={{ span: 24, order: 2 }} lg={{ span: 18, order: 1 }}>
+          <section aria-label="Lista de jogos filtrados">
+            <TabelaJogos jogos={jogosFiltrados} />
+          </section>
         </Col>
 
-        <Col xs={24} lg={6}>
-          <FiltrosLaterais
-            categoriasAtivas={categoriasAtivas}
-            plataformasAtivas={plataformasAtivas}
-            ordemAtual={ordemParam}
-            modeloAtual={modeloParam}
-            limiteAtual={limiteParam}
-            onChangeFiltro={handleAtualizarFiltro}
-          />
+        <Col xs={{ span: 24, order: 1 }} lg={{ span: 6, order: 2 }}>
+          <aside aria-label="Filtros e ordenação">
+            <FiltrosLaterais
+              categoriasAtivas={categoriasAtivas}
+              plataformasAtivas={plataformasAtivas}
+              ordemAtual={ordemParam}
+              modeloAtual={modeloParam}
+              limiteAtual={limiteParam}
+              onChangeFiltro={handleAtualizarFiltro}
+            />
+          </aside>
         </Col>
+        
       </Row>
-    </div>
+    </main>
   );
 }

@@ -11,6 +11,7 @@ import {
   Dropdown,
   Avatar,
   message,
+  Grid
 } from "antd";
 import {
   MenuOutlined,
@@ -25,15 +26,19 @@ import {
 } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import { GENEROS } from "../../utils/enums"; // Importamos os enums reais para montar as colunas!
+import { GENEROS } from "../../utils/enums"; 
 
 const { Header } = Layout;
 const { Title } = Typography;
+const { useBreakpoint } = Grid;
 
 export default function HeaderMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
+  const screens = useBreakpoint();
+  const isMobile = !screens.lg; 
+  const isSmallMobile = !screens.sm;
 
   const handleLogout = () => {
     logout();
@@ -43,7 +48,6 @@ export default function HeaderMenu() {
   const showMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Função para executar a barra de pesquisa
   const handleSearch = (value) => {
     if (value.trim() !== "") {
       navigate(`/jogos?busca=${encodeURIComponent(value)}`);
@@ -51,25 +55,16 @@ export default function HeaderMenu() {
     }
   };
 
-  const linkStyle = {
-    color: "#c7d5e0",
-    display: "block",
-    marginBottom: "16px",
-    fontSize: "16px", // Diminui levemente para acomodar melhor a dupla coluna
-    fontWeight: "600",
-    transition: "color 0.2s",
-  };
-
   const colTitleStyle = {
     color: "#fff",
     marginTop: 0,
     marginBottom: "24px",
-    fontSize: "26px", // Ajustado para equilibrar com a fonte menor dos links
+    fontSize: "26px",
     fontWeight: "800",
   };
 
   const containerStyle = {
-    maxWidth: "1300px", // Aumentado um pouco para dar respiro às colunas extras
+    maxWidth: "1300px",
     margin: "0 auto",
     width: "100%",
   };
@@ -77,7 +72,7 @@ export default function HeaderMenu() {
   const userMenuItems = [
     {
       key: "perfil",
-      icon: <UserOutlined />,
+      icon: <UserOutlined aria-hidden="true" />,
       label: (
         <Link to="/perfil?tab=1" style={{ color: "#c7d5e0" }}>
           Meu Perfil
@@ -86,61 +81,94 @@ export default function HeaderMenu() {
     },
     {
       key: "favoritos",
-      icon: <HeartOutlined />,
+      icon: <HeartOutlined aria-hidden="true" />,
       label: (
         <Link to="/perfil?tab=3" style={{ color: "#c7d5e0" }}>
           Meus Favoritos
         </Link>
       ),
     },
-    {
-      type: "divider",
-    },
+    { type: "divider" },
     {
       key: "logout",
       danger: true,
-      icon: <LogoutOutlined />,
+      icon: <LogoutOutlined aria-hidden="true" />,
       label: "Sair da conta",
       onClick: handleLogout,
     },
   ];
 
-  // Divide as categorias do Enum na metade para as duas colunas
   const meioCategorias = Math.ceil(GENEROS.length / 2);
   const categoriasColuna1 = GENEROS.slice(0, meioCategorias);
   const categoriasColuna2 = GENEROS.slice(meioCategorias);
 
   return (
     <>
+      <style>{`
+        .mega-menu-link {
+          color: #c7d5e0;
+          display: block;
+          margin-bottom: 16px;
+          font-size: 16px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+        .mega-menu-link:hover {
+          color: #fff;
+        }
+        .user-dropdown-btn {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 4px 8px;
+          border-radius: 24px;
+          transition: background 0.3s;
+          background: transparent;
+          border: none;
+        }
+        .user-dropdown-btn:hover {
+          background: rgba(255, 255, 255, 0.05);
+        }
+      `}</style>
+
       <Header
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           background: "#171a21",
-          padding: "0 50px",
-          height: "80px",
+          padding: isMobile ? "0 16px" : "0 50px", 
+          height: "auto",
+          minHeight: "80px",
+          flexWrap: isMobile ? "wrap" : "nowrap", 
+          gap: isMobile ? "12px" : "0",
+          paddingTop: isMobile ? "12px" : "0",
+          paddingBottom: isMobile ? "12px" : "0"
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", flex: 1 }}>
-          <Space
-            size="large"
-            style={{ display: "flex", flex: 1, justifyContent: "center" }}
-          >
-            <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "center", flex: isMobile ? "none" : 1 }}>
+          <Space size={isMobile ? "middle" : "large"} style={{ display: "flex", flex: 1, justifyContent: "center" }}>
+            <Link to="/" aria-label="Ir para a página inicial" style={{ display: "flex", alignItems: "center" }}>
               <img
                 src="/src/assets/images/logo.png"
                 alt="IGDb Logo"
                 style={{
-                  height: "45px",
+                  height: isSmallMobile ? "35px" : "45px", 
                   borderRadius: "4px",
                   display: "block",
                 }}
               />
             </Link>
-            <div
+            
+            <button
               onClick={showMenu}
+              aria-label="Abrir menu principal"
+              aria-expanded={isMenuOpen}
               style={{
+                background: "transparent",
+                border: "none",
                 color: "#fff",
                 cursor: "pointer",
                 display: "flex",
@@ -148,28 +176,30 @@ export default function HeaderMenu() {
                 gap: "8px",
                 fontSize: "18px",
                 fontWeight: "800",
+                padding: 0
               }}
             >
-              <MenuOutlined style={{ fontSize: "22px" }} />
-              Menu
-            </div>
+              <MenuOutlined aria-hidden="true" style={{ fontSize: "22px" }} />
+              {!isMobile && "Menu"}
+            </button>
           </Space>
         </div>
 
         <div
           style={{
-            flex: 2,
+            flex: isMobile ? "1 1 100%" : 2, 
+            order: isMobile ? 3 : 2, 
             display: "flex",
             justifyContent: "center",
-            maxWidth: "1000px",
-            padding: "0 24px",
+            maxWidth: isMobile ? "100%" : "1000px",
+            padding: isMobile ? "0" : "0 24px",
           }}
         >
-          {/* A Barra de pesquisa agora funciona e redireciona para a tela de listagem! */}
           <Input.Search
-            placeholder="Pesquisar jogos, categorias, plataformas..."
+            placeholder="Pesquisar jogos, categorias..."
             enterButton
             size="large"
+            aria-label="Campo de pesquisa de jogos"
             style={{ width: "100%" }}
             onSearch={handleSearch}
           />
@@ -178,15 +208,17 @@ export default function HeaderMenu() {
         <div
           style={{
             display: "flex",
-            flex: 1,
+            flex: isMobile ? "none" : 1,
+            order: isMobile ? 2 : 3,
             justifyContent: "flex-end",
             alignItems: "center",
-            gap: "30px",
+            gap: isMobile ? "16px" : "30px",
           }}
         >
           {user && (
             <Link
               to="/perfil?tab=2"
+              aria-label="Ver minhas avaliações"
               style={{
                 color: "#fff",
                 fontWeight: "800",
@@ -196,35 +228,14 @@ export default function HeaderMenu() {
                 gap: "8px",
               }}
             >
-              <StarOutlined style={{ fontSize: "20px", color: "#66c0f4" }} />
-              Minhas Avaliações
+              <StarOutlined aria-hidden="true" style={{ fontSize: "20px", color: "#66c0f4" }} />
+              {!isMobile && "Minhas Avaliações"}
             </Link>
           )}
 
           {user ? (
-            <Dropdown
-              menu={{ items: userMenuItems }}
-              placement="bottomRight"
-              arrow
-            >
-              <div
-                style={{
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  padding: "4px 8px",
-                  borderRadius: "24px",
-                  transition: "background 0.3s",
-                }}
-                onMouseOver={(e) =>
-                  (e.currentTarget.style.background =
-                    "rgba(255, 255, 255, 0.05)")
-                }
-                onMouseOut={(e) =>
-                  (e.currentTarget.style.background = "transparent")
-                }
-              >
+            <Dropdown menu={{ items: userMenuItems }} placement="bottomRight" arrow>
+              <button aria-label="Menu da conta do usuário" className="user-dropdown-btn">
                 <Avatar
                   style={{
                     backgroundColor: "#66c0f4",
@@ -234,12 +245,12 @@ export default function HeaderMenu() {
                 >
                   {user.nome.charAt(0).toUpperCase()}
                 </Avatar>
-                <span
-                  style={{ color: "#fff", fontWeight: "800", fontSize: "15px" }}
-                >
-                  {user.nome.split(" ")[0]}
-                </span>
-              </div>
+                {!isSmallMobile && (
+                  <span style={{ color: "#fff", fontWeight: "800", fontSize: "15px" }}>
+                    {user.nome.split(" ")[0]}
+                  </span>
+                )}
+              </button>
             </Dropdown>
           ) : (
             <Link to="/login">
@@ -251,12 +262,12 @@ export default function HeaderMenu() {
                   border: "none",
                   borderRadius: "24px",
                   fontWeight: "800",
-                  padding: "0 24px",
+                  padding: isMobile ? "0 16px" : "0 24px",
                   height: "40px",
-                  fontSize: "15px",
+                  fontSize: isMobile ? "14px" : "15px",
                 }}
               >
-                Faça Login
+                Login
               </Button>
             </Link>
           )}
@@ -268,194 +279,68 @@ export default function HeaderMenu() {
         closable={false}
         onClose={closeMenu}
         open={isMenuOpen}
-        height="auto" // Ajusta a altura automaticamente com base nas 2 colunas
-        styles={{
-          body: { background: "#1b2838", padding: "0" },
-        }}
+        height="auto"
+        styles={{ body: { background: "#1b2838", padding: "0" } }}
       >
-        <div
-          style={{ padding: "30px 40px", borderBottom: "1px solid #2a475e" }}
-        >
-          <div
-            style={{
-              ...containerStyle,
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <Link
-              to="/"
-              onClick={closeMenu}
-              style={{ display: "flex", alignItems: "center" }}
-            >
-              <img
-                src="/src/assets/images/logo.png"
-                alt="IGDb Logo"
-                style={{ height: "60px", borderRadius: "6px" }}
-              />
+        <div style={{ padding: isMobile ? "20px" : "30px 40px", borderBottom: "1px solid #2a475e" }}>
+          <div style={{ ...containerStyle, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <Link to="/" onClick={closeMenu} aria-label="Ir para a página inicial" style={{ display: "flex", alignItems: "center" }}>
+              <img src="/src/assets/images/logo.png" alt="IGDb Logo" style={{ height: isMobile ? "40px" : "60px", borderRadius: "6px" }} />
             </Link>
             <Button
               shape="circle"
-              icon={<CloseOutlined style={{ fontSize: "20px" }} />}
+              aria-label="Fechar menu"
+              icon={<CloseOutlined aria-hidden="true" style={{ fontSize: "20px" }} />}
               onClick={closeMenu}
-              style={{
-                background: "#66c0f4",
-                color: "#000",
-                border: "none",
-                width: "50px",
-                height: "50px",
-              }}
+              style={{ background: "#66c0f4", color: "#000", border: "none", width: "50px", height: "50px" }}
             />
           </div>
         </div>
 
-        <div style={{ padding: "60px 40px" }}>
+        <nav aria-label="Navegação do Mega Menu" style={{ padding: isMobile ? "30px 20px" : "60px 40px" }}>
           <div style={containerStyle}>
             <Row gutter={[40, 48]} justify="start">
-              {/* COLUNA 1: JOGOS (Rankings e Limites) */}
               <Col xs={24} md={6}>
-                <Title level={3} style={colTitleStyle}>
-                  <TrophyOutlined
-                    style={{ color: "#66c0f4", marginRight: "12px" }}
-                  />{" "}
-                  Jogos
+                <Title level={2} style={colTitleStyle}>
+                  <TrophyOutlined aria-hidden="true" style={{ color: "#66c0f4", marginRight: "12px" }} /> Jogos
                 </Title>
-                <Link
-                  to="/jogos?ordem=nota&limite=50"
-                  onClick={closeMenu}
-                  style={linkStyle}
-                  onMouseOver={(e) => (e.target.style.color = "#fff")}
-                  onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                >
-                  Top 50 Melhores Jogos
-                </Link>
-                <Link
-                  to="/jogos?modelo=gratuito&ordem=nota&limite=10"
-                  style={linkStyle}
-                  onClick={closeMenu}
-                  onMouseOver={(e) => (e.target.style.color = "#fff")}
-                  onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                >
-                  Top 10 Gratuitos
-                </Link>
-                <Link
-                  to="/jogos?modelo=pago&ordem=nota&limite=10"
-                  style={linkStyle}
-                  onClick={closeMenu}
-                  onMouseOver={(e) => (e.target.style.color = "#fff")}
-                  onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                >
-                  Top 10 Pagos
-                </Link>
-                <Link
-                  to="/jogos?ordem=recentes&limite=20"
-                  style={linkStyle}
-                  onClick={closeMenu}
-                  onMouseOver={(e) => (e.target.style.color = "#fff")}
-                  onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                >
-                  Lançamentos (Top 20)
-                </Link>
+                <Link to="/jogos?ordem=nota&limite=50" onClick={closeMenu} className="mega-menu-link">Top 50 Melhores Jogos</Link>
+                <Link to="/jogos?modelo=gratuito&ordem=nota&limite=10" onClick={closeMenu} className="mega-menu-link">Top 10 Gratuitos</Link>
+                <Link to="/jogos?modelo=pago&ordem=nota&limite=10" onClick={closeMenu} className="mega-menu-link">Top 10 Pagos</Link>
+                <Link to="/jogos?ordem=recentes&limite=20" onClick={closeMenu} className="mega-menu-link">Lançamentos (Top 20)</Link>
               </Col>
 
-              {/* COLUNA 2: CATEGORIAS (Dividida em 2 subcolunas puxadas direto do Enum) */}
               <Col xs={24} md={12}>
-                <Title level={3} style={colTitleStyle}>
-                  <AppstoreOutlined
-                    style={{ color: "#66c0f4", marginRight: "12px" }}
-                  />{" "}
-                  Categorias
+                <Title level={2} style={colTitleStyle}>
+                  <AppstoreOutlined aria-hidden="true" style={{ color: "#66c0f4", marginRight: "12px" }} /> Categorias
                 </Title>
                 <Row>
                   <Col span={12}>
                     {categoriasColuna1.map((cat) => (
-                      <Link
-                        key={cat}
-                        to={`/jogos?categorias=${cat}`}
-                        style={linkStyle}
-                        onClick={closeMenu}
-                        onMouseOver={(e) => (e.target.style.color = "#fff")}
-                        onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                      >
-                        {cat}
-                      </Link>
+                      <Link key={cat} to={`/jogos?categorias=${encodeURIComponent(cat)}`} onClick={closeMenu} className="mega-menu-link">{cat}</Link>
                     ))}
                   </Col>
                   <Col span={12}>
                     {categoriasColuna2.map((cat) => (
-                      <Link
-                        key={cat}
-                        to={`/jogos?categorias=${cat}`}
-                        style={linkStyle}
-                        onClick={closeMenu}
-                        onMouseOver={(e) => (e.target.style.color = "#fff")}
-                        onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                      >
-                        {cat}
-                      </Link>
+                      <Link key={cat} to={`/jogos?categorias=${encodeURIComponent(cat)}`} onClick={closeMenu} className="mega-menu-link">{cat}</Link>
                     ))}
                   </Col>
                 </Row>
               </Col>
 
-              {/* COLUNA 3: PLATAFORMAS (Puxando as principais) */}
               <Col xs={24} md={6}>
-                <Title level={3} style={colTitleStyle}>
-                  <DesktopOutlined
-                    style={{ color: "#66c0f4", marginRight: "12px" }}
-                  />{" "}
-                  Plataformas
+                <Title level={2} style={colTitleStyle}>
+                  <DesktopOutlined aria-hidden="true" style={{ color: "#66c0f4", marginRight: "12px" }} /> Plataformas
                 </Title>
-                <Link
-                  to="/jogos?plataformas=PC"
-                  style={linkStyle}
-                  onClick={closeMenu}
-                  onMouseOver={(e) => (e.target.style.color = "#fff")}
-                  onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                >
-                  PC (Windows)
-                </Link>
-                <Link
-                  to="/jogos?plataformas=PlayStation 5"
-                  style={linkStyle}
-                  onClick={closeMenu}
-                  onMouseOver={(e) => (e.target.style.color = "#fff")}
-                  onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                >
-                  PlayStation 5
-                </Link>
-                <Link
-                  to="/jogos?plataformas=PlayStation 4"
-                  style={linkStyle}
-                  onClick={closeMenu}
-                  onMouseOver={(e) => (e.target.style.color = "#fff")}
-                  onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                >
-                  PlayStation 4
-                </Link>
-                <Link
-                  to="/jogos?plataformas=Xbox Series X/S"
-                  style={linkStyle}
-                  onClick={closeMenu}
-                  onMouseOver={(e) => (e.target.style.color = "#fff")}
-                  onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                >
-                  Xbox Series X/S
-                </Link>
-                <Link
-                  to="/jogos?plataformas=Switch"
-                  style={linkStyle}
-                  onClick={closeMenu}
-                  onMouseOver={(e) => (e.target.style.color = "#fff")}
-                  onMouseOut={(e) => (e.target.style.color = "#c7d5e0")}
-                >
-                  Nintendo Switch
-                </Link>
+                <Link to="/jogos?plataformas=PC" onClick={closeMenu} className="mega-menu-link">PC (Windows)</Link>
+                <Link to="/jogos?plataformas=PlayStation%205" onClick={closeMenu} className="mega-menu-link">PlayStation 5</Link>
+                <Link to="/jogos?plataformas=PlayStation%204" onClick={closeMenu} className="mega-menu-link">PlayStation 4</Link>
+                <Link to="/jogos?plataformas=Xbox%20Series%20X%2FS" onClick={closeMenu} className="mega-menu-link">Xbox Series X/S</Link>
+                <Link to="/jogos?plataformas=Switch" onClick={closeMenu} className="mega-menu-link">Nintendo Switch</Link>
               </Col>
             </Row>
           </div>
-        </div>
+        </nav>
       </Drawer>
     </>
   );

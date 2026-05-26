@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Modal, Typography, Rate, Input, Button, message } from "antd";
+import { Modal, Typography, Rate, Input, Button, message, Grid } from "antd";
 import { StarFilled } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -7,10 +7,13 @@ import db from "../../assets/data.json";
 
 const { Title, Text } = Typography;
 const { TextArea } = Input;
+const { useBreakpoint } = Grid;
 
 export default function ModalAvaliacoes({ jogo, visible, onClose }) {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
+  const screens = useBreakpoint();
+  const isMobile = !screens.sm;
 
   const [nota, setNota] = useState(0);
   const [comentario, setComentario] = useState("");
@@ -62,7 +65,7 @@ export default function ModalAvaliacoes({ jogo, visible, onClose }) {
       footer={null}
       centered
       width={750}
-      closeIcon={<span style={{ color: "#8f98a0", fontSize: "20px" }}>✕</span>}
+      closeIcon={<span aria-label="Fechar avaliação" style={{ color: "#8f98a0", fontSize: "20px" }}>✕</span>}
       className="modal-avaliacao-igdb"
       wrapClassName="modal-avaliacao-igdb"
       rootClassName="modal-avaliacao-igdb"
@@ -79,7 +82,7 @@ export default function ModalAvaliacoes({ jogo, visible, onClose }) {
             background: "linear-gradient(180deg, #1e2c3a 0%, #0d131a 100%)",
             boxShadow:
               "0 0 80px rgba(87, 153, 239, 0.15), 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
-            padding: "50px 40px 40px 40px",
+            padding: isMobile ? "50px 20px 30px 20px" : "50px 40px 40px 40px",
             overflow: "visible",
           },
         })
@@ -93,125 +96,134 @@ export default function ModalAvaliacoes({ jogo, visible, onClose }) {
         `}
       </style>
 
-      <div
-        style={{
-          position: "absolute",
-          top: "-70px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          zIndex: 10,
-        }}
-      >
-        <StarFilled
-          style={{
-            fontSize: "110px",
-            color: "#5799ef",
-            filter: "drop-shadow(0px 10px 20px rgba(0,0,0,0.6))",
-          }}
-        />
-        <span
+      <section aria-labelledby="titulo-avaliar-jogo">
+        <div
           style={{
             position: "absolute",
-            color: "#fff",
-            fontSize: "26px",
-            fontWeight: "900",
-            marginTop: "6px",
-          }}
-        >
-          {nota > 0 ? nota : "?"}
-        </span>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginTop: "15px",
-        }}
-      >
-        <Text
-          style={{
-            color: "#f5c518",
-            fontWeight: "800",
-            letterSpacing: "2px",
-            fontSize: "14px",
-            textTransform: "uppercase",
-            marginBottom: "8px",
-          }}
-        >
-          Sua Avaliação
-        </Text>
-
-        <Title
-          level={2}
-          style={{
-            color: "#fff",
-            margin: "0 0 30px 0",
-            fontSize: "32px",
-            fontWeight: "800",
-            textAlign: "center",
-            lineHeight: "1.2",
-          }}
-        >
-          {jogo.titulo}
-        </Title>
-
-        <Rate
-          count={10}
-          value={nota}
-          onChange={setNota}
-          style={{
-            color: "#5799ef",
-            fontSize: "38px",
-            marginBottom: "30px",
+            top: "-70px",
+            left: "50%",
+            transform: "translateX(-50%)",
             display: "flex",
             justifyContent: "center",
-            gap: "4px",
-          }}
-        />
-
-        <TextArea
-          rows={4}
-          placeholder="Escreva uma breve análise (Opcional)"
-          value={comentario}
-          onChange={(e) => setComentario(e.target.value)}
-          style={{
-            backgroundColor: "rgba(0, 0, 0, 0.3)",
-            border: "1px solid rgba(255, 255, 255, 0.05)",
-            color: "#c7d5e0",
-            marginBottom: "30px",
-            resize: "none",
-            fontSize: "16px",
-            padding: "16px",
-            borderRadius: "8px",
-            boxShadow: "inset 0 2px 4px rgba(0,0,0,0.2)",
-          }}
-        />
-
-        <Button
-          type="primary"
-          onClick={handleAvaliar}
-          disabled={nota === 0}
-          style={{
-            width: "100%",
-            height: "54px",
-            borderRadius: "27px",
-            fontSize: "18px",
-            fontWeight: "700",
-            backgroundColor:
-              nota === 0 ? "rgba(255, 255, 255, 0.08)" : "#3a7bc8",
-            borderColor: "transparent",
-            color: nota === 0 ? "rgba(255, 255, 255, 0.3)" : "#fff",
-            transition: "all 0.3s ease",
+            alignItems: "center",
+            zIndex: 10,
           }}
         >
-          Avaliar
-        </Button>
-      </div>
+          <StarFilled
+            aria-hidden="true"
+            style={{
+              fontSize: "110px",
+              color: "#5799ef",
+              filter: "drop-shadow(0px 10px 20px rgba(0,0,0,0.6))",
+            }}
+          />
+          <span
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              color: "#fff",
+              fontSize: "26px",
+              fontWeight: "900",
+              marginTop: "6px",
+            }}
+          >
+            {nota > 0 ? nota : "?"}
+          </span>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            marginTop: "15px",
+          }}
+        >
+          <Text
+            id="label-sua-avaliacao"
+            style={{
+              color: "#f5c518",
+              fontWeight: "800",
+              letterSpacing: "2px",
+              fontSize: "14px",
+              textTransform: "uppercase",
+              marginBottom: "8px",
+            }}
+          >
+            Sua Avaliação
+          </Text>
+
+          <Title
+            id="titulo-avaliar-jogo"
+            level={2}
+            style={{
+              color: "#fff",
+              margin: "0 0 30px 0",
+              fontSize: isMobile ? "24px" : "32px",
+              fontWeight: "800",
+              textAlign: "center",
+              lineHeight: "1.2",
+            }}
+          >
+            {jogo.titulo}
+          </Title>
+
+          <div aria-labelledby="label-sua-avaliacao" style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+            <Rate
+              count={10}
+              value={nota}
+              onChange={setNota}
+              style={{
+                color: "#5799ef",
+                fontSize: isMobile ? "24px" : "38px",
+                marginBottom: "30px",
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "wrap", 
+                gap: "4px",
+              }}
+            />
+          </div>
+
+          <TextArea
+            rows={4}
+            aria-label="Escreva uma breve análise opcional"
+            placeholder="Escreva uma breve análise (Opcional)"
+            value={comentario}
+            onChange={(e) => setComentario(e.target.value)}
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 0.3)",
+              border: "1px solid rgba(255, 255, 255, 0.05)",
+              color: "#c7d5e0",
+              marginBottom: "30px",
+              resize: "none",
+              fontSize: "16px",
+              padding: "16px",
+              borderRadius: "8px",
+              boxShadow: "inset 0 2px 4px rgba(0,0,0,0.2)",
+            }}
+          />
+
+          <Button
+            type="primary"
+            onClick={handleAvaliar}
+            disabled={nota === 0}
+            style={{
+              width: "100%",
+              height: "54px",
+              borderRadius: "27px",
+              fontSize: "18px",
+              fontWeight: "700",
+              backgroundColor: nota === 0 ? "rgba(255, 255, 255, 0.08)" : "#3a7bc8",
+              borderColor: "transparent",
+              color: nota === 0 ? "rgba(255, 255, 255, 0.3)" : "#fff",
+              transition: "all 0.3s ease",
+            }}
+          >
+            Avaliar
+          </Button>
+        </div>
+      </section>
     </Modal>
   );
 }

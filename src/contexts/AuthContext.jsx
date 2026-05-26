@@ -5,6 +5,13 @@ export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
+  const [favoritos, setFavoritos] = useState(() => {
+    const storedFavs = localStorage.getItem("@IGDb:favoritos");
+    if (storedFavs) {
+      return JSON.parse(storedFavs);
+    }
+    return db.favoritos || [];
+  });
 
   useEffect(() => {
     const storedUser = localStorage.getItem("@IGDb:user");
@@ -20,7 +27,7 @@ export function AuthProvider({ children }) {
     }
 
     const novoUsuario = {
-      id: `u${Date.now()}`, // Cria um ID falso baseado na hora atual
+      id: `u${Date.now()}`,
       nome: nome,
       email: email,
       senha: senha,
@@ -64,8 +71,56 @@ export function AuthProvider({ children }) {
     localStorage.removeItem("@IGDb:user");
   };
 
+  const toggleFavorito = (jogo) => {
+    if (!user) return { success: false, message: "Inicie sessão para adicionar favoritos." };
+
+    const isFavorito = favoritos.some(
+      (fav) => fav.usuarioId === user.id && fav.jogoId === jogo.id
+    );
+
+    let novosFavoritos;
+
+    if (isFavorito) {
+      novosFavoritos = favoritos.filter(
+        (fav) => !(fav.usuarioId === user.id && fav.jogoId === jogo.id)
+      );
+      setFavoritos(novosFavoritos);
+      localStorage.setItem("@IGDb:favoritos", JSON.stringify(novosFavoritos));
+      return { success: true, isFav: false, message: `"${jogo.titulo}" removido dos favoritos.` };
+    } else {
+      const novoFavorito = {
+        id: "f" + Date.now(),
+        usuarioId: user.id,
+        jogoId: jogo.id,
+      };
+      novosFavoritos = [...favoritos, novoFavorito];
+      setFavoritos(novosFavoritos);
+      localStorage.setItem("@IGDb:favoritos", JSON.stringify(novosFavoritos));
+      return { success: true, isFav: true, message: `"${jogo.titulo}" adicionado aos favoritos!` };
+    }
+  };
+
+  const checkIsFavorito = (jogoId) => {
+    if (!user) return false;
+    return favoritos.some(
+      (fav) => fav.usuarioId === user.id && fav.jogoId === jogoId
+    );
+  };
+
   return (
-    <AuthContext.Provider value={{ user, login, logout, register, atualizarPerfil, isAuthenticated: !!user }}>
+    <AuthContext.Provider 
+      value={{ 
+        user, 
+        login, 
+        logout, 
+        register, 
+        atualizarPerfil, 
+        isAuthenticated: !!user,
+        favoritos,
+        toggleFavorito, 
+        checkIsFavorito 
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

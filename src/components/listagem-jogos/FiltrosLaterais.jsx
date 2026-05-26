@@ -14,20 +14,22 @@ export default function FiltrosLaterais({
   onChangeFiltro,
 }) {
   return (
-    <div
+    <aside
+      aria-labelledby="titulo-filtros"
       className="painel-filtros-steam"
       style={{
         background: "#16202d",
         padding: "20px",
         borderTop: "4px solid #66c0f4",
         borderRadius: "4px",
-        // Removida a propriedade marginTop: "86px", agora o alinhamento é automático!
       }}
     >
       <Space size="small" style={{ marginBottom: "24px" }}>
-        <FilterOutlined style={{ color: "#66c0f4", fontSize: "18px" }} />
+        <FilterOutlined aria-hidden="true" style={{ color: "#66c0f4", fontSize: "18px" }} />
+        
         <Title
-          level={4}
+          id="titulo-filtros"
+          level={2}
           style={{
             color: "#fff",
             margin: 0,
@@ -39,9 +41,9 @@ export default function FiltrosLaterais({
         </Title>
       </Space>
 
-      {/* ORDENAÇÃO */}
       <div style={{ marginBottom: "24px" }}>
         <Text
+          id="label-ordenar"
           style={{
             color: "#66c0f4",
             fontWeight: "bold",
@@ -52,6 +54,7 @@ export default function FiltrosLaterais({
           ORDENAR POR
         </Text>
         <Radio.Group
+          aria-labelledby="label-ordenar"
           onChange={(e) => onChangeFiltro("ordem", e.target.value)}
           value={ordemAtual}
           style={{ display: "flex", flexDirection: "column", gap: "8px" }}
@@ -70,9 +73,9 @@ export default function FiltrosLaterais({
 
       <Divider style={{ borderColor: "#2a475e", margin: "16px 0" }} />
 
-      {/* PREÇO / MODELO DE NEGÓCIO */}
       <div style={{ marginBottom: "24px" }}>
         <Text
+          id="label-preco"
           style={{
             color: "#66c0f4",
             fontWeight: "bold",
@@ -83,6 +86,7 @@ export default function FiltrosLaterais({
           PREÇO
         </Text>
         <Radio.Group
+          aria-labelledby="label-preco"
           onChange={(e) => onChangeFiltro("modelo", e.target.value)}
           value={modeloAtual}
           style={{ display: "flex", flexDirection: "column", gap: "8px" }}
@@ -97,9 +101,9 @@ export default function FiltrosLaterais({
 
       <Divider style={{ borderColor: "#2a475e", margin: "16px 0" }} />
 
-      {/* CATEGORIAS */}
       <div style={{ marginBottom: "24px" }}>
         <Text
+          id="label-generos"
           style={{
             color: "#66c0f4",
             fontWeight: "bold",
@@ -110,6 +114,7 @@ export default function FiltrosLaterais({
           GÊNEROS
         </Text>
         <Checkbox.Group
+          aria-labelledby="label-generos"
           options={GENEROS}
           value={categoriasAtivas}
           onChange={(valores) => onChangeFiltro("categorias", valores)}
@@ -119,9 +124,9 @@ export default function FiltrosLaterais({
 
       <Divider style={{ borderColor: "#2a475e", margin: "16px 0" }} />
 
-      {/* PLATAFORMAS */}
-      <div>
+      <div style={{ marginBottom: "24px" }}>
         <Text
+          id="label-plataformas"
           style={{
             color: "#66c0f4",
             fontWeight: "bold",
@@ -132,14 +137,19 @@ export default function FiltrosLaterais({
           PLATAFORMAS
         </Text>
         <Checkbox.Group
+          aria-labelledby="label-plataformas"
           options={PLATAFORMAS}
           value={plataformasAtivas}
           onChange={(valores) => onChangeFiltro("plataformas", valores)}
           style={{ display: "flex", flexDirection: "column", gap: "8px" }}
         />
       </div>
+      
+      <Divider style={{ borderColor: "#2a475e", margin: "16px 0" }} />
+
       <div style={{ marginBottom: "24px" }}>
         <Text
+          id="label-limite"
           style={{
             color: "#66c0f4",
             fontWeight: "bold",
@@ -150,11 +160,12 @@ export default function FiltrosLaterais({
           EXIBIR RESULTADOS
         </Text>
         <Radio.Group
+          aria-labelledby="label-limite"
           onChange={(e) => {
             if (e.target.value === "todos") {
               onChangeFiltro("limite", "todos");
             } else {
-              onChangeFiltro("limite", "50"); // Se marcar "Personalizado", joga 50 como número inicial
+              onChangeFiltro("limite", "50"); 
             }
           }}
           value={limiteAtual === "todos" ? "todos" : "personalizado"}
@@ -168,15 +179,15 @@ export default function FiltrosLaterais({
               Personalizado:
             </span>
             <InputNumber
+              aria-label="Quantidade personalizada de resultados"
               min={1}
               max={500}
-              // Se for "todos", a caixinha exibe 50 desabilitada. Se for número, exibe o número atual da URL.
               value={limiteAtual !== "todos" ? parseInt(limiteAtual, 10) : 50}
               onChange={(valor) => {
                 if (valor) onChangeFiltro("limite", valor.toString());
               }}
               disabled={limiteAtual === "todos"}
-              className="input-limite-dark" // Classe para estilizar
+              className="input-limite-dark" 
               style={{
                 width: "70px",
                 background: limiteAtual === "todos" ? "#1a1f26" : "#171a21",
@@ -186,8 +197,6 @@ export default function FiltrosLaterais({
           </Radio>
         </Radio.Group>
       </div>
-
-      <Divider style={{ borderColor: "#2a475e", margin: "16px 0" }} />
-    </div>
+    </aside>
   );
 }

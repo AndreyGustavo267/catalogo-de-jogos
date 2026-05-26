@@ -4,6 +4,7 @@ import { Space } from "antd";
 
 const PlaystationIcon = () => (
   <svg
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="20"
     height="20"
@@ -16,6 +17,7 @@ const PlaystationIcon = () => (
 
 const XboxIcon = () => (
   <svg
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="18"
     height="18"
@@ -28,6 +30,7 @@ const XboxIcon = () => (
 
 const SwitchIcon = () => (
   <svg
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="18"
     height="18"
@@ -45,10 +48,11 @@ export default function Plataformas({ plataformas, onClick }) {
 
     let iconContent;
     if (lower.includes("pc") || lower.includes("windows")) {
-      iconContent = <WindowsOutlined style={{ fontSize: "20px" }} />;
+      iconContent = <WindowsOutlined aria-hidden="true" style={{ fontSize: "20px" }} />;
     } else if (lower.includes("mac")) {
       iconContent = (
         <AppleOutlined
+          aria-hidden="true"
           style={{ fontSize: "22px", position: "relative", top: "-2px" }}
         />
       );
@@ -60,7 +64,7 @@ export default function Plataformas({ plataformas, onClick }) {
       iconContent = <SwitchIcon />;
     } else {
       iconContent = (
-        <span style={{ fontSize: "14px", fontWeight: "bold" }}>{plat}</span>
+        <span aria-hidden="true" style={{ fontSize: "14px", fontWeight: "bold" }}>{plat}</span>
       );
     }
 
@@ -69,21 +73,9 @@ export default function Plataformas({ plataformas, onClick }) {
         key={plat}
         to={`/jogos?plataformas=${encodeURIComponent(plat)}`}
         onClick={onClick}
-        style={{
-          color: "#8f98a0", // Cinza padrão
-          display: "flex",
-          alignItems: "center",
-          transition: "all 0.2s",
-        }}
-        onMouseOver={(e) => {
-          e.currentTarget.style.color = "#fff"; // Fica branco no hover
-          e.currentTarget.style.transform = "scale(1.1)"; // Dá uma leve crescida
-        }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.color = "#8f98a0";
-          e.currentTarget.style.transform = "scale(1)";
-        }}
-        title={`Filtrar por ${plat}`}
+        className="plataforma-icone-link"
+        aria-label={`Filtrar por ${plat}`}
+        title={`Filtrar por ${plat}`} 
       >
         {iconContent}
       </Link>
@@ -91,11 +83,26 @@ export default function Plataformas({ plataformas, onClick }) {
   };
 
   return (
-    <Space
-      size="middle"
-      style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
-    >
-      {plataformas.map(renderIcon)}
-    </Space>
+    <>
+      <style>{`
+        .plataforma-icone-link {
+          color: #8f98a0;
+          display: flex;
+          align-items: center;
+          transition: all 0.2s ease;
+        }
+        .plataforma-icone-link:hover {
+          color: #fff;
+          transform: scale(1.1);
+        }
+      `}</style>
+      
+      <Space
+        size="middle"
+        style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
+      >
+        {plataformas.map(renderIcon)}
+      </Space>
+    </>
   );
 }

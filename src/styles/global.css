@@ -32,7 +32,6 @@ body {
 .steam-carousel .slick-prev,
 .steam-carousel .slick-next {
   color: transparent !important;
-  background: transparent !important;
 }
 
 /* Posição das barrinhas */
@@ -40,10 +39,10 @@ body {
   bottom: -40px !important;
 }
 
-/* Formato das barrinhas */
+/* Deixa o tamanho flexível para a transição funcionar */
 .steam-carousel .slick-dots li {
-  width: 45px !important;
-  height: 6px !important;
+  width: auto !important; 
+  height: 5px !important;
   margin: 0 4px !important;
 }
 
@@ -54,21 +53,22 @@ body {
   content: none !important;
 }
 
-/* Cor da barrinha INATIVA */
+/* Cor da barrinha INATIVA (Azul Escuro Discreto) */
 .steam-carousel .slick-dots li button {
-  width: 100% !important;
-  height: 100% !important;
-  background: #ffffff !important;
-  opacity: 0.3 !important;
+  width: 16px !important; /* Largura menor quando inativa */
+  height: 5px !important;
+  background: #2a475e !important; /* A cor azul escura */
+  opacity: 1 !important; /* Deixa sólido em vez de transparente */
   border-radius: 4px !important;
   border: none !important;
   outline: none !important;
+  transition: all 0.3s ease !important; /* Efeito suave ao crescer */
 }
 
-/* Cor da barrinha ATIVA (Azul limpo, sem riscos) */
+/* Cor da barrinha ATIVA (Azul Vibrante do Logo) */
 .steam-carousel .slick-dots li.slick-active button {
-  background: #66c0f4 !important;
-  opacity: 1 !important;
+  background: #66c0f4 !important; /* A cor do logo */
+  width: 32px !important; /* Fica mais comprida para destacar */
 }
 
 /* =========================================

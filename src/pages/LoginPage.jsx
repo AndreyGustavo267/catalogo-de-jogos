@@ -25,9 +25,10 @@ export default function LoginPage() {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "80px auto", padding: "20px" }}>
+    <main aria-labelledby="titulo-login" style={{ maxWidth: "400px", margin: "80px auto", padding: "20px" }}>
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
-        <Title level={2} style={{ color: "#fff", marginBottom: "8px" }}>
+        
+        <Title id="titulo-login" level={1} style={{ color: "#fff", fontSize: "30px", marginBottom: "8px" }}>
           Iniciar Sessão
         </Title>
         <Text style={{ color: "#8f98a0", fontSize: "16px" }}>
@@ -41,16 +42,17 @@ export default function LoginPage() {
         onFinish={onFinish}
         size="large"
       >
-
         <Form.Item
           name="email"
+          label={<span style={{ color: "#c7d5e0" }}>E-mail</span>}
           rules={[
             { required: true, message: "Por favor, insira seu e-mail!" },
             { type: "email", message: "Insira um e-mail válido!" }
           ]}
         >
           <Input
-            prefix={<MailOutlined style={{ color: "#8f98a0" }} />}
+            autoFocus
+            prefix={<MailOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />}
             placeholder="Seu e-mail"
             style={{ 
               background: "#1b2838", 
@@ -62,10 +64,11 @@ export default function LoginPage() {
 
         <Form.Item
           name="senha"
+          label={<span style={{ color: "#c7d5e0" }}>Senha</span>}
           rules={[{ required: true, message: "Por favor, insira sua senha!" }]}
         >
           <Input.Password
-            prefix={<LockOutlined style={{ color: "#8f98a0" }} />}
+            prefix={<LockOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />}
             placeholder="Sua senha"
             style={{ 
               background: "#1b2838", 
@@ -95,13 +98,13 @@ export default function LoginPage() {
           </Button>
         </Form.Item>
         
-            <div style={{ textAlign: "center", marginTop: "20px" }}>
-            <Text style={{ color: "#8f98a0" }}>Não tem uma conta? </Text>
-            <Link to="/registro" style={{ color: "#66c0f4", fontWeight: "bold" }}>
-                Cadastre-se aqui.
-            </Link>
-            </div>
-        </Form>
-    </div>
-);
+        <div style={{ textAlign: "center", marginTop: "20px" }}>
+          <Text style={{ color: "#8f98a0" }}>Não tem uma conta? </Text>
+          <Link to="/registro" style={{ color: "#66c0f4", fontWeight: "bold" }}>
+            Cadastre-se aqui.
+          </Link>
+        </div>
+      </Form>
+    </main>
+  );
 }

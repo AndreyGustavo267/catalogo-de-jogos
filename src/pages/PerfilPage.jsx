@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Typography, Tabs, List, Row, Col, Space, Card, Avatar, Button, Modal, Form, Input, message } from "antd";
-import { StarFilled, UserOutlined, MailOutlined, CrownOutlined, EditOutlined, LockOutlined } from "@ant-design/icons";
+import { StarFilled, UserOutlined, MailOutlined, EditOutlined, LockOutlined } from "@ant-design/icons";
 import { AuthContext } from "../contexts/AuthContext";
 import db from "../assets/data.json";
 
@@ -12,6 +12,9 @@ export default function PerfilPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("1");
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [form] = Form.useForm();
+
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const tab = params.get("tab");
@@ -19,12 +22,11 @@ export default function PerfilPage() {
       setActiveTab(tab);
     }
   }, [location]);
+
   const handleTabChange = (key) => {
     setActiveTab(key);
     navigate(`/perfil?tab=${key}`, { replace: true });
   };
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [form] = Form.useForm();
   
   const handleUpdate = (values) => {
     const result = atualizarPerfil(values);
@@ -49,20 +51,20 @@ export default function PerfilPage() {
       children: (
         <Card style={{ background: "rgba(26, 31, 38, 0.5)", borderColor: "#2a475e", marginTop: "16px" }}>
           <Space direction="vertical" size="large" style={{ width: "100%" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
               <Space size="middle" align="center">
                 <Avatar size={64} style={{ backgroundColor: "#66c0f4", color: "#0a141d", fontSize: "24px", fontWeight: "bold" }}>
                   {user?.nome?.charAt(0).toUpperCase()}
                 </Avatar>
                 <div>
-                  <Title level={3} style={{ color: "#fff", margin: 0 }}>{user?.nome}</Title>
+                  <Title level={2} style={{ color: "#fff", margin: 0, fontSize: "24px" }}>{user?.nome}</Title>
                   <Text style={{ color: "#8f98a0" }}>Membro da Comunidade</Text>
                 </div>
               </Space>
               
               <Button 
                 type="primary" 
-                icon={<EditOutlined />} 
+                icon={<EditOutlined aria-hidden="true" />} 
                 onClick={() => {
                   form.setFieldsValue({ nome: user?.nome, email: user?.email });
                   setIsModalVisible(true);
@@ -75,11 +77,11 @@ export default function PerfilPage() {
             
             <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginTop: "10px" }}>
               <Text style={{ color: "#c7d5e0", fontSize: "16px" }}>
-                <UserOutlined style={{ marginRight: "10px", color: "#66c0f4" }} /> 
+                <UserOutlined aria-hidden="true" style={{ marginRight: "10px", color: "#66c0f4" }} /> 
                 <strong>Nome:</strong> {user?.nome}
               </Text>
               <Text style={{ color: "#c7d5e0", fontSize: "16px" }}>
-                <MailOutlined style={{ marginRight: "10px", color: "#66c0f4" }} /> 
+                <MailOutlined aria-hidden="true" style={{ marginRight: "10px", color: "#66c0f4" }} /> 
                 <strong>E-mail:</strong> {user?.email}
               </Text>
             </div>
@@ -91,7 +93,7 @@ export default function PerfilPage() {
       key: "2",
       label: `Minhas Avaliações (${listaAvaliacoes.length})`,
       children: (
-        <div style={{ marginTop: "16px" }}>
+        <section aria-label="Lista das suas avaliações" style={{ marginTop: "16px" }}>
           <List
             itemLayout="horizontal"
             dataSource={listaAvaliacoes}
@@ -100,14 +102,14 @@ export default function PerfilPage() {
               <div style={{ background: "rgba(26, 31, 38, 0.5)", borderRadius: "8px", marginBottom: "16px", padding: "20px", border: "1px solid rgba(255, 255, 255, 0.05)" }}>
                 <Row gutter={[24, 16]}>
                   <Col xs={24} sm={6} md={4}>
-                    <img src={item.jogo?.capa} alt={item.jogo?.titulo} style={{ width: "100%", borderRadius: "4px", objectFit: "cover" }} />
+                    <img src={item.jogo?.capa} alt={`Capa do jogo ${item.jogo?.titulo}`} style={{ width: "100%", borderRadius: "4px", objectFit: "cover" }} />
                   </Col>
                   <Col xs={24} sm={18} md={20}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                      <Title level={4} style={{ color: "#fff", margin: 0 }}>{item.jogo?.titulo}</Title>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "12px" }}>
+                      <Title level={3} style={{ color: "#fff", margin: 0, fontSize: "20px" }}>{item.jogo?.titulo}</Title>
                       <Space style={{ background: "rgba(245, 197, 24, 0.1)", padding: "4px 12px", borderRadius: "16px" }}>
-                        <StarFilled style={{ color: "#f5c518", fontSize: "16px" }} />
-                        <Text strong style={{ color: "#f5c518", fontSize: "16px" }}>{item.nota.toFixed(1)}</Text>
+                        <StarFilled aria-hidden="true" style={{ color: "#f5c518", fontSize: "16px" }} />
+                        <Text strong aria-label={`Sua nota foi ${item.nota.toFixed(1)}`} style={{ color: "#f5c518", fontSize: "16px" }}>{item.nota.toFixed(1)}</Text>
                       </Space>
                     </div>
                     <Text style={{ color: "#8f98a0", fontSize: "13px", display: "block", marginBottom: "12px" }}>
@@ -121,22 +123,22 @@ export default function PerfilPage() {
               </div>
             )}
           />
-        </div>
+        </section>
       ),
     },
     {
       key: "3",
       label: `Meus Favoritos (${meusFavoritos.length})`,
       children: (
-        <div style={{ marginTop: "16px" }}>
+        <section aria-label="Lista dos seus jogos favoritos" style={{ marginTop: "16px" }}>
           <Row gutter={[16, 16]}>
             {meusFavoritos.length > 0 ? (
               meusFavoritos.map((jogo) => (
                 <Col xs={12} sm={8} md={6} key={jogo.id}>
-                  <Link to={`/jogo/${jogo.id}`} style={{ textDecoration: "none" }}>
+                  <Link to={`/jogo/${jogo.id}`} style={{ textDecoration: "none" }} aria-label={`Ver detalhes de ${jogo.titulo}`}>
                     <Card
                       hoverable
-                      cover={<img alt={jogo.titulo} src={jogo.capa} style={{ height: "100px", objectFit: "cover" }} />}
+                      cover={<img alt={`Capa do jogo ${jogo.titulo}`} src={jogo.capa} style={{ height: "140px", objectFit: "cover", display: "block" }} />}
                       style={{ background: "#1a1f26", borderColor: "#2a475e", overflow: "hidden" }}
                       bodyStyle={{ padding: "12px" }}
                     >
@@ -152,25 +154,26 @@ export default function PerfilPage() {
               <Text style={{ color: "#8f98a0" }}>Você ainda não adicionou jogos aos favoritos.</Text>
             )}
           </Row>
-        </div>
+        </section>
       ),
     },
   ];
 
   return (
-    <div style={{ maxWidth: "1000px", margin: "40px auto", padding: "0 20px" }}>
+    <main aria-labelledby="titulo-pagina-perfil" style={{ maxWidth: "1000px", margin: "40px auto", padding: "0 20px" }}>
       <div style={{ marginBottom: "30px" }}>
-        <Title level={2} style={{ color: "#fff", margin: 0 }}>Meu Perfil</Title>
+        <Title id="titulo-pagina-perfil" level={1} style={{ color: "#fff", margin: 0, fontSize: "32px" }}>Meu Perfil</Title>
         <Text style={{ color: "#8f98a0", fontSize: "16px" }}>Gerencie sua conta e suas atividades no IGDb.</Text>
       </div>
 
       <Tabs activeKey={activeTab} onChange={handleTabChange} items={items} size="large" />
 
       <Modal
-        title="Editar Perfil"
+        title={<span id="titulo-modal-edicao">Editar Perfil</span>}
         open={isModalVisible}
         onCancel={() => setIsModalVisible(false)}
         footer={null}
+        aria-labelledby="titulo-modal-edicao"
         styles={{ 
           body: { padding: "10px 0" } 
         }}
@@ -184,29 +187,29 @@ export default function PerfilPage() {
         >
           <Form.Item
             name="nome"
-            label={<Text strong>Nome Completo</Text>}
+            label={<Text style={{ color: "#c7d5e0" }}>Nome Completo</Text>}
             rules={[{ required: true, message: "Por favor, insira seu nome!" }]}
           >
-            <Input prefix={<UserOutlined style={{ color: "#8f98a0" }} />} />
+            <Input autoFocus prefix={<UserOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />} />
           </Form.Item>
 
           <Form.Item
             name="email"
-            label={<Text strong>E-mail</Text>}
+            label={<Text style={{ color: "#c7d5e0" }}>E-mail</Text>}
             rules={[
               { required: true, message: "Por favor, insira seu e-mail!" },
               { type: "email", message: "Insira um e-mail válido!" }
             ]}
           >
-            <Input prefix={<MailOutlined style={{ color: "#8f98a0" }} />} />
+            <Input prefix={<MailOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />} />
           </Form.Item>
 
           <Form.Item
             name="senha"
-            label={<Text strong>Nova Senha</Text>}
-            extra="Deixe em branco se não quiser alterar a senha."
+            label={<Text style={{ color: "#c7d5e0" }}>Nova Senha</Text>}
+            extra={<span style={{ color: "#8f98a0" }}>Deixe em branco se não quiser alterar a senha.</span>}
           >
-            <Input.Password prefix={<LockOutlined style={{ color: "#8f98a0" }} />} placeholder="Nova senha" />
+            <Input.Password prefix={<LockOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />} placeholder="Nova senha" />
           </Form.Item>
 
           <Form.Item style={{ marginBottom: 0, marginTop: "30px", textAlign: "right" }}>
@@ -221,6 +224,6 @@ export default function PerfilPage() {
           </Form.Item>
         </Form>
       </Modal>
-    </div>
+    </main>
   );
 }

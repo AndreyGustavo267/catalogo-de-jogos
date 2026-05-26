@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Typography, Row, Col, Space, Button, List } from "antd";
+import { Typography, Row, Col, Space, Button, List, Grid } from "antd";
 import {
   StarFilled,
   StarOutlined,
@@ -11,14 +11,15 @@ import Plataformas from "../common/Plataformas";
 import ModalAvaliacoes from "./ModalAvaliacoes";
 
 const { Title, Text } = Typography;
+const { useBreakpoint } = Grid;
 
 export default function TabelaJogos({ jogos }) {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedGame, setSelectedGame] = useState(null);
-
   const [modalAvaliacaoVisible, setModalAvaliacaoVisible] = useState(false);
   const [jogoParaAvaliar, setJogoParaAvaliar] = useState(null);
-
+  const screens = useBreakpoint();
+  const isMobile = !screens.sm;
   const handleOpenDetails = (jogo) => {
     setSelectedGame(jogo);
     setModalVisible(true);
@@ -31,6 +32,16 @@ export default function TabelaJogos({ jogos }) {
 
   return (
     <div>
+      <style>{`
+        .tabela-titulo-link {
+          color: #fff;
+          transition: color 0.2s;
+        }
+        .tabela-titulo-link:hover {
+          color: #66c0f4 !important;
+        }
+      `}</style>
+
       <List
         itemLayout="horizontal"
         dataSource={jogos}
@@ -63,10 +74,10 @@ export default function TabelaJogos({ jogos }) {
                     overflow: "hidden",
                   }}
                 >
-                  <Link to={`/jogo/${jogo.id}`}>
+                  <Link to={`/jogo/${jogo.id}`} aria-label={`Ver detalhes do jogo ${jogo.titulo}`}>
                     <img
                       src={jogo.capa}
-                      alt={jogo.titulo}
+                      alt={`Capa de ${jogo.titulo}`}
                       style={{
                         width: "100%",
                         height: "100%",
@@ -76,6 +87,7 @@ export default function TabelaJogos({ jogos }) {
                     />
                   </Link>
                   <div
+                    aria-label={`Ranking de busca: número ${index + 1}`}
                     style={{
                       position: "absolute",
                       top: 0,
@@ -94,31 +106,33 @@ export default function TabelaJogos({ jogos }) {
                 </div>
               </Col>
 
-              <Col xs={24} sm={12} md={13}>
+              <Col xs={24} sm={12} md={13} style={{ textAlign: isMobile ? "center" : "left" }}>
                 <Space direction="vertical" size={6} style={{ width: "100%" }}>
                   <Link
                     to={`/jogo/${jogo.id}`}
-                    style={{ display: "inline-block" }}
+                    style={{ display: "inline-block", textDecoration: "none" }}
                   >
                     <Title
                       level={3}
+                      className="tabela-titulo-link"
                       style={{
-                        color: "#fff",
                         margin: 0,
                         fontSize: "22px",
                         fontWeight: "700",
-                        transition: "color 0.2s",
                       }}
-                      onMouseOver={(e) =>
-                        (e.currentTarget.style.color = "#66c0f4")
-                      }
-                      onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
                     >
                       {jogo.titulo}
                     </Title>
                   </Link>
 
-                  <Space size="large" style={{ alignItems: "center" }}>
+                  <Space 
+                    size="large" 
+                    style={{ 
+                      alignItems: "center", 
+                      justifyContent: isMobile ? "center" : "flex-start",
+                      width: "100%"
+                    }}
+                  >
                     <Text style={{ color: "#8f98a0", fontSize: "15px" }}>
                       {new Date(jogo.dataLancamento).getFullYear()}
                     </Text>
@@ -134,30 +148,31 @@ export default function TabelaJogos({ jogos }) {
                   </Space>
                 </Space>
               </Col>
-              <Col xs={24} sm={6} md={6} style={{ textAlign: "right" }}>
-                <Row justify="end" align="middle" gutter={[24, 0]}>
+
+              <Col xs={24} sm={6} md={6} style={{ textAlign: isMobile ? "center" : "right" }}>
+                <Row justify={isMobile ? "center" : "end"} align="middle" gutter={[24, 12]}>
                   <Col style={{ textAlign: "center", minWidth: "60px" }}>
                     <div
                       style={{
                         display: "flex",
                         alignItems: "center",
-                        justifyContent: "flex-end",
+                        justifyContent: "center",
                         gap: "6px",
                       }}
                     >
-                      <StarFilled
-                        style={{ color: "#f5c518", fontSize: "18px" }}
-                      />
-                      <Text strong style={{ color: "#fff", fontSize: "18px" }}>
+                      <StarFilled aria-hidden="true" style={{ color: "#f5c518", fontSize: "18px" }} />
+                      <Text strong aria-label={`Nota média: ${jogo.notaMedia.toFixed(1)}`} style={{ color: "#fff", fontSize: "18px" }}>
                         {jogo.notaMedia.toFixed(1)}
                       </Text>
                     </div>
                   </Col>
+                  
                   <Col>
                     <Space size="middle">
                       <Button
                         type="text"
-                        icon={<StarOutlined style={{ color: "#5799ef" }} />}
+                        aria-label={`Avaliar o jogo ${jogo.titulo}`}
+                        icon={<StarOutlined aria-hidden="true" style={{ color: "#5799ef" }} />}
                         style={{
                           color: "#5799ef",
                           fontWeight: "600",
@@ -170,8 +185,9 @@ export default function TabelaJogos({ jogos }) {
 
                       <Button
                         type="text"
+                        aria-label={`Ver detalhes de ${jogo.titulo}`}
                         icon={
-                          <InfoCircleOutlined style={{ color: "#8f98a0" }} />
+                          <InfoCircleOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />
                         }
                         style={{ color: "#8f98a0", padding: "0 4px" }}
                         onClick={() => handleOpenDetails(jogo)}

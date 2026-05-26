@@ -1,28 +1,80 @@
-import { Typography, Row, Col, Space, Button } from "antd";
-import { StarFilled, EyeOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Typography, Row, Col, Space, Button, message } from "antd";
+import { StarFilled, HeartOutlined, HeartFilled, EyeOutlined } from "@ant-design/icons";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import db from "../../assets/data.json";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const { Title, Text, Paragraph } = Typography;
 
 export default function Top10Jogos() {
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [favoritosAtuais, setFavoritosAtuais] = useState(db.favoritos || []);
   const sortedGames = [...db.jogos].sort((a, b) => b.notaMedia - a.notaMedia);
   const top3 = sortedGames.slice(0, 3);
   const bottom7 = sortedGames.slice(3, 10);
 
-  // Função para desenhar os 3 primeiros (Agora empilhados para suportar imagens horizontais)
+  const handleToggleFavorito = (e, jogo) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!user) {
+      message.warning("Inicie sessão para adicionar jogos aos favoritos.");
+      navigate("/login");
+      return;
+    }
+
+    const isFavorito = favoritosAtuais.some(
+      (fav) => fav.usuarioId === user.id && fav.jogoId === jogo.id
+    );
+
+    if (isFavorito) {
+      const novosFavoritos = favoritosAtuais.filter(
+        (fav) => !(fav.usuarioId === user.id && fav.jogoId === jogo.id)
+      );
+      setFavoritosAtuais(novosFavoritos);
+      
+      const indexDb = db.favoritos.findIndex(fav => fav.usuarioId === user.id && fav.jogoId === jogo.id);
+      if (indexDb !== -1) db.favoritos.splice(indexDb, 1);
+      
+      message.info(`"${jogo.titulo}" foi removido dos favoritos.`);
+    } else {
+      const novoFavorito = {
+        id: "f" + Date.now(),
+        usuarioId: user.id,
+        jogoId: jogo.id,
+      };
+      
+      db.favoritos.push(novoFavorito); 
+      setFavoritosAtuais([...favoritosAtuais, novoFavorito]); 
+      
+      message.success(`"${jogo.titulo}" adicionado aos favoritos!`);
+    }
+  };
+
+  const checkIsFavorito = (jogoId) => {
+    if (!user) return false;
+    return favoritosAtuais.some(
+      (fav) => fav.usuarioId === user.id && fav.jogoId === jogoId
+    );
+  };
+
   const renderTopCard = (jogo, rank, isFirst) => {
     if (!jogo) return null;
 
+    const isFav = checkIsFavorito(jogo.id);
+
     return (
       <Link
+        key={jogo.id}
         to={`/jogo/${jogo.id}`}
         style={{ display: "block", height: "100%", textDecoration: "none" }}
       >
         <div
           style={{
             display: "flex",
-            flexDirection: "column", // MUDANÇA: Imagem em cima, texto embaixo
+            flexDirection: "column",
             height: "100%",
             background: "#1a1f26",
             borderRadius: "8px",
@@ -37,17 +89,15 @@ export default function Top10Jogos() {
             (e.currentTarget.style.transform = "translateY(0)")
           }
         >
-          {/* IMAGEM HORIZONTAL NO TOPO (Proporção 16:9) */}
           <div
             style={{
               width: "100%",
-              aspectRatio: "16/9", // MUDANÇA: Força a proporção widescreen para não cortar
+              aspectRatio: "16/9",
               background: `url(${jogo.capa}) center/cover no-repeat`,
               position: "relative",
             }}
           ></div>
 
-          {/* INFORMAÇÕES NA PARTE INFERIOR */}
           <div
             style={{
               flex: 1,
@@ -109,15 +159,16 @@ export default function Top10Jogos() {
 
             <Button
               type="text"
-              icon={<EyeOutlined />}
+              icon={isFav ? <HeartFilled style={{ color: "#ff4d4f" }} /> : <HeartOutlined />}
+              onClick={(e) => handleToggleFavorito(e, jogo)}
               style={{
-                color: "#66c0f4",
+                color: isFav ? "#ff4d4f" : "#66c0f4",
                 padding: 0,
                 justifyContent: "flex-start",
                 marginBottom: "12px",
               }}
             >
-              Marcar como jogado
+              {isFav ? "Nos Favoritos" : "Marcar como favorito"}
             </Button>
 
             <Paragraph
@@ -139,7 +190,6 @@ export default function Top10Jogos() {
     );
   };
 
-  // Função para desenhar do 4º ao 10º (Também adaptado para 16:9)
   const renderBottomCard = (jogo, rank) => {
     return (
       <Link
@@ -161,11 +211,10 @@ export default function Top10Jogos() {
           onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
           onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
         >
-          {/* IMAGEM HORIZONTAL NO TOPO */}
           <div
             style={{
               width: "100%",
-              aspectRatio: "16/9", // MUDANÇA: Substitui o 2/3 (vertical) pelo 16/9 (horizontal)
+              aspectRatio: "16/9", 
               background: `url(${jogo.capa}) center/cover no-repeat`,
               position: "relative",
             }}
@@ -228,7 +277,7 @@ export default function Top10Jogos() {
           {renderTopCard(top3[2], 3, false)}
         </Col>
       </Row>
-
+      
       {bottom7.length > 0 && (
         <div
           style={{

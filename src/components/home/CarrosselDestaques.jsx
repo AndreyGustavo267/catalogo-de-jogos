@@ -1,20 +1,19 @@
-import { Carousel, Typography, Space } from "antd";
+import { Carousel, Typography, Space, Grid } from "antd";
 import { LeftOutlined, RightOutlined, StarFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import db from "../../assets/data.json";
-
-// 1. IMPORTAMOS OS COMPONENTES PADRONIZADOS
 import Generos from "../common/Generos";
 import Plataformas from "../common/Plataformas";
 
 const { Title, Text } = Typography;
+const { useBreakpoint } = Grid;
 
-// Seta Esquerda Customizada
 const CustomLeftArrow = (props) => {
   const { className, style, onClick } = props;
   return (
-    <div
+    <button
       className={className}
+      aria-label="Destaque anterior"
       style={{
         ...style,
         display: "flex",
@@ -24,22 +23,23 @@ const CustomLeftArrow = (props) => {
         height: "100%",
         left: 0,
         zIndex: 2,
-        background:
-          "linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 100%)",
+        background: "linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 100%)",
+        border: "none",
+        cursor: "pointer"
       }}
       onClick={onClick}
     >
-      <LeftOutlined style={{ fontSize: "32px", color: "#fff", opacity: 0.8 }} />
-    </div>
+      <LeftOutlined aria-hidden="true" style={{ fontSize: "32px", color: "#fff", opacity: 0.8 }} />
+    </button>
   );
 };
 
-// Seta Direita Customizada
 const CustomRightArrow = (props) => {
   const { className, style, onClick } = props;
   return (
-    <div
+    <button
       className={className}
+      aria-label="Próximo destaque"
       style={{
         ...style,
         display: "flex",
@@ -49,30 +49,29 @@ const CustomRightArrow = (props) => {
         height: "100%",
         right: 0,
         zIndex: 2,
-        background:
-          "linear-gradient(to left, rgba(0,0,0,0.8) 0%, transparent 100%)",
+        background: "linear-gradient(to left, rgba(0,0,0,0.8) 0%, transparent 100%)",
+        border: "none",
+        cursor: "pointer"
       }}
       onClick={onClick}
     >
-      <RightOutlined
-        style={{ fontSize: "32px", color: "#fff", opacity: 0.8 }}
-      />
-    </div>
+      <RightOutlined aria-hidden="true" style={{ fontSize: "32px", color: "#fff", opacity: 0.8 }} />
+    </button>
   );
 };
 
-// A FUNÇÃO renderPlatformIcon FOI TOTALMENTE DELETADA DAQUI!
-
 export default function CarrosselDestaques() {
-  // Ordenar os jogos pela data de lançamento (mais recentes primeiro) e pegar os 5 primeiros
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
+
   const top5Games = [...db.jogos]
     .sort((a, b) => new Date(b.dataLancamento) - new Date(a.dataLancamento))
     .slice(0, 5);
 
   return (
-    <div style={{ width: "100%", margin: "0 auto", paddingBottom: "50px" }}>
+    <div style={{ width: "100%", margin: "0 auto", paddingBottom: "60px" }}>
       <Title
-        level={4}
+        level={2}
         style={{
           color: "#fff",
           borderLeft: "4px solid #f5c518",
@@ -80,6 +79,7 @@ export default function CarrosselDestaques() {
           marginBottom: "24px",
           fontSize: "28px",
           fontWeight: "normal",
+          marginTop: 0
         }}
       >
         Destaques Recentes
@@ -98,7 +98,9 @@ export default function CarrosselDestaques() {
             <div
               style={{
                 display: "flex",
-                height: "450px",
+                flexDirection: isMobile ? "column" : "row", 
+                height: isMobile ? "auto" : "450px",
+                minHeight: isMobile ? "500px" : "auto",
                 width: "100%",
                 backgroundColor: "#0a141d",
                 borderRadius: "25px",
@@ -107,44 +109,46 @@ export default function CarrosselDestaques() {
                 textDecoration: "none",
               }}
             >
-              {/* LADO ESQUERDO: Imagem do Jogo que funciona como Link para os detalhes */}
               <Link
                 to={`/jogo/${jogo.id}`}
+                aria-label={`Ver página do jogo ${jogo.titulo}`}
                 style={{
-                  flex: "0 0 65%",
-                  background: `url(${jogo.capa}) center/cover no-repeat`,
+                  flex: isMobile ? "none" : "0 0 65%",
+                  width: isMobile ? "100%" : "65%",
+                  height: isMobile ? "250px" : "100%",
                   display: "block",
                 }}
-              />
+              >
+                <img 
+                  src={jogo.capa} 
+                  alt=""
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} 
+                />
+              </Link>
 
-              {/* LADO DIREITO: Painel de Informações com Gradiente */}
               <div
                 style={{
-                  flex: "0 0 35%",
-                  padding: "40px 32px",
-                  background:
-                    "linear-gradient(to right, #0e151d 0%, #16202d 100%)",
+                  flex: isMobile ? "none" : "0 0 35%",
+                  width: isMobile ? "100%" : "35%",
+                  padding: isMobile ? "24px 20px" : "40px 32px",
+                  background: isMobile 
+                    ? "linear-gradient(to bottom, #0e151d 0%, #16202d 100%)" 
+                    : "linear-gradient(to right, #0e151d 0%, #16202d 100%)",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
                 }}
               >
-                {/* Título Clicável */}
-                <Link to={`/jogo/${jogo.id}`}>
+                <Link to={`/jogo/${jogo.id}`} style={{ textDecoration: "none" }}>
                   <Title
-                    level={2}
+                    level={3} 
+                    className="destaque-titulo-link"
                     style={{
-                      color: "#fff",
-                      marginTop: 0,
+                      margin: 0,
                       marginBottom: "28px",
-                      fontSize: "34px",
+                      fontSize: isMobile ? "28px" : "34px",
                       lineHeight: "1.1",
-                      transition: "color 0.2s",
                     }}
-                    onMouseOver={(e) =>
-                      (e.currentTarget.style.color = "#66c0f4")
-                    }
-                    onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
                   >
                     {jogo.titulo}
                   </Title>
@@ -155,7 +159,6 @@ export default function CarrosselDestaques() {
                   size="large"
                   style={{ width: "100%" }}
                 >
-                  {/* Avaliação */}
                   <div
                     style={{
                       display: "flex",
@@ -167,21 +170,17 @@ export default function CarrosselDestaques() {
                     <Text style={{ color: "#c7d5e0", fontSize: "18px" }}>
                       Avaliação IGDb:
                     </Text>
-                    <StarFilled
-                      style={{ color: "#f5c518", fontSize: "26px" }}
-                    />{" "}
-                    <Text strong style={{ color: "#fff", fontSize: "26px" }}>
+                    <StarFilled aria-hidden="true" style={{ color: "#f5c518", fontSize: "26px" }} />
+                    <Text strong aria-label={`Nota ${jogo.notaMedia.toFixed(1)}`} style={{ color: "#fff", fontSize: "26px" }}>
                       {jogo.notaMedia.toFixed(1)}
                     </Text>
                   </div>
 
-                  {/* 2. SUBSTITUÍMOS O MAP DE TAGS ANTIGO PELO NOSSO COMPONENTE */}
                   <div>
                     <Generos generos={jogo.generos} />
                   </div>
 
-                  {/* 3. SUBSTITUÍMOS OS ÍCONES MANUAIS PELO NOSSO COMPONENTE */}
-                  <div style={{ marginTop: "24px" }}>
+                  <div style={{ marginTop: isMobile ? "12px" : "24px" }}>
                     <Text
                       style={{
                         color: "#7a858f",

@@ -1,15 +1,17 @@
-import { Modal, Typography, Divider } from "antd";
+import React from "react";
+import { Modal, Typography, Divider, Grid } from "antd";
 import { CloseOutlined, RightOutlined, StarFilled } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import db from "../../assets/data.json";
 import Generos from "../common/Generos";
 import Plataformas from "../common/Plataformas";
-import React from "react";
 
 const { Title, Text, Paragraph } = Typography;
+const { useBreakpoint } = Grid;
 
 export default function ModalDetalheJogo({ jogo, visible, onClose }) {
-  const navigate = useNavigate();
+  const screens = useBreakpoint();
+  const isMobile = !screens.sm;
 
   if (!jogo) return null;
 
@@ -22,11 +24,11 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
       onCancel={onClose}
       footer={null}
       closeIcon={
-        <CloseOutlined style={{ color: "#8f98a0", fontSize: "18px" }} />
+        <CloseOutlined aria-label="Fechar detalhes do jogo" style={{ color: "#8f98a0", fontSize: "18px" }} />
       }
       centered
       width={750}
-      cclassName="igdb-dark-modal"
+      className="igdb-dark-modal"
       wrapClassName="igdb-dark-modal"
       styles={{
         mask: { background: "rgba(0, 0, 0, 0.7)", backdropFilter: "blur(2px)" },
@@ -38,13 +40,25 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
             background: "linear-gradient(180deg, #1e2c3a 0%, #0d131a 100%)",
             boxShadow:
               "0 0 80px rgba(87, 153, 239, 0.15), 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
-            padding: "50px 40px 40px 40px",
+            padding: isMobile ? "40px 20px 30px 20px" : "50px 40px 40px 40px",
             overflow: "visible",
           },
         })
       }
     >
-      <div
+      <style>{`
+        .link-titulo-jogo {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+        .link-titulo-jogo:hover {
+          color: #66c0f4;
+        }
+      `}</style>
+
+      <section
+        aria-labelledby="modal-titulo-detalhe"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -52,13 +66,19 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
           marginTop: "10px",
         }}
       >
-        {/* PARTE SUPERIOR: CAPA HORIZONTAL + INFOS */}
-        <div style={{ display: "flex", gap: "24px", alignItems: "flex-start" }}>
+        <div style={{ 
+          display: "flex", 
+          flexDirection: isMobile ? "column" : "row",
+          gap: "24px", 
+          alignItems: isMobile ? "center" : "flex-start",
+          textAlign: isMobile ? "center" : "left"
+        }}>
           <img
             src={jogo.capa}
-            alt={jogo.titulo}
+            alt={`Capa do jogo ${jogo.titulo}`}
             style={{
-              width: "220px",
+              width: isMobile ? "100%" : "220px",
+              maxWidth: "350px", 
               aspectRatio: "16/9",
               objectFit: "cover",
               borderRadius: "6px",
@@ -71,60 +91,55 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
               flex: 1,
               display: "flex",
               flexDirection: "column",
+              alignItems: isMobile ? "center" : "flex-start", 
               gap: "8px",
             }}
           >
-            {/* Título e Seta clicável */}
-            <div
-              onClick={() => {
-                onClose();
-                navigate(`/jogo/${jogo.id}`);
-              }}
+            <Link
+              to={`/jogo/${jogo.id}`}
+              onClick={onClose}
+              className="link-titulo-jogo"
+              aria-label={`Ver página completa de ${jogo.titulo}`}
               style={{
-                cursor: "pointer",
                 display: "flex",
                 alignItems: "center",
+                justifyContent: isMobile ? "center" : "flex-start",
                 gap: "12px",
                 width: "fit-content",
               }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.color = "#66c0f4";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.color = "#fff";
-              }}
             >
               <Title
-                level={3}
+                id="modal-titulo-detalhe"
+                level={2} 
                 style={{
                   color: "inherit",
                   margin: 0,
                   fontSize: "26px",
                   fontWeight: "800",
-                  transition: "color 0.2s",
                 }}
               >
                 {jogo.titulo}
               </Title>
               <RightOutlined
+                aria-hidden="true"
                 style={{
                   fontSize: "22px",
                   color: "inherit",
                   strokeWidth: "30",
                   stroke: "currentColor",
-                  transition: "color 0.2s",
                 }}
               />
-            </div>
+            </Link>
 
-            {/* Ano e Nota */}
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
+                justifyContent: isMobile ? "center" : "flex-start",
                 gap: "16px",
                 color: "#8f98a0",
                 fontSize: "15px",
+                flexWrap: "wrap",
               }}
             >
               <Text style={{ color: "#8f98a0" }}>
@@ -133,50 +148,36 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
               <div
                 style={{ display: "flex", alignItems: "center", gap: "6px" }}
               >
-                <StarFilled style={{ color: "#f5c518", fontSize: "16px" }} />
-                <Text strong style={{ color: "#fff", fontSize: "15px" }}>
+                <StarFilled aria-hidden="true" style={{ color: "#f5c518", fontSize: "16px" }} />
+                <Text strong aria-label={`Nota ${jogo.notaMedia.toFixed(1)} de 10`} style={{ color: "#fff", fontSize: "15px" }}>
                   {jogo.notaMedia.toFixed(1)}/10
                 </Text>
               </div>
             </div>
 
-            {/* Desenvolvedora */}
             <div style={{ marginTop: "4px" }}>
-              <Text
-                style={{
-                  color: "#8f98a0",
-                  fontSize: "15px",
-                  marginRight: "6px",
-                }}
-              >
+              <Text style={{ color: "#8f98a0", fontSize: "15px", marginRight: "6px" }}>
                 Direção / Dev:
               </Text>
-              <Text
-                style={{
-                  color: "#66c0f4",
-                  fontSize: "15px",
-                  fontWeight: "600",
-                }}
-              >
+              <Text style={{ color: "#66c0f4", fontSize: "15px", fontWeight: "600" }}>
                 {nomeDev}
               </Text>
             </div>
           </div>
         </div>
 
-        {/* SINOPSE */}
         <Paragraph
           style={{
             color: "#c7d5e0",
             fontSize: "15px",
             lineHeight: "1.6",
             margin: 0,
+            textAlign: isMobile ? "center" : "left", 
           }}
         >
           {jogo.sinopse}
         </Paragraph>
 
-        {/* CATEGORIAS E PLATAFORMAS COM DIVIDERS */}
         <div style={{ display: "flex", flexDirection: "column" }}>
           <Divider
             style={{
@@ -189,6 +190,7 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
             style={{
               display: "flex",
               alignItems: "center",
+              justifyContent: isMobile ? "center" : "flex-start",
               flexWrap: "wrap",
               gap: "16px",
             }}
@@ -213,16 +215,20 @@ export default function ModalDetalheJogo({ jogo, visible, onClose }) {
             }}
           />
 
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            <Text
-              style={{ color: "#fff", fontWeight: "700", fontSize: "15px" }}
-            >
+          <div style={{ 
+            display: "flex", 
+            alignItems: "center", 
+            justifyContent: isMobile ? "center" : "flex-start",
+            flexWrap: "wrap", 
+            gap: "16px" 
+          }}>
+            <Text style={{ color: "#fff", fontWeight: "700", fontSize: "15px" }}>
               Plataformas disponíveis:
             </Text>
             <Plataformas plataformas={jogo.plataformas} onClick={onClose} />
           </div>
         </div>
-      </div>
+      </section>
     </Modal>
   );
 }

@@ -26,9 +26,9 @@ export default function RegistroPage() {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "80px auto", padding: "20px" }}>
+    <main aria-labelledby="titulo-registro" style={{ maxWidth: "400px", margin: "80px auto", padding: "20px" }}>
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
-        <Title level={2} style={{ color: "#fff", marginBottom: "8px" }}>
+        <Title id="titulo-registro" level={1} style={{ color: "#fff", fontSize: "30px", marginBottom: "8px" }}>
           Criar Conta
         </Title>
         <Text style={{ color: "#8f98a0", fontSize: "16px" }}>
@@ -37,12 +37,15 @@ export default function RegistroPage() {
       </div>
 
       <Form name="register_form" layout="vertical" onFinish={onFinish} size="large">
+        
         <Form.Item
           name="nome"
+          label={<span style={{ color: "#c7d5e0" }}>Nome Completo</span>}
           rules={[{ required: true, message: "Por favor, insira seu nome!" }]}
         >
           <Input
-            prefix={<UserOutlined style={{ color: "#8f98a0" }} />}
+            autoFocus 
+            prefix={<UserOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />}
             placeholder="Seu nome completo"
             style={{ background: "#1b2838", borderColor: "#2a475e", color: "#fff" }}
           />
@@ -50,13 +53,14 @@ export default function RegistroPage() {
 
         <Form.Item
           name="email"
+          label={<span style={{ color: "#c7d5e0" }}>E-mail</span>}
           rules={[
             { required: true, message: "Por favor, insira seu e-mail!" },
             { type: "email", message: "Insira um e-mail válido!" }
           ]}
         >
           <Input
-            prefix={<MailOutlined style={{ color: "#8f98a0" }} />}
+            prefix={<MailOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />}
             placeholder="E-mail (ex: novo@email.com)"
             style={{ background: "#1b2838", borderColor: "#2a475e", color: "#fff" }}
           />
@@ -64,13 +68,14 @@ export default function RegistroPage() {
 
         <Form.Item
           name="senha"
+          label={<span style={{ color: "#c7d5e0" }}>Senha</span>}
           rules={[
             { required: true, message: "Por favor, crie uma senha!" },
             { min: 6, message: "A senha deve ter pelo menos 6 caracteres." }
           ]}
         >
           <Input.Password
-            prefix={<LockOutlined style={{ color: "#8f98a0" }} />}
+            prefix={<LockOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />}
             placeholder="Crie uma senha segura"
             style={{ background: "#1b2838", borderColor: "#2a475e", color: "#fff" }}
           />
@@ -103,6 +108,6 @@ export default function RegistroPage() {
           </Link>
         </div>
       </Form>
-    </div>
+    </main>
   );
 }

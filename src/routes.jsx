@@ -11,6 +11,7 @@ import TermosPage from "./pages/TermosPage";
 import PrivacidadePage from "./pages/PrivacidadePage"; 
 import PerfilPage from "./pages/PerfilPage"; 
 import GamePage from "./pages/GamePage"; 
+import NotFoundPage from "./pages/NotFoundPage";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
             element: <PerfilPage />,
           },
         ],
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />,
       },
     ],
   },
