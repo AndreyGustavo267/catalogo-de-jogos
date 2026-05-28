@@ -1,61 +1,33 @@
-import { useParams, Link } from "react-router-dom";
-import { Typography, Button } from "antd";
-import { FrownOutlined } from "@ant-design/icons";
+import { useParams } from "react-router-dom";
 import db from "../assets/data.json";
 import PainelJogo from "../components/jogo/PainelJogo";
+import TabelaJogos from "../components/listagem-jogos/TabelaJogos";
+import NotFoundPage from "../pages/NotFoundPage";
 
-const { Title, Text } = Typography;
 
 export default function GamePage() {
     const { id } = useParams();
     const jogoEncontrado = db.jogos.find((jogo) => jogo.id === id);
 
     if (jogoEncontrado) {
+      const jogosDesenvolvedora = db.jogos.filter((j) => j.desenvolvedoraID === jogoEncontrado.desenvolvedoraID && j.id !== jogoEncontrado.id).slice(0, 5)
+
       return (
-        <PainelJogo jogo={jogoEncontrado} />
+        <div style={{ maxWidth: "85rem", margin: "0 auto", paddingBottom: "40px" }}>
+
+          <PainelJogo jogo={jogoEncontrado}/>
+
+          {/* <div style={{ marginTop:"60px" }}>
+            <title>Outros jogos da desenvolvedora {jogoEncontrado.desenvolvedoraID}</title>
+            <TabelaJogos jogos={jogosDesenvolvedora} />
+          </div> */}
+        </div>
       );
-    } 
-    
-    return (
-      <main 
-        aria-labelledby="titulo-jogo-inexistente"
-        style={{ 
-          display: "flex", 
-          flexDirection: "column", 
-          alignItems: "center", 
-          justifyContent: "center", 
-          minHeight: "50vh",
-          padding: "40px 20px",
-          textAlign: "center" 
-        }}
-      >
-        <FrownOutlined aria-hidden="true" style={{ fontSize: "64px", color: "#66c0f4", marginBottom: "24px" }} />
-        
-        <Title id="titulo-jogo-inexistente" level={1} style={{ color: "#fff", margin: 0 }}>
-          Jogo não encontrado
-        </Title>
-        
-        <Text style={{ color: "#8f98a0", fontSize: "16px", display: "block", marginTop: "12px", marginBottom: "32px" }}>
-          Ops! O jogo que você está procurando não existe ou foi removido do catálogo.
-        </Text>
-        
-        <Link to="/">
-          <Button 
-            type="primary" 
-            size="large" 
-            style={{ 
-              background: "#66c0f4", 
-              color: "#0a141d", 
-              fontWeight: "bold", 
-              border: "none",
-              borderRadius: "24px",
-              padding: "0 32px",
-              height: "45px"
-            }}
-          >
-            Voltar ao Catálogo
-          </Button>
-        </Link>
-      </main>
-    );
+    } else {
+      return (
+        <div>
+          <NotFoundPage />
+        </div>
+      );
+    }
 }

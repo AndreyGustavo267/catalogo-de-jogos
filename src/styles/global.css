@@ -124,3 +124,24 @@ div.modal-avaliacao-igdb .ant-modal-content {
 div.modal-avaliacao-igdb .ant-rate-star-zero svg {
   color: rgba(255, 255, 255, 0.1) !important;
 }
+
+/* Largura da barra inteira */
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+/* O fundo (a trilha por onde a barra corre) */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+/* O "pegador" (a parte que você clica e arrasta) */
+::-webkit-scrollbar-thumb {
+  background: #2a475e; /* Um azul bem escuro, padrão Steam */
+  border-radius: 10px; /* Cantos arredondados modernos */
+}
+
+/* Quando passar o mouse por cima do pegador */
+::-webkit-scrollbar-thumb:hover {
+  background: #66c0f4; /* Acende com o seu azul de destaque! */
+}
