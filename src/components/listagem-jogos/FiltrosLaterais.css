@@ -11,6 +11,9 @@
 
 .painel-filtros-steam .ant-checkbox-wrapper:hover,
 .painel-filtros-steam .ant-radio-wrapper:hover {
+
+.painel-filtros-steam .ant-checkbox-wrapper:hover,
+.painel-filtros-steam .ant-radio-wrapper:hover {
   color: #fff !important;
 }
 

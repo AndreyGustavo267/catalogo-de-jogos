@@ -19,11 +19,25 @@ export default function ModalAvaliacoes({ jogo, visible, onClose }) {
   const [comentario, setComentario] = useState("");
 
   useEffect(() => {
-    if (visible) {
-      setNota(0);
-      setComentario("");
+    if (visible && jogo) {
+      if (user) {
+        const avaliacaoExistente = db.avaliacoes.find(
+          (a) => a.usuarioId === user.id && a.jogoId === jogo.id
+        );
+
+        if (avaliacaoExistente) {
+          setNota(avaliacaoExistente.nota);
+          setComentario(avaliacaoExistente.comentario || "");
+        } else {
+          setNota(0);
+          setComentario("");
+        }
+      } else {
+        setNota(0);
+        setComentario("");
+      }
     }
-  }, [visible]);
+  }, [visible, jogo, user]);
 
   const handleAvaliar = () => {
     if (!user) {
@@ -37,22 +51,32 @@ export default function ModalAvaliacoes({ jogo, visible, onClose }) {
       return;
     }
 
-    const novaAvaliacao = {
-      id: "a" + Date.now(),
-      usuarioId: user.id,
-      jogoId: jogo.id,
-      nota: nota,
-      comentario: comentario.trim(),
-      data: new Date().toISOString(),
-    };
+    const indexExistente = db.avaliacoes.findIndex(
+      (a) => a.usuarioId === user.id && a.jogoId === jogo.id
+    );
 
-    db.avaliacoes.push(novaAvaliacao);
+    if (indexExistente !== -1) {
+      db.avaliacoes[indexExistente].nota = nota;
+      db.avaliacoes[indexExistente].comentario = comentario.trim();
+      db.avaliacoes[indexExistente].data = new Date().toISOString();
+      message.success("Avaliação atualizada com sucesso!");
+    } else {
+      const novaAvaliacao = {
+        id: "a" + Date.now(),
+        usuarioId: user.id,
+        jogoId: jogo.id,
+        nota: nota,
+        comentario: comentario.trim(),
+        data: new Date().toISOString(),
+      };
+      db.avaliacoes.push(novaAvaliacao);
+      message.success("Avaliação salva com sucesso!");
+    }
 
     const avaliacoesDoJogo = db.avaliacoes.filter((a) => a.jogoId === jogo.id);
     const soma = avaliacoesDoJogo.reduce((acc, curr) => acc + curr.nota, 0);
     jogo.notaMedia = soma / avaliacoesDoJogo.length;
 
-    message.success("Avaliação salva com sucesso!");
     onClose();
   };
 
@@ -220,7 +244,9 @@ export default function ModalAvaliacoes({ jogo, visible, onClose }) {
               transition: "all 0.3s ease",
             }}
           >
-            Avaliar
+            {db.avaliacoes.find(a => a.usuarioId === user?.id && a.jogoId === jogo.id) 
+              ? "Atualizar Avaliação" 
+              : "Salvar Avaliação"}
           </Button>
         </div>
       </section>

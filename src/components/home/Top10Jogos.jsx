@@ -1,20 +1,27 @@
-import { Typography, Row, Col, Space, Button, message } from "antd";
-import { StarFilled, HeartOutlined, HeartFilled, EyeOutlined } from "@ant-design/icons";
+import { Typography, Row, Col, Space, Button, message, Grid } from "antd";
+import { StarFilled, HeartOutlined, HeartFilled } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import db from "../../assets/data.json";
 import { AuthContext } from "../../contexts/AuthContext";
 
 const { Title, Text, Paragraph } = Typography;
+const { useBreakpoint } = Grid;
 
 export default function Top10Jogos() {
-  const { user } = useContext(AuthContext);
+  // 1. A MÁGICA: Puxamos as funções prontas do nosso AuthContext!
+  const { user, toggleFavorito, checkIsFavorito } = useContext(AuthContext);
   const navigate = useNavigate();
-  const [favoritosAtuais, setFavoritosAtuais] = useState(db.favoritos || []);
+  
+  // (Opcional, mas recomendado) Trazendo de volta a responsividade do Grid que tínhamos feito
+  const screens = useBreakpoint();
+  const isMobile = !screens.md;
+
   const sortedGames = [...db.jogos].sort((a, b) => b.notaMedia - a.notaMedia);
   const top3 = sortedGames.slice(0, 3);
   const bottom7 = sortedGames.slice(3, 10);
 
+  // 2. FUNÇÃO SIMPLIFICADA: O Contexto faz todo o trabalho de salvar no localStorage agora
   const handleToggleFavorito = (e, jogo) => {
     e.preventDefault();
     e.stopPropagation();
@@ -25,44 +32,21 @@ export default function Top10Jogos() {
       return;
     }
 
-    const isFavorito = favoritosAtuais.some(
-      (fav) => fav.usuarioId === user.id && fav.jogoId === jogo.id
-    );
-
-    if (isFavorito) {
-      const novosFavoritos = favoritosAtuais.filter(
-        (fav) => !(fav.usuarioId === user.id && fav.jogoId === jogo.id)
-      );
-      setFavoritosAtuais(novosFavoritos);
-      
-      const indexDb = db.favoritos.findIndex(fav => fav.usuarioId === user.id && fav.jogoId === jogo.id);
-      if (indexDb !== -1) db.favoritos.splice(indexDb, 1);
-      
-      message.info(`"${jogo.titulo}" foi removido dos favoritos.`);
+    // Chama a função global que criámos no AuthContext
+    const result = toggleFavorito(jogo);
+    
+    // Exibe a mensagem correta dependendo se adicionou ou removeu
+    if (result.isFav) {
+      message.success(result.message);
     } else {
-      const novoFavorito = {
-        id: "f" + Date.now(),
-        usuarioId: user.id,
-        jogoId: jogo.id,
-      };
-      
-      db.favoritos.push(novoFavorito); 
-      setFavoritosAtuais([...favoritosAtuais, novoFavorito]); 
-      
-      message.success(`"${jogo.titulo}" adicionado aos favoritos!`);
+      message.info(result.message);
     }
-  };
-
-  const checkIsFavorito = (jogoId) => {
-    if (!user) return false;
-    return favoritosAtuais.some(
-      (fav) => fav.usuarioId === user.id && fav.jogoId === jogoId
-    );
   };
 
   const renderTopCard = (jogo, rank, isFirst) => {
     if (!jogo) return null;
 
+    // Usamos a função global do Contexto para ver se o coração deve ficar vermelho
     const isFav = checkIsFavorito(jogo.id);
 
     return (
@@ -282,7 +266,8 @@ export default function Top10Jogos() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(7, 1fr)",
+            // 3. Devolvi a responsividade para os telemóveis aqui!
+            gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(7, 1fr)",
             gap: "16px",
             marginTop: "16px",
           }}

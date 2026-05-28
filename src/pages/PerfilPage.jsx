@@ -8,7 +8,7 @@ import db from "../assets/data.json";
 const { Title, Text, Paragraph } = Typography;
 
 export default function PerfilPage() {
-  const { user, atualizarPerfil } = useContext(AuthContext);
+  const { user, atualizarPerfil, favoritos } = useContext(AuthContext);  
   const location = useLocation();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("1");
@@ -42,7 +42,12 @@ export default function PerfilPage() {
     return { ...aval, jogo: jogoInfo };
   });
 
-  const meusFavoritos = db.jogos.filter((jogo) => user?.jogosFavoritosIds?.includes(jogo.id));
+  const meusIdsFavoritos = (favoritos || [])
+  .filter((fav) => fav.usuarioId === user?.id)
+  .map((fav) => fav.jogoId);
+
+  // const meusFavoritos = db.jogos.filter((jogo) => user?.jogosFavoritosIds?.includes(jogo.id));
+  const meusFavoritos = db.jogos.filter((jogo) => meusIdsFavoritos.includes(jogo.id));
 
   const items = [
     {
