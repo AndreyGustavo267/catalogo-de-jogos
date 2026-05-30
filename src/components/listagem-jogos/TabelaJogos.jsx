@@ -1,25 +1,33 @@
-import { useState } from "react";
-import { Typography, Row, Col, Space, Button, List, Grid } from "antd";
+import { useState, useContext } from "react";
+import { Typography, Row, Col, Space, Button, List, Grid, message } from "antd";
 import {
   StarFilled,
   StarOutlined,
   InfoCircleOutlined,
+  HeartOutlined,
+  HeartFilled,
 } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ModalDetalheJogo from "./ModalDetalheJogo";
 import Plataformas from "../common/Plataformas";
 import ModalAvaliacoes from "./ModalAvaliacoes";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const { Title, Text } = Typography;
 const { useBreakpoint } = Grid;
 
 export default function TabelaJogos({ jogos }) {
+  const { user, toggleFavorito, checkIsFavorito } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedGame, setSelectedGame] = useState(null);
   const [modalAvaliacaoVisible, setModalAvaliacaoVisible] = useState(false);
   const [jogoParaAvaliar, setJogoParaAvaliar] = useState(null);
+
   const screens = useBreakpoint();
   const isMobile = !screens.sm;
+
   const handleOpenDetails = (jogo) => {
     setSelectedGame(jogo);
     setModalVisible(true);
@@ -28,6 +36,21 @@ export default function TabelaJogos({ jogos }) {
   const handleOpenRate = (jogo) => {
     setJogoParaAvaliar(jogo);
     setModalAvaliacaoVisible(true);
+  };
+
+  const handleFavoritar = (jogo) => {
+    if (!user) {
+      message.warning("Inicie sessão para adicionar este jogo aos favoritos.");
+      navigate("/login");
+      return;
+    }
+
+    const result = toggleFavorito(jogo);
+    if (result.isFav) {
+      message.success(result.message);
+    } else {
+      message.info(result.message);
+    }
   };
 
   return (
@@ -52,156 +75,182 @@ export default function TabelaJogos({ jogos }) {
             </Text>
           ),
         }}
-        renderItem={(jogo, index) => (
-          <div
-            style={{
-              background: "rgba(26, 31, 38, 0.5)",
-              borderRadius: "8px",
-              marginBottom: "12px",
-              padding: "14px 20px",
-              border: "1px solid rgba(255, 255, 255, 0.05)",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
-            }}
-          >
-            <Row gutter={[24, 16]} align="middle">
-              <Col xs={24} sm={6} md={5}>
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    aspectRatio: "16/9",
-                    borderRadius: "4px",
-                    overflow: "hidden",
-                  }}
-                >
-                  <Link to={`/jogo/${jogo.id}`} aria-label={`Ver detalhes do jogo ${jogo.titulo}`}>
-                    <img
-                      src={jogo.capa}
-                      alt={`Capa de ${jogo.titulo}`}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        display: "block",
-                      }}
-                    />
-                  </Link>
+        renderItem={(jogo, index) => {
+          const isFav = checkIsFavorito(jogo.id);
+
+          return (
+            <div
+              style={{
+                background: "rgba(26, 31, 38, 0.5)",
+                borderRadius: "8px",
+                marginBottom: "12px",
+                padding: "14px 20px",
+                border: "1px solid rgba(255, 255, 255, 0.05)",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
+              }}
+            >
+              <Row gutter={[24, 16]} align="middle">
+                <Col xs={24} sm={6} md={5}>
                   <div
-                    aria-label={`Ranking de busca: número ${index + 1}`}
                     style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      background: "#0060f0",
-                      color: "#fff",
-                      padding: "2px 10px",
-                      fontWeight: "bold",
-                      fontSize: "14px",
-                      borderBottomRightRadius: "4px",
-                      pointerEvents: "none",
+                      position: "relative",
+                      width: "100%",
+                      aspectRatio: "16/9",
+                      borderRadius: "4px",
+                      overflow: "hidden",
                     }}
                   >
-                    #{index + 1}
-                  </div>
-                </div>
-              </Col>
-
-              <Col xs={24} sm={12} md={13} style={{ textAlign: isMobile ? "center" : "left" }}>
-                <Space direction="vertical" size={6} style={{ width: "100%" }}>
-                  <Link
-                    to={`/jogo/${jogo.id}`}
-                    style={{ display: "inline-block", textDecoration: "none" }}
-                  >
-                    <Title
-                      level={3}
-                      className="tabela-titulo-link"
-                      style={{
-                        margin: 0,
-                        fontSize: "22px",
-                        fontWeight: "700",
-                      }}
-                    >
-                      {jogo.titulo}
-                    </Title>
-                  </Link>
-
-                  <Space 
-                    size="large" 
-                    style={{ 
-                      alignItems: "center", 
-                      justifyContent: isMobile ? "center" : "flex-start",
-                      width: "100%"
-                    }}
-                  >
-                    <Text style={{ color: "#8f98a0", fontSize: "15px" }}>
-                      {new Date(jogo.dataLancamento).getFullYear()}
-                    </Text>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "12px",
-                      }}
-                    >
-                      <Plataformas plataformas={jogo.plataformas} />
-                    </div>
-                  </Space>
-                </Space>
-              </Col>
-
-              <Col xs={24} sm={6} md={6} style={{ textAlign: isMobile ? "center" : "right" }}>
-                <Row justify={isMobile ? "center" : "end"} align="middle" gutter={[24, 12]}>
-                  <Col style={{ textAlign: "center", minWidth: "60px" }}>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: "6px",
-                      }}
-                    >
-                      <StarFilled aria-hidden="true" style={{ color: "#f5c518", fontSize: "18px" }} />
-                      <Text strong aria-label={`Nota média: ${jogo.notaMedia.toFixed(1)}`} style={{ color: "#fff", fontSize: "18px" }}>
-                        {jogo.notaMedia.toFixed(1)}
-                      </Text>
-                    </div>
-                  </Col>
-                  
-                  <Col>
-                    <Space size="middle">
-                      <Button
-                        type="text"
-                        aria-label={`Avaliar o jogo ${jogo.titulo}`}
-                        icon={<StarOutlined aria-hidden="true" style={{ color: "#5799ef" }} />}
+                    <Link to={`/jogo/${jogo.id}`} aria-label={`Ver detalhes do jogo ${jogo.titulo}`}>
+                      <img
+                        src={jogo.capa}
+                        alt={`Capa de ${jogo.titulo}`}
                         style={{
-                          color: "#5799ef",
-                          fontWeight: "600",
-                          padding: "0 4px",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          display: "block",
                         }}
-                        onClick={() => handleOpenRate(jogo)}
-                      >
-                        Avaliar
-                      </Button>
+                      />
+                    </Link>
+                    <div
+                      aria-label={`Ranking de busca: número ${index + 1}`}
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        background: "#0060f0",
+                        color: "#fff",
+                        padding: "2px 10px",
+                        fontWeight: "bold",
+                        fontSize: "14px",
+                        borderBottomRightRadius: "4px",
+                        pointerEvents: "none",
+                      }}
+                    >
+                      #{index + 1}
+                    </div>
+                  </div>
+                </Col>
 
-                      <Button
-                        type="text"
-                        aria-label={`Ver detalhes de ${jogo.titulo}`}
-                        icon={
-                          <InfoCircleOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />
-                        }
-                        style={{ color: "#8f98a0", padding: "0 4px" }}
-                        onClick={() => handleOpenDetails(jogo)}
+                <Col xs={24} sm={12} md={13} style={{ textAlign: isMobile ? "center" : "left" }}>
+                  <Space direction="vertical" size={6} style={{ width: "100%" }}>
+                    <Link
+                      to={`/jogo/${jogo.id}`}
+                      style={{ display: "inline-block", textDecoration: "none" }}
+                    >
+                      <Title
+                        level={3}
+                        className="tabela-titulo-link"
+                        style={{
+                          margin: 0,
+                          fontSize: "22px",
+                          fontWeight: "700",
+                        }}
                       >
-                        Detalhes
-                      </Button>
+                        {jogo.titulo}
+                      </Title>
+                    </Link>
+
+                    <Space
+                      size="large"
+                      style={{
+                        alignItems: "center",
+                        justifyContent: isMobile ? "center" : "flex-start",
+                        width: "100%"
+                      }}
+                    >
+                      <Text style={{ color: "#8f98a0", fontSize: "15px" }}>
+                        {new Date(jogo.dataLancamento).getFullYear()}
+                      </Text>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "12px",
+                        }}
+                      >
+                        <Plataformas plataformas={jogo.plataformas} />
+                      </div>
                     </Space>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </div>
-        )}
+                  </Space>
+                </Col>
+
+                <Col xs={24} sm={6} md={6} style={{ textAlign: isMobile ? "center" : "right" }}>
+                  <Row justify={isMobile ? "center" : "end"} align="middle" gutter={[24, 12]}>
+                    <Col style={{ textAlign: "center", minWidth: "60px" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          gap: "6px",
+                        }}
+                      >
+                        <StarFilled aria-hidden="true" style={{ color: "#f5c518", fontSize: "18px" }} />
+                        <Text strong aria-label={`Nota média: ${jogo.notaMedia.toFixed(1)}`} style={{ color: "#fff", fontSize: "18px" }}>
+                          {jogo.notaMedia.toFixed(1)}
+                        </Text>
+                      </div>
+                    </Col>
+
+                    <Col>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row", 
+                          alignItems: "center",
+                          gap: "16px", 
+                          justifyContent: isMobile ? "center" : "flex-end"
+                        }}
+                      >
+
+                        <Button
+                          type="text"
+                          aria-label={isFav ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+                          icon={isFav ? <HeartFilled aria-hidden="true" style={{ color: "#ff4d4f" }} /> : <HeartOutlined aria-hidden="true" style={{ color: "#66c0f4" }} />}
+                          style={{
+                            color: isFav ? "#ff4d4f" : "#66c0f4",
+                            fontWeight: "600",
+                            padding: "0",
+                          }}
+                          onClick={() => handleFavoritar(jogo)}
+                        >
+                          {isMobile ? "" : "Favoritar"}
+                        </Button>
+
+                        <Button
+                          type="text"
+                          aria-label={`Avaliar o jogo ${jogo.titulo}`}
+                          icon={<StarOutlined aria-hidden="true" style={{ color: "#f5c518" }} />}
+                          style={{
+                            color: "#f5c518",
+                            fontWeight: "600",
+                            padding: "0",
+                          }}
+                          onClick={() => handleOpenRate(jogo)}
+                        >
+                          {isMobile ? "" : "Avaliar"}
+                        </Button>
+
+                        <Button
+                          type="text"
+                          aria-label={`Ver detalhes de ${jogo.titulo}`}
+                          icon={<InfoCircleOutlined aria-hidden="true" style={{ color: "#8f98a0" }} />}
+                          style={{ color: "#8f98a0", padding: "0" }}
+                          onClick={() => handleOpenDetails(jogo)}
+                        >
+                          {isMobile ? "" : "Detalhes"}
+                        </Button>
+                      </div>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </div>
+          );
+        }}
       />
+
       <ModalDetalheJogo
         jogo={selectedGame}
         visible={modalVisible}

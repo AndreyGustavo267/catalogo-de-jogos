@@ -1639,7 +1639,7 @@
       "notaMedia": 8.5
     }
   ],
-  "avaliacoes": [
+   "avaliacoes": [
     {
       "id": "a1",
       "usuarioId": "u1",
@@ -1647,6 +1647,70 @@
       "nota": 10,
       "comentario": "Obra-prima! A história me prendeu do início ao fim e os gráficos estão absurdos.",
       "data": "2023-10-15T14:30:00Z"
+    },
+    {
+      "id": "a2",
+      "usuarioId": "u2",
+      "jogoId": "j1",
+      "nota": 8.5,
+      "comentario": "Excelente jogo, mas encontrei alguns pequenos bugs visuais durante a exploração. Fora isso, é incrível.",
+      "data": "2023-10-18T09:15:00Z"
+    },
+    {
+      "id": "a3",
+      "usuarioId": "u3",
+      "jogoId": "j2",
+      "nota": 9.5,
+      "comentario": "A jogabilidade é super fluida e o multiplayer está muito divertido. Recomendo para jogar com os amigos!",
+      "data": "2023-11-02T20:45:00Z"
+    },
+    {
+      "id": "a4",
+      "usuarioId": "u4",
+      "jogoId": "j3",
+      "nota": 5,
+      "comentario": "Fiquei um bocado dececionado. As missões são muito repetitivas e a história não me cativou nada.",
+      "data": "2023-11-10T16:20:00Z"
+    },
+    {
+      "id": "a5",
+      "usuarioId": "u1",
+      "jogoId": "j2",
+      "nota": 9,
+      "comentario": "Muito bom! Superou as minhas expectativas, especialmente a trilha sonora fantástica.",
+      "data": "2023-11-15T11:05:00Z"
+    },
+    {
+      "id": "a6",
+      "usuarioId": "u5",
+      "jogoId": "j1",
+      "nota": 7,
+      "comentario": "É um bom jogo, mas sinceramente esperava mais inovação em relação ao título anterior da franquia.",
+      "data": "2023-12-05T18:30:00Z"
+    },
+    {
+      "id": "a7",
+      "usuarioId": "u2",
+      "jogoId": "j4",
+      "nota": 10,
+      "comentario": "Simplesmente perfeito. O mundo aberto é o mais detalhado que já vi. Vale cada cêntimo.",
+      "data": "2024-01-12T22:10:00Z"
+    },
+    {
+      "id": "a8",
+      "usuarioId": "u6",
+      "jogoId": "j3",
+      "nota": 3,
+      "comentario": "Odeio ser aquele tipo, mas o jogo está injogável no lançamento. Muitos crashes e problemas de performance no PC.",
+      "data": "2024-01-20T08:50:00Z"
+    },
+    {
+      "id": "a9",
+      "usuarioId": "u3",
+      "jogoId": "j5",
+      "nota": 8,
+      "comentario": "Combate excelente e bosses muito desafiantes. A curva de aprendizagem é dura, mas compensa.",
+      "data": "2024-02-14T19:00:00Z"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useRef, useEffect } from "react";
 import {
   Layout,
   Input,
@@ -26,19 +26,36 @@ import {
 } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import { GENEROS } from "../../utils/enums"; 
+import { GENEROS } from "../../utils/enums";
+
+import db from "../../assets/data.json";
 
 const { Header } = Layout;
-const { Title } = Typography;
+const { Title, Text } = Typography;
 const { useBreakpoint } = Grid;
 
 export default function HeaderMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [termoBusca, setTermoBusca] = useState("");
+  const [resultadosBusca, setResultadosBusca] = useState([]);
+  const [mostrarDropdown, setMostrarDropdown] = useState(false);
+  const searchContainerRef = useRef(null);
+
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
   const screens = useBreakpoint();
-  const isMobile = !screens.lg; 
+  const isMobile = !screens.lg;
   const isSmallMobile = !screens.sm;
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+        setMostrarDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleLogout = () => {
     logout();
@@ -48,8 +65,25 @@ export default function HeaderMenu() {
   const showMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
 
+  const handleInputChange = (e) => {
+    const valor = e.target.value;
+    setTermoBusca(valor);
+
+    if (valor.trim() !== "") {
+      const resultados = db.jogos
+        .filter((jogo) => jogo.titulo.toLowerCase().includes(valor.toLowerCase()))
+        .slice(0, 5);
+
+      setResultadosBusca(resultados);
+      setMostrarDropdown(true);
+    } else {
+      setMostrarDropdown(false);
+    }
+  };
+
   const handleSearch = (value) => {
     if (value.trim() !== "") {
+      setMostrarDropdown(false);
       navigate(`/jogos?busca=${encodeURIComponent(value)}`);
       closeMenu();
     }
@@ -131,6 +165,25 @@ export default function HeaderMenu() {
         .user-dropdown-btn:hover {
           background: rgba(255, 255, 255, 0.05);
         }
+        
+        .live-search-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 8px;
+          background-color: #3d4450;
+          border-bottom: 1px solid #2a475e;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          text-decoration: none;
+        }
+        .live-search-item:hover {
+          background-color: #66c0f4; /* Fundo azul ao passar o rato */
+        }
+        .live-search-item:hover .game-title,
+        .live-search-item:hover .game-price {
+          color: #0a141d !important; /* Texto escurece no hover */
+        }
       `}</style>
 
       <Header
@@ -139,10 +192,10 @@ export default function HeaderMenu() {
           alignItems: "center",
           justifyContent: "space-between",
           background: "#171a21",
-          padding: isMobile ? "0 16px" : "0 50px", 
+          padding: isMobile ? "0 16px" : "0 50px",
           height: "auto",
           minHeight: "80px",
-          flexWrap: isMobile ? "wrap" : "nowrap", 
+          flexWrap: isMobile ? "wrap" : "nowrap",
           gap: isMobile ? "12px" : "0",
           paddingTop: isMobile ? "12px" : "0",
           paddingBottom: isMobile ? "12px" : "0"
@@ -155,13 +208,13 @@ export default function HeaderMenu() {
                 src="/src/assets/images/logo.png"
                 alt="IGDb Logo"
                 style={{
-                  height: isSmallMobile ? "35px" : "45px", 
+                  height: isSmallMobile ? "35px" : "45px",
                   borderRadius: "4px",
                   display: "block",
                 }}
               />
             </Link>
-            
+
             <button
               onClick={showMenu}
               aria-label="Abrir menu principal"
@@ -186,23 +239,73 @@ export default function HeaderMenu() {
         </div>
 
         <div
+          ref={searchContainerRef}
           style={{
-            flex: isMobile ? "1 1 100%" : 2, 
-            order: isMobile ? 3 : 2, 
+            flex: isMobile ? "1 1 100%" : 2,
+            order: isMobile ? 3 : 2,
             display: "flex",
             justifyContent: "center",
             maxWidth: isMobile ? "100%" : "1000px",
             padding: isMobile ? "0" : "0 24px",
+            position: "relative",
           }}
         >
           <Input.Search
             placeholder="Pesquisar jogos, categorias..."
             enterButton
             size="large"
+            value={termoBusca}
+            onChange={handleInputChange}
+            onSearch={handleSearch}
             aria-label="Campo de pesquisa de jogos"
             style={{ width: "100%" }}
             onSearch={handleSearch}
           />
+
+          {mostrarDropdown && resultadosBusca.length > 0 && (
+            <div
+              style={{
+                position: "absolute",
+                top: "100%",
+                left: isMobile ? "0" : "24px",
+                right: isMobile ? "0" : "24px",
+                marginTop: "4px",
+                backgroundColor: "#3d4450",
+                borderRadius: "4px",
+                boxShadow: "0 8px 24px rgba(0,0,0,0.6)",
+                zIndex: 1000,
+                overflow: "hidden",
+              }}
+            >
+              <div style={{ padding: "8px 12px", fontSize: "12px", color: "#8f98a0", textTransform: "uppercase", fontWeight: "bold" }}>
+                Resultados da pesquisa
+              </div>
+
+              {resultadosBusca.map((jogo) => (
+                <Link
+                  key={jogo.id}
+                  to={`/jogo/${jogo.id}`}
+                  className="live-search-item"
+                  onClick={() => {
+                    setMostrarDropdown(false);
+                    setTermoBusca("");
+                  }}
+                >
+                  <img
+                    src={jogo.capa}
+                    alt=""
+                    aria-hidden="true"
+                    style={{ width: "120px", height: "45px", objectFit: "cover", borderRadius: "2px" }}
+                  />
+                  <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                    <Text className="game-title" style={{ color: "#fff", fontWeight: "600", fontSize: "15px", lineHeight: "1.2" }}>
+                      {jogo.titulo}
+                    </Text>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         <div

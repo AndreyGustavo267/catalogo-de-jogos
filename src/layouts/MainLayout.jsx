@@ -1,5 +1,5 @@
 import { Layout, Grid } from "antd";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import HeaderMenu from "../components/layout/HeaderMenu";
 import FooterMenu from "../components/layout/FooterMenu";
 import BotaoVoltarInicio from "../components/layout/BotaoVoltarInicio";
@@ -10,7 +10,7 @@ const { useBreakpoint } = Grid;
 export default function MainLayout() {
   const screens = useBreakpoint();
   const isMobile = !screens.sm;
-  
+
   return (
     <Layout style={{ minHeight: "100vh", background: "transparent" }}>
       <HeaderMenu />
@@ -22,6 +22,7 @@ export default function MainLayout() {
       <FooterMenu />
 
       <BotaoVoltarInicio />
+      <ScrollRestoration />
     </Layout>
   );
 }
